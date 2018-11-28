@@ -232,3 +232,174 @@ END # FLOW:Flow Analysis 1
 PARAMETERIZATION:
 END""")
 Save(Overwrite=True)
+meshComponent1.Update(AllDependencies=True)
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp0\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 1
+        Start Method = Serial
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+mesh1.Edit()
+setup1.Exit()
+Save(Overwrite=True)
+geometry1.Exit()
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Update(AllDependencies=True)
+mesh1.Exit()
+mesh1.Edit()
+solution1.Exit()
+mesh1.Edit()
+geometry1.Edit()
+geometry1.Exit()
+meshComponent1.UpdateUpstreamComponents()
+meshComponent1.Update(AllDependencies=True)
+mesh1.Exit()
+mesh1.Edit()
+Save(Overwrite=True)
+mesh1.Exit()
+meshComponent1.Update(AllDependencies=True)
+setup1.Edit()
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp0\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 1
+        Start Method = Serial
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.222681
+    Pan = 0, 0
+    Rotation Quaternion = 0.279848, -0.364705, -0.115917, 0.880476
+    
+  END
+
+END
+
+> update
+LIBRARY:
+  CEL:
+    EXPRESSIONS:
+      OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
+    END
+  END
+END
+
+EXPRESSION EVALUATOR:
+  Evaluated Expression = OutTempRange
+END
+
+> forceupdate EXPRESSION EVALUATOR""")
+results1.SendCommand(Command="""PARAMETERIZATION:
+  RESPONSE FIELD: OutTempRange
+    Method = Expression
+    Expression Name = OutTempRange
+  END
+END""")
+results1.SendCommand(Command="""LIBRARY:
+  CEL:
+    EXPRESSIONS:
+      OutTempAve = massFlowAve(Temperature)@out
+    END
+  END
+END
+
+EXPRESSION EVALUATOR:
+  Evaluated Expression = OutTempAve
+END
+
+> forceupdate EXPRESSION EVALUATOR""")
+results1.SendCommand(Command="""PARAMETERIZATION:
+  RESPONSE FIELD: OutTempAve
+    Method = Expression
+    Expression Name = OutTempAve
+  END
+END""")
+Save(Overwrite=True)
