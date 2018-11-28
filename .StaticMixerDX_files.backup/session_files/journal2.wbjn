@@ -403,3 +403,5 @@ results1.SendCommand(Command="""PARAMETERIZATION:
   END
 END""")
 Save(Overwrite=True)
+results1.Exit()
+Save(Overwrite=True)
