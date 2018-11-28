@@ -32,7 +32,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">1969</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 1973, "Input": 1967, "Output": 1967}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2014, "Input": 1967, "Output": 1967}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
@@ -45,7 +45,7 @@
       <Object Name="/Geometry/TransferData:Geometry" Version="1.0">
         <class-type valType="String">TransferData</class-type>
         <object-name valType="String">Geometry</object-name>
-        <member-data valType="String">{"DisplayText": "Geometry", "ConnectionKeys": ["2188f091-323f-4698-ab2e-b4fbaba0c365"], "Data": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Geometry", "ConnectionKeys": ["2188f091-323f-4698-ab2e-b4fbaba0c365"], "Data": $$58e461b0-d094-4156-9e43-45400508be55}</member-data>
       </Object>
       <Object Name="/Geometry/ParameterAdapter1:DesignModelerParameter" Version="1.0">
         <class-type valType="String">Ansys.Core.DataModel.DataObjects.DynamicDataObject, Ans.Core</class-type>
@@ -66,15 +66,16 @@
       <container-type valType="String">Ansys.Meshing.Core.Addin:SimulationModel</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 1776, "Input": 1781, "Output": 1768}</last-modified-by-usage>
+      <last-updated valType="Int64">1998</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2012, "Input": 2012, "Output": 2012}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Scopes": 0, "Geometry": 1969, "Mesh": 1998, "Setup": 0, "Solution": 0, "Results": 0}</last-update-regen-times>
       <unique-system-dir valType="String">CFX</unique-system-dir>
-      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Mesh/SimulationConnection:SimulationConnection" Version="1.0">
         <class-type valType="String">SimulationConnection</class-type>
         <object-name valType="String">SimulationConnection</object-name>
-        <member-data valType="String">{"DisplayText": "SimulationConnection", "_IsAssemblyMeshing": None, "_MeshingSolverSetting": None, "Caption": "SimulationConnection", "EventIdToDataReferenceMap": {}, "DSIdToDataReferenceMap": {}, "Attributes": {}}</member-data>
+        <member-data valType="String">{"DisplayText": "SimulationConnection", "_IsAssemblyMeshing": False, "_MeshingSolverSetting": 1, "Caption": "SimulationConnection", "EventIdToDataReferenceMap": {}, "DSIdToDataReferenceMap": {"11": {"CellModel": $$c9f38a32-f99a-4b87-87a2-0bb4e7064956}, "10": {"CellModel": $$c9f38a32-f99a-4b87-87a2-0bb4e7064956}, "12": {"CellModel": $$c9f38a32-f99a-4b87-87a2-0bb4e7064956}}, "Attributes": {}}</member-data>
       </Object>
       <Object Name="/Mesh/MechanicalSystemType:SystemType for Fluids||CFX" Version="1.0">
         <class-type valType="String">MechanicalSystemType</class-type>
@@ -84,7 +85,7 @@
       <Object Name="/Mesh/MeshingMesh:MeshingMeshDataObject" Version="1.0">
         <class-type valType="String">MeshingMesh</class-type>
         <object-name valType="String">MeshingMeshDataObject</object-name>
-        <member-data valType="String">{"DisplayText": "MeshingMeshDataObject", "Caption": "Mesh", "MeshId": -1}</member-data>
+        <member-data valType="String">{"DisplayText": "MeshingMeshDataObject", "Caption": "Mesh", "MeshId": 12}</member-data>
         <custom-data>
           <AttentionRequired valType="String">False</AttentionRequired>
           <ImportedMeshFileType valType="String">0</ImportedMeshFileType>
@@ -95,8 +96,9 @@
             <CMDBMesh>
               <Name valType="String">CMDBMesh</Name>
               <Guid0 valType="String">64e586d2-18c8-4ee6-a22b-8969c4f566fb</Guid0>
+              <Data valType="String">d4cff3a2-d413-4575-a84b-818d76a31001</Data>
               <UpToDate valType="String">False</UpToDate>
-              <value-keys valType="String">{"Name": System.String, "Guid0": System.String, "UpToDate": System.Boolean}</value-keys>
+              <value-keys valType="String">{"Name": System.String, "Guid0": System.String, "Data": System.String, "UpToDate": System.Boolean}</value-keys>
             </CMDBMesh>
           </transferDataMap>
         </custom-data>
@@ -114,7 +116,7 @@
       <Object Name="/Mesh/OutputsGeneratedManagerDataEntityType:OutputsGeneratedManagerObject" Version="1.0">
         <class-type valType="String">OutputsGeneratedManagerDataEntityType</class-type>
         <object-name valType="String">OutputsGeneratedManagerObject</object-name>
-        <member-data valType="String">{"DisplayText": "OutputsGeneratedManagerObject", "outputGeneratedTimes": {}}</member-data>
+        <member-data valType="String">{"DisplayText": "OutputsGeneratedManagerObject", "outputGeneratedTimes": {"CMDBMesh": 1986}}</member-data>
       </Object>
       <Object Name="/Mesh/MeshProperties:MeshProperties" Version="1.0">
         <class-type valType="String">MeshProperties</class-type>
@@ -125,6 +127,25 @@
         <class-type valType="String">ContainerConnections</class-type>
         <object-name valType="String">ModelContainerConnections</object-name>
         <member-data valType="String">{"DisplayText": "ModelContainerConnections", "Connections": {"Geometry": {"$$58e461b0-d094-4156-9e43-45400508be55": {"Geometry": ["2188f091-323f-4698-ab2e-b4fbaba0c365"]}}}}</member-data>
+      </Object>
+      <Object Name="/Mesh/MechanicalModel:MechanicalModel" Version="1.0">
+        <class-type valType="String">MechanicalModel</class-type>
+        <object-name valType="String">MechanicalModel</object-name>
+        <member-data valType="String">{"DisplayText": "MechanicalModel", "Caption": "Model", "File": $$0efe63d6-02b1-4b46-b5cf-4a26a6898427, "MeshFile": None, "EdaFile": None, "ModelId": 10, "PrototypeId": 11, "ModelHash": "da5ad5ab-0e45-4e54-8992-8a9e6abcd416", "GeometryHash": "da5ad5ab-0e45-4e54-8992-8a9e6abcd416", "IsResetNotRequired": False}</member-data>
+        <custom-data>
+          <File valType="String">0efe63d6-02b1-4b46-b5cf-4a26a6898427</File>
+          <FilePath valType="String"></FilePath>
+          <AttentionRequired valType="String">True</AttentionRequired>
+          <ParameterValueModified valType="String">False</ParameterValueModified>
+          <IsModifiedDueToModelAssemblyPropertyChange valType="String">False</IsModifiedDueToModelAssemblyPropertyChange>
+          <AttachType valType="String">2</AttachType>
+          <value-keys valType="String">{"File": System.String, "FilePath": System.String, "AttentionRequired": System.Boolean, "ParameterValueModified": System.Boolean, "IsModifiedDueToModelAssemblyPropertyChange": System.Boolean, "AttachType": System.Int32}</value-keys>
+        </custom-data>
+      </Object>
+      <Object Name="/Mesh/MechanicalMeshFile:CMDBMesh" Version="1.0">
+        <class-type valType="String">MechanicalMeshFile</class-type>
+        <object-name valType="String">CMDBMesh</object-name>
+        <member-data valType="String">{"DisplayText": "CMDBMesh", "TransferFile": $$2ddd1c0e-c1c2-4fd9-9b43-b11eb496efdf}</member-data>
       </Object>
     </Container>
     <Container Name="Setup" Version="1.0">

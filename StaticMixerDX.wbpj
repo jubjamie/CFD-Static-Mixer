@@ -2,13 +2,14 @@
 <Storage>
   <Project Version="9.0">
     <base-designpoint-name valType="String">0</base-designpoint-name>
-    <timestamp-max valType="Int64">1973</timestamp-max>
+    <timestamp-max valType="Int64">2014</timestamp-max>
     <framework-build-version valType="String">19.1.103.0</framework-build-version>
     <external-version-string valType="String">Release 19.1</external-version-string>
-    <last-saved-utc valType="String">11/21/2018 11:01:33</last-saved-utc>
+    <last-saved-utc valType="String">11/28/2018 10:18:58</last-saved-utc>
     <managed-categories valType="String">[report, misc, progress]</managed-categories>
     <logHistory valType="StringArray">
       <ArrayEntry Index="0">jc2182@ENPC-LAB140:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents8884.log</ArrayEntry>
+      <ArrayEntry Index="1">jc2182@ENPC-LAB113:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents12932.log</ArrayEntry>
     </logHistory>
     <expression-scope-container valType="String">Parameters</expression-scope-container>
     <project-type valType="String">WB2</project-type>
@@ -37,7 +38,11 @@
 "5402376c-ff2d-4ea9-97c5-fda780d78500": "/Schematic/ComponentTemplate:SimulationMeshingModelCellTemplate",
 "75a8feba-348a-40ca-9e59-83dfea8d9926": "/Schematic/ComponentTemplate:CFXPhysicsTemplate",
 "b064fa1b-c39a-4e60-8ea5-3a8d4bc6ebdc": "/Schematic/ComponentTemplate:CFXResultsTemplate",
-"5f5511d5-598f-4ce6-bcdb-a2490df3ac07": "/Schematic/ComponentTemplate:CFDPostTemplate"
+"5f5511d5-598f-4ce6-bcdb-a2490df3ac07": "/Schematic/ComponentTemplate:CFDPostTemplate",
+"0efe63d6-02b1-4b46-b5cf-4a26a6898427": "/FileContainer/FileReference:F4",
+"2ddd1c0e-c1c2-4fd9-9b43-b11eb496efdf": "/FileContainer/FileReference:F3",
+"bc815507-af8c-4ca9-9934-6f9476f84037": "/FileTypesContainer/FileType:CMDBMeshFileType",
+"bc7489a2-f9a4-43d2-958c-fc95d2fbe50a": "/FileTypesContainer/FileType:MeshFileType"
 }</ReferenceList>
       </ProjectReferenceList>
       <DesignPointReferenceListCollection>
@@ -56,7 +61,9 @@
 "2795bb06-617b-460b-8ba8-3a66ea8ab26b": "/Results/SolutionDataLink:Solution Provider",
 "6d7e2ddb-c31f-438f-9fc6-fdefa743c9e7": "/Results/CFDResults:Results Source",
 "72cc9407-8e1e-434e-a1d5-49a5c55d0563": "/Geometry/ParameterAdapter1:DesignModelerParameter",
-"4529a34f-32b6-4740-bfac-c8d72c00dbd6": "/Geometry/ParameterAdapter2:DesignModelerParameter"
+"4529a34f-32b6-4740-bfac-c8d72c00dbd6": "/Geometry/ParameterAdapter2:DesignModelerParameter",
+"c9f38a32-f99a-4b87-87a2-0bb4e7064956": "/Mesh/MechanicalModel:MechanicalModel",
+"d4cff3a2-d413-4575-a84b-818d76a31001": "/Mesh/MechanicalMeshFile:CMDBMesh"
 }</ReferenceList>
         </DesignPointReferenceList>
       </DesignPointReferenceListCollection>
@@ -79,7 +86,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 1915, "Input": 1382, "Output": 1382}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2007, "Input": 1382, "Output": 1382}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/FileContainer/FileReference:F1" Version="1.0">
@@ -91,6 +98,16 @@
         <class-type valType="String">FileReference</class-type>
         <object-name valType="String">F2</object-name>
         <member-data valType="String">{"DisplayText": "CFX.agdb", "FileType": $$1541192c-5f74-4cd3-8df4-e76f8ed8c70b, "DependentFiles": [], "ContainerAssociations": ["Geometry"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\CFX\DM\CFX.agdb", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F3" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F3</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.cmdb", "FileType": $$bc815507-af8c-4ca9-9934-6f9476f84037, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\CFX\MECH\CFX.cmdb", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F4" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F4</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.mshdb", "FileType": $$bc7489a2-f9a4-43d2-958c-fc95d2fbe50a, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\global\MECH\CFX.mshdb", "ReferenceCount": 1}</member-data>
       </Object>
     </Container>
     <Container Name="Messages" Version="1.0">
@@ -109,13 +126,14 @@
       <maxUpdateOrder valType="Double">1</maxUpdateOrder>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 1388, "Input": 1961, "Output": 1386}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2003, "Input": 1961, "Output": 1386}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/Parameters/DesignPoint:0" Version="1.0">
         <class-type valType="String">DesignPoint</class-type>
         <object-name valType="String">0</object-name>
-        <member-data valType="String">{"DisplayText": "DP 0", "JustDuplicated": False, "PartiallyRetainedData": [], "ValidRetainedData": [], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate"}, "Note": None, "IsUpToDate": False, "Exported": True, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": False, "UpdateOrder": 1}</member-data>
+        <member-data valType="String">{"DisplayText": "DP 0", "JustDuplicated": False, "PartiallyRetainedData": [], "ValidRetainedData": [], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Mesh in CFX"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate"}, "Note": None, "IsUpToDate": False, "Exported": True, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": False, "UpdateOrder": 1}</member-data>
+        <properties-setByUserFlag-data valType="String">["IsDataModelValid"]</properties-setByUserFlag-data>
       </Object>
       <Object Name="/Parameters/DesignPointReportSetting:Design Points Report Setting" Version="1.0">
         <class-type valType="String">DesignPointReportSetting</class-type>
@@ -155,9 +173,9 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 1831, "Input": 1839, "Output": 1389}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1990, "Input": 1999, "Output": 1389}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
-      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Schematic/System:CFX" Version="1.0">
         <class-type valType="String">System</class-type>
         <object-name valType="String">CFX</object-name>
@@ -216,7 +234,7 @@
       <Object Name="/Schematic/Component:Mesh" Version="1.0">
         <class-type valType="String">Component</class-type>
         <object-name valType="String">Mesh</object-name>
-        <member-data valType="String">{"DisplayText": "Mesh", "ImageName": "model2", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Mesh", "_overwrittenUpdatable": None, "Template": $$5402376c-ff2d-4ea9-97c5-fda780d78500, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "Geometry", "Component": $$f9254046-90e4-4015-860f-5b8c977aaac6, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Mesh", "ImageName": "model2", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Mesh", "_overwrittenUpdatable": None, "Template": $$5402376c-ff2d-4ea9-97c5-fda780d78500, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "Geometry", "Component": $$f9254046-90e4-4015-860f-5b8c977aaac6, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
       </Object>
       <Object Name="/Schematic/Component:Setup" Version="1.0">
         <class-type valType="String">Component</class-type>
@@ -271,7 +289,7 @@
       <Object Name="/Units/UnitSystem:UnitSys" Version="1.0">
         <class-type valType="String">UnitSystem</class-type>
         <object-name valType="String">UnitSys</object-name>
-        <member-data valType="String">{"DisplayText": "Metric (kg,m,s,°C,A,N,V)", "ChangedQuantityUnits": {"Temperature": "C", "Energy Source Coefficient": "W m^-3 C^-1", "Heat Transfer Coefficient": "W m^-2 C^-1", "InvTemp1": "C^-1", "InvTemp2": "C^-2", "InvTemp3": "C^-3", "InvTemp4": "C^-4", "Molar Entropy": "J mol^-1 C^-1", "Normalized Value": "m m^-1", "Seebeck Coefficient": "V C^-1", "Specific Entropy": "J kg^-1 C^-1", "Specific Heat Capacity": "J kg^-1 C^-1", "Temperature Gradient": "C m^-1", "Thermal Conductivity": "W m^-1 C^-1", "Thermal Expansivity": "C^-1", "Stress Per Temperature": "Pa C^-1", "Temperature Difference": "C", "Density Derivative wrt Temperature": "kg m^-3 C^-1", "Pressure Derivative wrt Temperature": "Pa C^-1", "Thermal Capacitance": "J C^-1", "Thermal Conductance": "W C^-1", "Thermal Contact Resistance": "W^-1 m^2 C"}, "UnitSystemName": "MKS_STANDARD", "BaseUnitSystemName": "SI", "IsProjectUnitSystem": True, "IsDefault": False}</member-data>
+        <member-data valType="String">{"DisplayText": "Metric (kg,m,s,°C,A,N,V)", "ChangedQuantityUnits": {}, "UnitSystemName": "MKS_STANDARD", "BaseUnitSystemName": "SI", "IsProjectUnitSystem": True, "IsDefault": False}</member-data>
       </Object>
       <Object Name="/Units/UnitSystem:UnitSys 1" Version="1.0">
         <class-type valType="String">UnitSystem</class-type>
