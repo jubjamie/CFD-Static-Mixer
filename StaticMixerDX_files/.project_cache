@@ -1,4 +1,5 @@
-﻿dp0/CFX/DM/CFX.agdb
+﻿dp0/CFX/CFX/Fluid Flow CFX.cfx
+dp0/CFX/DM/CFX.agdb
 dp0/CFX/MECH/CFX.cmdb
 dp0/global/MECH/CFX.mshdb
 dp0/designPoint.wbdp
@@ -8,6 +9,7 @@ dp0/
 session_files/
 dp0/CFX/
 dp0/global/
+dp0/CFX/CFX/
 dp0/CFX/DM/
 dp0/CFX/MECH/
 dp0/global/MECH/
