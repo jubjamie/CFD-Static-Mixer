@@ -72,3 +72,139 @@ boolean9 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
 backgroundSession9 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
 boolean10 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
 backgroundSession10 = UpdateAllDesignPoints(DesignPoints=[designPoint5])
+designPoint5.Delete()
+designPoint3.Delete()
+designPoint4.Delete()
+designPoint6 = Parameters.CreateDesignPoint()
+parameter1 = Parameters.GetParameter(Name="P11")
+designPoint6.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.4 [m]")
+parameter2 = Parameters.GetParameter(Name="P12")
+designPoint6.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.4 [m]")
+parameter3 = Parameters.GetParameter(Name="P13")
+designPoint6.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.03 [m]")
+parameter4 = Parameters.GetParameter(Name="P14")
+designPoint6.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0 [m]")
+designPoint6.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="3 [m]")
+designPoint6.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0 [m]")
+designPoint6.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.03 [m]")
+parameter5 = Parameters.GetParameter(Name="P15")
+designPoint6.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.3 [m]")
+designPoint7 = Parameters.CreateDesignPoint()
+designPoint7.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.2 [m]")
+designPoint7.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.2 [m]")
+designPoint7.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0 [m]")
+designPoint7.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="15 [m]")
+designPoint7.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.015 [m]")
+designPoint7.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.2 [m]")
+designPoint8 = Parameters.CreateDesignPoint()
+designPoint8.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.12 [m]")
+designPoint8.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.12 [m]")
+designPoint8.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0 [m]")
+designPoint8.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="9 [m]")
+designPoint8.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.009 [m]")
+designPoint8.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.009 [m]")
+designPoint8.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.12 [m]")
+setupComponent1.Clean()
+designPoint6.Retained = True
+Parameters.SetBaseDesignPoint(DesignPoint=designPoint6)
+designPoint1.Delete()
+designPoint9 = Parameters.CreateDesignPoint()
+designPoint9.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.15 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.15 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.011 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="11 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.015 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.011 [m]")
+designPoint9.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.15 [m]")
+boolean11 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession11 = UpdateAllDesignPoints(DesignPoints=[designPoint6])
+setupComponent1.Clean()
+designPoint7.Retained = True
+Parameters.SetBaseDesignPoint(DesignPoint=designPoint7)
+setupComponent1.Clean()
+boolean12 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession12 = UpdateAllDesignPoints(DesignPoints=[designPoint7])
+boolean13 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession13 = UpdateAllDesignPoints(DesignPoints=[designPoint7])
+meshComponent1.Update(AllDependencies=True)
+mesh1 = system1.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+designPoint7.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.015 [m]")
+boolean14 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession14 = UpdateAllDesignPoints(DesignPoints=[designPoint7])
+designPoint8.Retained = True
+setupComponent1.Clean()
+boolean15 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession15 = UpdateAllDesignPoints(DesignPoints=[designPoint8])
+setupComponent1.Clean()
+designPoint9.Retained = True
+boolean16 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession16 = UpdateAllDesignPoints(DesignPoints=[designPoint9])
+setupComponent1.Clean()
+boolean17 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession17 = UpdateAllDesignPoints(DesignPoints=[designPoint6])
+Save(Overwrite=True)
