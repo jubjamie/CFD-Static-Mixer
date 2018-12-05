@@ -5,17 +5,32 @@ dp0/CFX/CFX/Fluid Flow CFX_002.res
 dp0/CFX/DM/CFX.agdb
 dp0/CFX/MECH/CFX.cmdb
 dp0/CFX/Post/Fluid Flow CFX.cst
+dp0/CFX-1/CFX/Fluid Flow CFX.cfx
+dp0/CFX-1/CFX/Fluid Flow CFX.def
+dp0/CFX-1/CFX/Fluid Flow CFX_001.out
+dp0/CFX-1/CFX/Fluid Flow CFX_001.res
+dp0/CFX-1/DM/CFX-1.agdb
+dp0/CFX-1/MECH/CFX-11.cmdb
+dp0/CFX-1/Post/Fluid Flow CFX.cst
+dp0/global/MECH/CFX-1.mshdb
 dp0/global/MECH/CFX.mshdb
 dp0/designPoint.wbdp
 session_files/journal1.wbjn
 session_files/journal2.wbjn
+session_files/journal3.wbjn
 dp0/
 session_files/
 dp0/CFX/
+dp0/CFX-1/
 dp0/global/
 dp0/CFX/CFX/
 dp0/CFX/DM/
 dp0/CFX/MECH/
 dp0/CFX/Post/
+dp0/CFX-1/CFX/
+dp0/CFX-1/DM/
+dp0/CFX-1/MECH/
+dp0/CFX-1/Post/
 dp0/global/MECH/
 dp0/global/MECH/CFX/
+dp0/global/MECH/CFX-1/

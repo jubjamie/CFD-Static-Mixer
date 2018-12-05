@@ -1,4 +1,4 @@
-# State file created:  2018/11/28 10:42:44
+# State file created:  2018/12/05 10:45:58
 # CFX-19.1
 
 COMMENT:User Data
@@ -94,7 +94,7 @@ dp0\CFX\CFX\Fluid Flow CFX_002.res
       Tile Texture = Off
       Transform Texture = Off
       Transparency = 0.0
-      Visibility = false
+      Visibility = Off
     END
     BOUNDARY:in1
       Apply Instancing Transform = On
@@ -367,8 +367,7 @@ dp0\CFX\CFX\Fluid Flow CFX_002.res
       Full Circle = Off
       Hub Curve Mode = From Turbo Region
       Inlet Curve Mode = From Turbo Region
-      Inlet Region = /DATA READER/CASE:Case CFX/BOUNDARY:in1,/DATA READER/\
-CASE:Case CFX/BOUNDARY:in2
+      Inlet Region = in1,in2
       Instance Definition = From File
       Linear Blade Aligned Variable Available = false
       Number of Components in 360 = 1
@@ -377,7 +376,7 @@ CASE:Case CFX/BOUNDARY:in2
       Number of Passages in 360 = 1
       Number of Passages in Component = 1
       Outlet Curve Mode = From Turbo Region
-      Outlet Region = /DATA READER/CASE:Case CFX/BOUNDARY:out
+      Outlet Region = out
       Principal Axis = Z
       Reflection Plane Option = From Plane
       Rotation Angle = 0 [degree]
@@ -752,6 +751,7 @@ DEFAULT LEGEND:Default Legend View 1
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -774,6 +774,7 @@ DEFAULT LEGEND:Default Legend View 2
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -796,6 +797,7 @@ DEFAULT LEGEND:Default Legend View 3
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -818,6 +820,7 @@ DEFAULT LEGEND:Default Legend View 4
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -842,6 +845,24 @@ FILE PROCESSING:
   Processing Mode = None
   Supress File Replacement Warnings = false
 END
+HARDCOPY:
+  Antialiasing = On
+  Hardcopy Filename = H:/dos/CFD/CW/CFD-Static-Mixer/First Step with \
+Inflation.png
+  Hardcopy Format = png
+  Hardcopy Tolerance = 0.0001
+  Image Height = 600
+  Image Scale = 100
+  Image Width = 600
+  JPEG Image Quality = 80
+  Paper Orientation = Landscape
+  Paper Size = Letter
+  Print Line Width = 1
+  Print Quality = High
+  Screen Capture = Off
+  Use Screen Size = On
+  White Background = On
+END
 LIBRARY:
   CEL:
     EXPRESSIONS:
@@ -864,13 +885,84 @@ MASS FLOW CALC OPTION ON PHYSICAL SURFACES:
   Option = Interpolated
 END
 PARAMETERIZATION:
+  RESPONSE FIELD:OutTempAve
+    Expression Name = OutTempAve
+    Method = Expression
+  END
   RESPONSE FIELD:OutTempRange
     Expression Name = OutTempRange
     Method = Expression
   END
-  RESPONSE FIELD:OutTempAve
-    Expression Name = OutTempAve
-    Method = Expression
+END
+PLANE:mid
+  Apply Instancing Transform = On
+  Apply Texture = Off
+  Blend Texture = On
+  Bound Radius = 0.5 [m]
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Hybrid
+  Culling Mode = No Culling
+  Direction 1 Bound = 1.0 [m]
+  Direction 1 Orientation = 0 [degree]
+  Direction 1 Points = 10
+  Direction 2 Bound = 1.0 [m]
+  Direction 2 Points = 10
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Invert Plane Bound = Off
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Colour Mode = Default
+  Line Width = 1
+  Max = 0.0 [K]
+  Min = 0.0 [K]
+  Normal = 0 , 0 , 1
+  Option = Point and Normal
+  Plane Bound = None
+  Plane Type = Slice
+  Point = 0 [m], 0 [m], 1 [m]
+  Point 1 = 0 [m], 0 [m], 0 [m]
+  Point 2 = 1 [m], 0 [m], 0 [m]
+  Point 3 = 0 [m], 1 [m], 0 [m]
+  Range = Global
+  Render Edge Angle = 0 [degree]
+  Specular Lighting = On
+  Surface Drawing = Smooth Shading
+  Texture Angle = 0
+  Texture Direction = 0 , 1 , 0
+  Texture Material = Metal
+  Texture Position = 0 , 0
+  Texture Scale = 1
+  Texture Type = Predefined
+  Tile Texture = Off
+  Transform Texture = Off
+  Transparency = 0.0
+  Visibility = On
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
   END
 END
 REPORT:
@@ -1062,10 +1154,16 @@ END
 SCALAR VARIABLE:Static Entropy
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Streamline Number on Streamline 1
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Temperature
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Thermal Conductivity
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Time on Streamline 1
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Total Pressure
@@ -1218,6 +1316,86 @@ END
 SCALAR VARIABLE:Z
   Boundary Values = Conservative
 END
+STREAMLINE:Streamline 1
+  Absolute Tolerance = 0.0 [m]
+  Add Sample Vertex Normals = Off
+  Apply Instancing Transform = On
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Conservative
+  Cross Periodics = On
+  Culling Mode = No Culling
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Draw Streams = On
+  Draw Symbols = Off
+  Grid Tolerance = 0.01
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Width = 1
+  Location List = in1
+  Locator Sampling Method = Equally Spaced
+  Max = 0.0 [K]
+  Maximum Number of Items = 25
+  Min = 0.0 [K]
+  Number of Samples = 25
+  Number of Sides = 8
+  Random Seed = 1
+  Range = Global
+  Reduction Factor = 1.0
+  Reduction or Max Number = Max Number
+  Sample Spacing = 0.1
+  Sampling Accuracy = High
+  Sampling Aspect Ratio = 1
+  Sampling Grid Angle = 0 [degree]
+  Seed Point Type = Equally Spaced Samples
+  Simplify Geometry = Off
+  Specular Lighting = On
+  Stream Drawing Mode = Line
+  Stream Initial Direction = 0 , 0 , 0
+  Stream Size = 1.0
+  Stream Symbol = Ball
+  Streamline Direction = Forward
+  Streamline Maximum Periods = 20
+  Streamline Maximum Segments = 10000
+  Streamline Maximum Time = 0.0 [s]
+  Streamline Solver Type = RungeKutta2
+  Streamline Type = 3D Streamline
+  Streamline Width = 2
+  Surface Drawing = Smooth Shading
+  Surface Streamline Direction = Forward and Backward
+  Symbol Size = 1.0
+  Symbol Start Time = 10.0 [s]
+  Symbol Stop Time = -10.0 [s]
+  Symbol Time Interval = 1.0 [s]
+  Tolerance Mode = Grid Relative
+  Transparency = 0.0
+  Variable = Velocity
+  Variable Boundary Values = Conservative
+  Visibility = Off
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
+  END
+END
 SYMBOL CONTROL:
   Symbol Size = 1
 END
@@ -1359,7 +1537,7 @@ VIEW:View 1
   Highlight Type = Surface Mesh
   Is A Figure = false
   Light Angle = 50, 110
-  Object Visibility List = /DEFAULT LEGEND:Default Legend View 1,/\
+  Object Visibility List = /DEFAULT LEGEND:Default Legend View 1,/PLANE:mid,/\
 WIREFRAME:Wireframe
   Projection = Orthographic
   Ruler Visibility = true
@@ -1369,8 +1547,8 @@ WIREFRAME:Wireframe
     Pan = 0,0
     Pivot Point = 0,0,0
     Rotation = -90, 0, 0
-    Rotation Quaternion = 0.279848,-0.364705,-0.115917,0.880476
-    Scale = 0.222681
+    Rotation Quaternion = 0,0,0,1
+    Scale = 0.30303
     Send To Viewer = True
   END
 END
