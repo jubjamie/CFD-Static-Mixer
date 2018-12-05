@@ -1,0 +1,12 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+system1 = GetSystem(Name="CFX")
+meshComponent1 = system1.GetComponent(Name="Mesh")
+meshComponent1.Clean()
+designPoint1 = Parameters.GetDesignPoint(Name="2")
+designPoint1.Retained = False
+boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+designPoint2 = Parameters.GetDesignPoint(Name="1")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Save(Overwrite=True)

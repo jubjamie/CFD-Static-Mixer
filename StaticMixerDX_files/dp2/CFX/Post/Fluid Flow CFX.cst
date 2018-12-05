@@ -1,4 +1,4 @@
-# State file created:  2018/12/05 10:54:18
+# State file created:  2018/12/05 14:04:17
 # CFX-19.1
 
 COMMENT:User Data
@@ -15,10 +15,10 @@ DATA READER:
   Clear All Objects = False
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
-  Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp0\\
-CFX\CFX\Fluid Flow CFX_003.res
+  Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp2\\
+CFX\CFX\Fluid Flow CFX_004.res
   Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp0\CFX\CFX\Fluid Flow CFX_003.res
+dp2\CFX\CFX\Fluid Flow CFX_004.res
   Current Timestep = -1
   Current Timevalue = 0
   Edit Case Names = false
@@ -46,10 +46,10 @@ dp0\CFX\CFX\Fluid Flow CFX_003.res
   Timevalue Match Criterion = Same Value
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
-    Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp0\\
-CFX\CFX\Fluid Flow CFX_003.res
+    Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp2\\
+CFX\CFX\Fluid Flow CFX_004.res
     Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp0\CFX\CFX\Fluid Flow CFX_003.res
+dp2\CFX\CFX\Fluid Flow CFX_004.res
     Current Timestep = -1
     Current Timevalue = 0
     File Angle Units = rad
@@ -866,12 +866,12 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 147
-      Current Time Step = 147
+      Accumulated Time Step = 222
+      Current Time Step = 222
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       Reference Pressure = 1 [atm]
-      Sequence Step = 147
+      Sequence Step = 222
       Time = 0 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step

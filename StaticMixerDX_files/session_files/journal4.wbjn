@@ -1,0 +1,74 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+system1 = GetSystem(Name="CFX")
+meshComponent1 = system1.GetComponent(Name="Mesh")
+meshComponent1.Clean()
+designPoint1 = Parameters.GetDesignPoint(Name="2")
+designPoint1.Retained = False
+boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+designPoint2 = Parameters.GetDesignPoint(Name="1")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Save(Overwrite=True)
+meshComponent1.Clean()
+designPoint1.Retained = True
+boolean2 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+designPoint3 = Parameters.GetDesignPoint(Name="3")
+designPoint3.Retained = True
+boolean3 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+meshComponent1.Clean()
+designPoint3.Retained = False
+designPoint3.Retained = True
+designPoint3.Retained = False
+designPoint3.Retained = True
+designPointUpdateSettings1 = GetDesignPointUpdateSettings()
+designPointUpdateSettings1.DesignPointRetainedOrExportedUpdate = "FullProject"
+designPointUpdateSettings1.DesignPointRetainedOrExportedUpdate = "Parameters"
+designPoint3.Retained = False
+boolean4 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession4 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+designPoint3.Retained = True
+designPointUpdateSettings1.DesignPointRetainedOrExportedUpdate = "FullProject"
+meshComponent1.Clean()
+boolean5 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession5 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+designPoint4 = Parameters.GetDesignPoint(Name="0")
+designPoint4.Retained = False
+designPoint4.Retained = True
+designPoint1.Retained = False
+designPoint1.Retained = True
+designPoint3.Retained = False
+designPoint3.Retained = True
+designPoint5 = designPoint2.Duplicate()
+Parameters.SetBaseDesignPoint(DesignPoint=designPoint1)
+designPoint2.Delete()
+meshComponent1.Clean()
+designPoint3.Retained = False
+designPoint5.Retained = False
+designPoint4.Retained = False
+designPoint4.Retained = True
+designPoint5.Retained = True
+designPoint5.Retained = False
+designPoint3.Retained = True
+designPoint5.Retained = True
+boolean6 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession6 = UpdateAllDesignPoints(DesignPoints=[designPoint5])
+system2 = GetSystem(Name="CFX 1")
+system2.Delete()
+meshComponent1.Clean()
+boolean7 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession7 = UpdateAllDesignPoints(DesignPoints=[designPoint4])
+boolean8 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession8 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+designPoint4.Retained = False
+designPoint4.Retained = True
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Clean()
+setupComponent1.Clean()
+setupComponent1.Clean()
+boolean9 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession9 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+boolean10 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession10 = UpdateAllDesignPoints(DesignPoints=[designPoint5])

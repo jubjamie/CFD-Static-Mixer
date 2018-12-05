@@ -2,15 +2,16 @@
 <Storage>
   <Project Version="9.0">
     <base-designpoint-name valType="String">1</base-designpoint-name>
-    <timestamp-max valType="Int64">5623</timestamp-max>
+    <timestamp-max valType="Int64">5822</timestamp-max>
     <framework-build-version valType="String">19.1.103.0</framework-build-version>
     <external-version-string valType="String">Release 19.1</external-version-string>
-    <last-saved-utc valType="String">12/05/2018 11:10:18</last-saved-utc>
+    <last-saved-utc valType="String">12/05/2018 13:41:33</last-saved-utc>
     <managed-categories valType="String">[report, misc, progress]</managed-categories>
     <logHistory valType="StringArray">
       <ArrayEntry Index="0">jc2182@ENPC-LAB140:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents8884.log</ArrayEntry>
       <ArrayEntry Index="1">jc2182@ENPC-LAB113:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents12932.log</ArrayEntry>
       <ArrayEntry Index="2">jc2182@ENPC-LAB124:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents9900.log</ArrayEntry>
+      <ArrayEntry Index="3">jc2182@ENPC-LAB137:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents11508.log</ArrayEntry>
     </logHistory>
     <expression-scope-container valType="String">Parameters</expression-scope-container>
     <project-type valType="String">WB2</project-type>
@@ -41,7 +42,6 @@
 "b064fa1b-c39a-4e60-8ea5-3a8d4bc6ebdc": "/Schematic/ComponentTemplate:CFXResultsTemplate",
 "5f5511d5-598f-4ce6-bcdb-a2490df3ac07": "/Schematic/ComponentTemplate:CFDPostTemplate",
 "0efe63d6-02b1-4b46-b5cf-4a26a6898427": "/FileContainer/FileReference:F4",
-"e7b3db50-8588-4d18-bfe7-6395a8a629f4": "/FileContainer/FileReference:F66",
 "bc815507-af8c-4ca9-9934-6f9476f84037": "/FileTypesContainer/FileType:CMDBMeshFileType",
 "bc7489a2-f9a4-43d2-958c-fc95d2fbe50a": "/FileTypesContainer/FileType:MeshFileType",
 "598ad774-e1b3-4ebd-af05-f785c5e174d7": "/FileContainer/FileReference:F5",
@@ -52,7 +52,6 @@
 "11511442-9b36-4334-a719-ccff0135db15": "/FileTypesContainer/FileType:CFXSolverInput",
 "1d60d066-cfc2-4b57-9f62-a08c2a5be334": "/FileTypesContainer/FileType:CFXSolverResults",
 "db103ad3-3c45-4ae4-b440-7a9e5d90f62d": "/FileTypesContainer/FileType:CFXSolverOutput",
-"7bd64415-f625-433e-9bb5-edbf27ac5336": "/FileContainer/FileReference:F65",
 "1db82265-cd0b-4e85-912e-d11f12c825f5": "/Parameters/DesignPoint:2",
 "8ceb7d90-9d67-4bf6-8f83-116e6f1e9b30": "/Parameters/DesignPoint:0",
 "c21d5c7b-80b8-4088-9cc0-c070fe739c73": "/FileContainer/FileReference:F13",
@@ -97,74 +96,14 @@
 "63e592b9-ddc2-4381-bd31-7c53615f556c": "/FileContainer/FileReference:F38",
 "4fad1a6a-6c5d-485f-9b6e-78095f87b651": "/FileContainer/FileReference:F39",
 "862d1694-2782-4228-b2f7-5420b16cd46a": "/FileContainer/FileReference:F36",
-"113453a0-a901-4600-840c-787c5ff2b14a": "/FileContainer/FileReference:F47",
-"2ea35c71-3ba3-474c-8b48-219087d4b95e": "/FileContainer/FileReference:F48",
-"600b249b-51ef-410c-a3b5-67793fe7ac68": "/FileContainer/FileReference:F63",
-"56c6b7ba-12c9-4808-84dc-18cf53faee3c": "/FileContainer/FileReference:F64",
-"4beb29b1-2a1b-44e3-9734-bcbf10b2a0b2": "/FileContainer/FileReference:F50",
-"cb297e64-7c67-40c2-ae58-7a1df050b261": "/FileContainer/FileReference:F60",
-"dd975863-34fd-4c9d-b9df-40733e527e5c": "/FileContainer/FileReference:F61",
-"40c0b20b-ccd6-457c-8b6a-f360fe442bbe": "/FileContainer/FileReference:F62",
-"f93d7b83-2a62-40ba-9b2d-28d1c504220a": "/FileContainer/FileReference:F51",
-"62c0228d-5edd-4dbd-9a65-06ef021d02d3": "/FileContainer/FileReference:F52",
-"370fcef6-82da-4d12-b471-85796c25d20e": "/FileContainer/FileReference:F54",
-"b27d07f0-5f63-430d-bd65-36241773ad75": "/FileContainer/FileReference:F53",
-"9d0073d5-2b66-44a5-b6b7-7e10ccf4e6d4": "/FileContainer/FileReference:F57",
-"7bde8641-5334-462b-86b6-e3a69c62ea39": "/FileContainer/FileReference:F55",
-"0613e3ca-cd14-4f74-b3c8-7795ba6e3e85": "/FileContainer/FileReference:F58",
-"1f9efa35-c5a4-4ff8-a7eb-350abc5f5bb1": "/FileContainer/FileReference:F59",
-"d7336df6-8caa-4597-b24a-32371f23a2ff": "/FileContainer/FileReference:F56",
 "3d81d916-8866-4cbc-b65d-cb71f152c225": "/FileTypesContainer/FileType:default",
-"e3f77489-977c-4790-86f0-0626f44bd025": "/FileContainer/FileReference:F67",
-"026789b7-26dc-4a94-96ea-b4f34ef06dfc": "/FileContainer/FileReference:F68"
+"cb41f1ef-b2e9-40eb-a56b-c9b07c6e3e81": "/FileContainer/FileReference:F69",
+"4402c636-c1da-4e79-91ee-208ead284eed": "/FileContainer/FileReference:F70",
+"effe123e-2bae-4de0-84a6-4ceafd95c3a2": "/FileContainer/FileReference:F71",
+"997e0ff2-2172-4488-a1dd-0f05f8e3cf21": "/FileContainer/FileReference:F72"
 }</ReferenceList>
       </ProjectReferenceList>
       <DesignPointReferenceListCollection>
-        <DesignPointReferenceList Name="0">
-          <ReferenceList valType="String">{
-"1a8f6427-2756-4269-9219-a267e4a8af9b": "/Mesh/MeshingGeneratedMeshOutputProvider:MeshingGeneratedMeshOutputProvider",
-"245dfc30-25f7-4b6b-863a-3638c1c99ca5": "/Mesh/GeneratedMeshOutputForAQWAModelProvider:GeneratedMeshOutputForAQWAModelProvider",
-"58e461b0-d094-4156-9e43-45400508be55": "/Geometry/Geometry:GeometryDataObject",
-"4b0d658f-c1d3-4d4c-9838-7f00eb022fe9": "/Mesh/MeshingMesh:MeshingMeshDataObject",
-"64d570fc-a66a-4627-825d-cd866a4b113d": "/Setup/CFXMeshDataLink:MeshingMeshDataObject",
-"69188d55-b80f-4f05-962d-f2ac12c0a124": "/Setup/CFXSetupProperties:Setup Source",
-"20ead413-6947-41ec-96b7-51291b4ad302": "/Setup/CFXSetup:Setup Provider",
-"08838af3-5702-40a3-8497-5e1e2b196590": "/Solution/CFXSetupDataLink:Setup Provider",
-"a0120215-0473-4ad5-96af-198625ed9816": "/Solution/CFXSolutionProperties:Solution Source",
-"5cb5b8a3-d27f-4f15-8447-7f189fa57708": "/Solution/CFXSolution:Solution Provider",
-"2795bb06-617b-460b-8ba8-3a66ea8ab26b": "/Results/SolutionDataLink:Solution Provider",
-"6d7e2ddb-c31f-438f-9fc6-fdefa743c9e7": "/Results/CFDResults:Results Source",
-"72cc9407-8e1e-434e-a1d5-49a5c55d0563": "/Geometry/ParameterAdapter1:DesignModelerParameter",
-"4529a34f-32b6-4740-bfac-c8d72c00dbd6": "/Geometry/ParameterAdapter2:DesignModelerParameter",
-"c9f38a32-f99a-4b87-87a2-0bb4e7064956": "/Mesh/MechanicalModel:MechanicalModel",
-"d4cff3a2-d413-4575-a84b-818d76a31001": "/Mesh/MechanicalMeshFile:CMDBMesh",
-"77e121d5-5c22-43e9-8b9d-2f9d46e200d8": "/Setup/ParameterAdapter1:inMassFlow",
-"d68579a5-4659-4431-b1d4-4e9d4e4f01ca": "/Solution/CFXSolverRun:Fluid Flow CFX_002",
-"b35f70e7-2b7d-449a-bc40-3fc90ff4075f": "/Results/ParameterAdapter1:OutTempRange",
-"dd8b67ef-2b78-450a-a3aa-5c665ad31586": "/Results/ParameterAdapter2:OutTempAve",
-"bafadf6c-7eab-4ab6-b79c-ba93db5f7923": "/Mesh 1/MechanicalModel:MechanicalModel",
-"f05607f8-fa77-43cf-891c-bb99cdce9955": "/Mesh 1/MechanicalMeshFile:CMDBMesh",
-"4140f19a-1502-44e5-8708-5b56d3be79b5": "/Mesh 1/MeshingGeneratedMeshOutputProvider:MeshingGeneratedMeshOutputProvider",
-"85be3667-d8a5-443f-a5e4-c2ddcb095706": "/Mesh 1/GeneratedMeshOutputForAQWAModelProvider:GeneratedMeshOutputForAQWAModelProvider",
-"70a85ed7-e152-4fd2-8702-e4f8d4888be3": "/Geometry 1/Geometry:GeometryDataObject",
-"d6e97e3d-23d6-45e0-8dd1-b23844447df8": "/Mesh 1/MeshingMesh:MeshingMeshDataObject",
-"60f60ecc-b241-481a-bfcb-93996430b0ce": "/Setup 1/CFXMeshDataLink:MeshingMeshDataObject",
-"b3b0f404-9b58-43f0-8592-cbdc43329cf4": "/Setup 1/CFXSetupProperties:Setup Source",
-"10258b1a-3c38-4b69-a23a-fe317f646b6e": "/Setup 1/CFXSetup:Setup Provider",
-"3a936d0e-5ff6-4e49-92c4-9ddc81772ab6": "/Solution 1/CFXSetupDataLink:Setup Provider",
-"d9bc8cef-8fe1-4a45-8e91-7392d135acad": "/Solution 1/CFXSolverRun:Fluid Flow CFX_001",
-"788bc821-e1d5-4fca-80bb-0878b9b653cb": "/Solution 1/CFXSolutionProperties:Solution Source",
-"990f2411-95f4-4f64-859a-2397affeb342": "/Solution 1/CFXSolution:Solution Provider",
-"8e757ffd-91f9-4341-8a54-02ff343f0727": "/Results 1/SolutionDataLink:Solution Provider",
-"239a45b9-b815-42ea-bef1-1a854c62bcd5": "/Results 1/CFDResults:Results Source",
-"9628809b-2fc1-49f1-8f8a-941a5d6d1101": "/Geometry 1/ParameterAdapter1:DesignModelerParameter",
-"bb3cb17f-88c7-4de1-9649-0c4ba74fcd0b": "/Geometry 1/ParameterAdapter2:DesignModelerParameter",
-"3e65b789-bd7d-49b6-953a-cc7b77c8a48b": "/Setup 1/ParameterAdapter1:inMassFlow",
-"5de44f36-0469-4293-8812-991a06128fcd": "/Results 1/ParameterAdapter1:OutTempRange",
-"69c72e6e-1841-494d-8037-1413e18ae8c7": "/Results 1/ParameterAdapter2:OutTempAve",
-"3e285142-0134-4204-9688-2ef1b558ff19": "/Solution/CFXSolverRun:Fluid Flow CFX_003"
-}</ReferenceList>
-        </DesignPointReferenceList>
         <DesignPointReferenceList Name="1">
           <ReferenceList valType="String">{
 "1a8f6427-2756-4269-9219-a267e4a8af9b": "/Mesh/MeshingGeneratedMeshOutputProvider:MeshingGeneratedMeshOutputProvider",
@@ -213,11 +152,10 @@
 "f9e2ece2-7234-41fe-ab68-228a3637fb87": "/Mesh/ParameterAdapter2:3720679f-8443-45a1-8053-7c2c7ffaa04a",
 "c842c499-5dac-451c-b07b-0aa76ca084db": "/Mesh/ParameterAdapter3:2408ee9e-0917-4cc4-b3f5-6aee6b810b5f",
 "8e07d885-a316-4808-a4e2-32710eee33dd": "/Mesh/ParameterAdapter4:e65f4d3f-7e9b-45f5-821b-f29d76d994b8",
-"bc223c24-b75e-407e-8c9c-45a5933ca988": "/Mesh/ParameterAdapter5:7da3dd65-2bde-422d-842d-2e5d4764d148",
-"5289790c-d3f3-4a8f-b731-0c299bf20c6f": "/Solution/CFXSolverRun:Fluid Flow CFX_001"
+"bc223c24-b75e-407e-8c9c-45a5933ca988": "/Mesh/ParameterAdapter5:7da3dd65-2bde-422d-842d-2e5d4764d148"
 }</ReferenceList>
         </DesignPointReferenceList>
-        <DesignPointReferenceList Name="2">
+        <DesignPointReferenceList Name="0">
           <ReferenceList valType="String">{
 "1a8f6427-2756-4269-9219-a267e4a8af9b": "/Mesh/MeshingGeneratedMeshOutputProvider:MeshingGeneratedMeshOutputProvider",
 "245dfc30-25f7-4b6b-863a-3638c1c99ca5": "/Mesh/GeneratedMeshOutputForAQWAModelProvider:GeneratedMeshOutputForAQWAModelProvider",
@@ -259,12 +197,7 @@
 "3e65b789-bd7d-49b6-953a-cc7b77c8a48b": "/Setup 1/ParameterAdapter1:inMassFlow",
 "5de44f36-0469-4293-8812-991a06128fcd": "/Results 1/ParameterAdapter1:OutTempRange",
 "69c72e6e-1841-494d-8037-1413e18ae8c7": "/Results 1/ParameterAdapter2:OutTempAve",
-"3e285142-0134-4204-9688-2ef1b558ff19": "/Solution/CFXSolverRun:Fluid Flow CFX_003",
-"c4cdd9d2-cc19-45c6-9532-ec78b638ce13": "/Solution/CFXSolverRun:Fluid Flow CFX_004",
-"5dc6fa84-abca-4b40-bfb1-449ba7c1646a": "/Solution/CFXSolverRun:Fluid Flow CFX_005",
-"e21f655e-4ace-4480-b093-512be2ab248e": "/Solution/CFXSolverRun:Fluid Flow CFX_005 1",
-"47553cb6-3731-433d-b52c-90f7935d1ca1": "/Solution/CFXSolverRun:Fluid Flow CFX_005 2",
-"60d6d8e1-9658-4df3-a33c-af5dbf762871": "/Solution/CFXSolverRun:Fluid Flow CFX_005 3"
+"3e285142-0134-4204-9688-2ef1b558ff19": "/Solution/CFXSolverRun:Fluid Flow CFX_003"
 }</ReferenceList>
         </DesignPointReferenceList>
       </DesignPointReferenceListCollection>
@@ -287,7 +220,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 5535, "Input": 1382, "Output": 1382}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 5818, "Input": 1382, "Output": 1382}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/FileContainer/FileReference:F1" Version="1.0">
@@ -330,9 +263,9 @@
         <object-name valType="String">F29</object-name>
         <member-data valType="String">{"DisplayText": "CFX.mshdb", "FileType": $$bc7489a2-f9a4-43d2-958c-fc95d2fbe50a, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\global\MECH\CFX.mshdb", "ReferenceCount": 1}</member-data>
       </Object>
-      <Object Name="/FileContainer/FileReference:F65" Version="1.0">
+      <Object Name="/FileContainer/FileReference:F69" Version="1.0">
         <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F65</object-name>
+        <object-name valType="String">F69</object-name>
         <member-data valType="String">{"DisplayText": "CFX.cmdb", "FileType": $$bc815507-af8c-4ca9-9934-6f9476f84037, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX\MECH\CFX.cmdb", "ReferenceCount": 1}</member-data>
       </Object>
       <Object Name="/FileContainer/FileReference:F14" Version="1.0">
@@ -435,105 +368,20 @@
         <object-name valType="String">F39</object-name>
         <member-data valType="String">{"DisplayText": "Fluid Flow CFX_001.out", "FileType": $$db103ad3-3c45-4ae4-b440-7a9e5d90f62d, "DependentFiles": [], "ContainerAssociations": ["Solution 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX-1\CFX\Fluid Flow CFX_001.out", "ReferenceCount": 1}</member-data>
       </Object>
-      <Object Name="/FileContainer/FileReference:F63" Version="1.0">
+      <Object Name="/FileContainer/FileReference:F70" Version="1.0">
         <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F63</object-name>
-        <member-data valType="String">{"DisplayText": "CFX1.cmdb", "FileType": $$bc815507-af8c-4ca9-9934-6f9476f84037, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\MECH\CFX1.cmdb", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F48" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F48</object-name>
-        <member-data valType="String">{"DisplayText": "CFX.mshdb", "FileType": $$bc7489a2-f9a4-43d2-958c-fc95d2fbe50a, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\global\MECH\CFX.mshdb", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F47" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F47</object-name>
-        <member-data valType="String">{"DisplayText": "CFX.agdb", "FileType": $$1541192c-5f74-4cd3-8df4-e76f8ed8c70b, "DependentFiles": [], "ContainerAssociations": ["Geometry"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\DM\CFX.agdb", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F66" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F66</object-name>
+        <object-name valType="String">F70</object-name>
         <member-data valType="String">{"DisplayText": "Fluid Flow CFX.def", "FileType": $$11511442-9b36-4334-a719-ccff0135db15, "DependentFiles": [], "ContainerAssociations": ["Setup"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX\CFX\Fluid Flow CFX.def", "ReferenceCount": 1}</member-data>
       </Object>
-      <Object Name="/FileContainer/FileReference:F67" Version="1.0">
+      <Object Name="/FileContainer/FileReference:F71" Version="1.0">
         <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F67</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_001.res", "FileType": $$1d60d066-cfc2-4b57-9f62-a08c2a5be334, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX\CFX\Fluid Flow CFX_001.res", "ReferenceCount": 1}</member-data>
+        <object-name valType="String">F71</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_002.res", "FileType": $$1d60d066-cfc2-4b57-9f62-a08c2a5be334, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX\CFX\Fluid Flow CFX_002.res", "ReferenceCount": 1}</member-data>
       </Object>
-      <Object Name="/FileContainer/FileReference:F68" Version="1.0">
+      <Object Name="/FileContainer/FileReference:F72" Version="1.0">
         <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F68</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_001.out", "FileType": $$db103ad3-3c45-4ae4-b440-7a9e5d90f62d, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX\CFX\Fluid Flow CFX_001.out", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F50" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F50</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.cfx", "FileType": $$afe2e4e9-11db-4b56-a437-a3e9ab0be8ab, "DependentFiles": [], "ContainerAssociations": ["Setup"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\CFX\Fluid Flow CFX.cfx", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F51" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F51</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.cst", "FileType": $$fc1c225b-930f-42dd-96e6-aeb394e61c5b, "DependentFiles": [], "ContainerAssociations": ["Results"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\Post\Fluid Flow CFX.cst", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F52" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F52</object-name>
-        <member-data valType="String">{"DisplayText": "CFX-1.agdb", "FileType": $$1541192c-5f74-4cd3-8df4-e76f8ed8c70b, "DependentFiles": [], "ContainerAssociations": ["Geometry 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\DM\CFX-1.agdb", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F53" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F53</object-name>
-        <member-data valType="String">{"DisplayText": "CFX-11.cmdb", "FileType": $$bc815507-af8c-4ca9-9934-6f9476f84037, "DependentFiles": [], "ContainerAssociations": ["Mesh 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\MECH\CFX-11.cmdb", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F54" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F54</object-name>
-        <member-data valType="String">{"DisplayText": "CFX-1.mshdb", "FileType": $$bc7489a2-f9a4-43d2-958c-fc95d2fbe50a, "DependentFiles": [], "ContainerAssociations": ["Mesh 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\global\MECH\CFX-1.mshdb", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F55" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F55</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.cfx", "FileType": $$afe2e4e9-11db-4b56-a437-a3e9ab0be8ab, "DependentFiles": [], "ContainerAssociations": ["Setup 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\CFX\Fluid Flow CFX.cfx", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F56" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F56</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.cst", "FileType": $$fc1c225b-930f-42dd-96e6-aeb394e61c5b, "DependentFiles": [], "ContainerAssociations": ["Results 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\Post\Fluid Flow CFX.cst", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F57" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F57</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.def", "FileType": $$11511442-9b36-4334-a719-ccff0135db15, "DependentFiles": [], "ContainerAssociations": ["Setup 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\CFX\Fluid Flow CFX.def", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F58" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F58</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_001.res", "FileType": $$1d60d066-cfc2-4b57-9f62-a08c2a5be334, "DependentFiles": [], "ContainerAssociations": ["Solution 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\CFX\Fluid Flow CFX_001.res", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F59" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F59</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_001.out", "FileType": $$db103ad3-3c45-4ae4-b440-7a9e5d90f62d, "DependentFiles": [], "ContainerAssociations": ["Solution 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX-1\CFX\Fluid Flow CFX_001.out", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F60" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F60</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_004.res", "FileType": $$1d60d066-cfc2-4b57-9f62-a08c2a5be334, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\CFX\Fluid Flow CFX_004.res", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F61" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F61</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_004.out", "FileType": $$db103ad3-3c45-4ae4-b440-7a9e5d90f62d, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\CFX\Fluid Flow CFX_004.out", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F62" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F62</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_004.res.lck", "FileType": $$3d81d916-8866-4cbc-b65d-cb71f152c225, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\CFX\Fluid Flow CFX_004.res.lck", "ReferenceCount": 1}</member-data>
-      </Object>
-      <Object Name="/FileContainer/FileReference:F64" Version="1.0">
-        <class-type valType="String">FileReference</class-type>
-        <object-name valType="String">F64</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.def", "FileType": $$11511442-9b36-4334-a719-ccff0135db15, "DependentFiles": [], "ContainerAssociations": ["Setup"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp2\CFX\CFX\Fluid Flow CFX.def", "ReferenceCount": 1}</member-data>
+        <object-name valType="String">F72</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_002.out", "FileType": $$db103ad3-3c45-4ae4-b440-7a9e5d90f62d, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp1\CFX\CFX\Fluid Flow CFX_002.out", "ReferenceCount": 1}</member-data>
       </Object>
     </Container>
     <Container Name="Messages" Version="1.0">
@@ -813,7 +661,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <maxUpdateOrder valType="Double">4</maxUpdateOrder>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 5619, "Input": 5603, "Output": 1386}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 5801, "Input": 5784, "Output": 1386}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Parameters/DesignPoint:0" Version="1.0">
@@ -825,13 +673,13 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Parameters/DesignPoint:1" Version="1.0">
         <class-type valType="String">DesignPoint</class-type>
         <object-name valType="String">1</object-name>
-        <member-data valType="String">{"DisplayText": "DP 1", "JustDuplicated": False, "PartiallyRetainedData": None, "ValidRetainedData": ["Scopes", "Geometry", "Mesh", "Setup", "Solution", "Results", "Geometry 1", "Mesh 1", "Setup 1", "Solution 1", "Results 1"], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Mesh in CFX, Setup in CFX, Solution in CFX, Results in CFX", "DidCompleteUpdate": "True"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "1500 [kg s^-1]", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "1 [m]", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "0 [degree]", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "1500 [kg s^-1]", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "0.2 [m]", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "0.2 [m]", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "0.015 [m]", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "0.015 [m]", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "0.2 [m]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$134c1323-0d7c-4924-80e5-324cd3bd0934": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$57e5828a-140c-41fc-84aa-ee7155d14646": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.0552063 [K]"}, "$$0f84e95b-76c7-4249-9f5c-df46107133ad": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.02 [K]"}, "$$1205e039-2906-4977-b1bd-af4e688a0aa5": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$9cfeb621-70aa-432c-abba-7a908a0bac64": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.718964 [K]"}, "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300 [K]"}, "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.2 [m]"}, "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.2 [m]"}, "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.015 [m]"}, "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.015 [m]"}, "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.2 [m]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "UpToDate", "$$57e5828a-140c-41fc-84aa-ee7155d14646": "UpToDate", "$$0f84e95b-76c7-4249-9f5c-df46107133ad": "UpToDate", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "UpToDate", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "UpToDate", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "UpToDate", "$$9cfeb621-70aa-432c-abba-7a908a0bac64": "UpToDate", "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": "UpToDate", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "UpToDate", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "UpToDate", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "UpToDate", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "UpToDate", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "UpToDate"}, "Note": None, "IsUpToDate": True, "Exported": False, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": True, "UpdateOrder": 2}</member-data>
+        <member-data valType="String">{"DisplayText": "DP 1", "JustDuplicated": False, "PartiallyRetainedData": None, "ValidRetainedData": ["Scopes", "Geometry", "Mesh", "Setup", "Solution", "Results", "Geometry 1", "Mesh 1", "Setup 1", "Solution 1", "Results 1"], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Mesh in CFX, Setup in CFX, Solution in CFX, Results in CFX", "DidCompleteUpdate": "True"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "1500 [kg s^-1]", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "1 [m]", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "0 [degree]", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "1500 [kg s^-1]", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "0.2 [m]", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "0.2 [m]", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "0.015 [m]", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "0.015 [m]", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "0.2 [m]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$134c1323-0d7c-4924-80e5-324cd3bd0934": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$57e5828a-140c-41fc-84aa-ee7155d14646": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.0118103 [K]"}, "$$0f84e95b-76c7-4249-9f5c-df46107133ad": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.005 [K]"}, "$$1205e039-2906-4977-b1bd-af4e688a0aa5": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$9cfeb621-70aa-432c-abba-7a908a0bac64": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.718964 [K]"}, "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300 [K]"}, "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.2 [m]"}, "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.2 [m]"}, "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.015 [m]"}, "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.015 [m]"}, "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.2 [m]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "UpToDate", "$$57e5828a-140c-41fc-84aa-ee7155d14646": "UpToDate", "$$0f84e95b-76c7-4249-9f5c-df46107133ad": "UpToDate", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "UpToDate", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "UpToDate", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "UpToDate", "$$9cfeb621-70aa-432c-abba-7a908a0bac64": "UpToDate", "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": "UpToDate", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "UpToDate", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "UpToDate", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "UpToDate", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "UpToDate", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "UpToDate"}, "Note": None, "IsUpToDate": True, "Exported": False, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": True, "UpdateOrder": 2}</member-data>
         <properties-setByUserFlag-data valType="String">["Note", "Exported", "Retained", "IsDataModelValid"]</properties-setByUserFlag-data>
       </Object>
       <Object Name="/Parameters/DesignPoint:2" Version="1.0">
         <class-type valType="String">DesignPoint</class-type>
         <object-name valType="String">2</object-name>
-        <member-data valType="String">{"DisplayText": "DP 2", "JustDuplicated": False, "PartiallyRetainedData": None, "ValidRetainedData": ["Scopes", "Geometry", "Mesh", "Setup", "Solution", "Results", "Geometry 1", "Mesh 1", "Setup 1", "Solution 1", "Results 1"], "ErrorsOnLastUpdate": {"$$0bd4b5bf-c5f9-4211-aeda-bf653f2792f3": "Update of the Solution component in Fluid Flow (CFX) for Design Point 2 failed: The solver failed with a non-zero exit code of : 1"}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Solution in CFX", "DidCompleteUpdate": "True"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "1500 [kg s^-1]", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "1 [m]", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "0 [degree]", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "1500 [kg s^-1]", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "0.15 [m]", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "0.15 [m]", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "0.011 [m]", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "0.011 [m]", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "0.15 [m]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$134c1323-0d7c-4924-80e5-324cd3bd0934": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$57e5828a-140c-41fc-84aa-ee7155d14646": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1.25259 [K]"}, "$$0f84e95b-76c7-4249-9f5c-df46107133ad": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.001 [K]"}, "$$1205e039-2906-4977-b1bd-af4e688a0aa5": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$9cfeb621-70aa-432c-abba-7a908a0bac64": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.718964 [K]"}, "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300 [K]"}, "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "UpToDate", "$$57e5828a-140c-41fc-84aa-ee7155d14646": "Failed", "$$0f84e95b-76c7-4249-9f5c-df46107133ad": "Failed", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "UpToDate", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "UpToDate", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "UpToDate", "$$9cfeb621-70aa-432c-abba-7a908a0bac64": "UpToDate", "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": "UpToDate", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "UpToDate", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "UpToDate", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "UpToDate", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "UpToDate", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "UpToDate"}, "Note": None, "IsUpToDate": False, "Exported": False, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": True, "UpdateOrder": 3}</member-data>
+        <member-data valType="String">{"DisplayText": "DP 2", "JustDuplicated": False, "PartiallyRetainedData": None, "ValidRetainedData": ["Scopes", "Geometry", "Mesh", "Setup", "Solution", "Results", "Geometry 1", "Mesh 1", "Setup 1", "Solution 1", "Results 1"], "ErrorsOnLastUpdate": {"$$0bd4b5bf-c5f9-4211-aeda-bf653f2792f3": "Update of the Solution component in Fluid Flow (CFX) for Design Point 2 failed: The solver failed with a non-zero exit code of : 1"}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Solution in CFX", "DidCompleteUpdate": "True"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "1500 [kg s^-1]", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "1 [m]", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "0 [degree]", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "1500 [kg s^-1]", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "0.15 [m]", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "0.15 [m]", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "0.011 [m]", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "0.011 [m]", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "0.15 [m]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$134c1323-0d7c-4924-80e5-324cd3bd0934": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$57e5828a-140c-41fc-84aa-ee7155d14646": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1.25259 [K]"}, "$$0f84e95b-76c7-4249-9f5c-df46107133ad": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.001 [K]"}, "$$1205e039-2906-4977-b1bd-af4e688a0aa5": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$9cfeb621-70aa-432c-abba-7a908a0bac64": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.718964 [K]"}, "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300 [K]"}, "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "UpToDate", "$$57e5828a-140c-41fc-84aa-ee7155d14646": "Failed", "$$0f84e95b-76c7-4249-9f5c-df46107133ad": "Failed", "$$1205e039-2906-4977-b1bd-af4e688a0aa5": "UpToDate", "$$e6762cea-e51e-4bb7-9e68-c0c9562af82d": "UpToDate", "$$5f99edb6-f52d-4d1e-a7db-028a307afebe": "UpToDate", "$$9cfeb621-70aa-432c-abba-7a908a0bac64": "UpToDate", "$$de867c19-7e8b-49ff-a207-fc6f9d3a3276": "UpToDate", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "UpToDate", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "UpToDate", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "UpToDate", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "UpToDate", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "UpToDate"}, "Note": None, "IsUpToDate": False, "Exported": False, "Retained": False, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": False, "HasBeenSolved": True, "UpdateOrder": 3}</member-data>
         <properties-setByUserFlag-data valType="String">["Note", "Exported", "Retained", "IsDataModelValid"]</properties-setByUserFlag-data>
       </Object>
       <Object Name="/Parameters/DesignPoint:3" Version="1.0">
@@ -863,12 +711,12 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Parameters/Parameter:P4" Version="1.0">
         <class-type valType="String">Parameter</class-type>
         <object-name valType="String">P4</object-name>
-        <member-data valType="String">{"DisplayText": "OutTempRange", "PersistedNamedValueEntityReference": None, "Expression": None, "Usage": "DirectOutput", "IsParameter": True, "Scope": None, "SystemData": {}, "SerializedNamedExpression": None, "Description": None, "ErrorMessage": None, "HasRemovedLinksFromMigration": False, "Value": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.0552063 [K]"}, "ValueSpec": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Temperature"}}</member-data>
+        <member-data valType="String">{"DisplayText": "OutTempRange", "PersistedNamedValueEntityReference": None, "Expression": None, "Usage": "DirectOutput", "IsParameter": True, "Scope": None, "SystemData": {}, "SerializedNamedExpression": None, "Description": None, "ErrorMessage": None, "HasRemovedLinksFromMigration": False, "Value": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.0118103 [K]"}, "ValueSpec": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Temperature"}}</member-data>
       </Object>
       <Object Name="/Parameters/Parameter:P5" Version="1.0">
         <class-type valType="String">Parameter</class-type>
         <object-name valType="String">P5</object-name>
-        <member-data valType="String">{"DisplayText": "OutTempAve", "PersistedNamedValueEntityReference": None, "Expression": None, "Usage": "DirectOutput", "IsParameter": True, "Scope": None, "SystemData": {}, "SerializedNamedExpression": None, "Description": None, "ErrorMessage": None, "HasRemovedLinksFromMigration": False, "Value": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.02 [K]"}, "ValueSpec": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Temperature"}}</member-data>
+        <member-data valType="String">{"DisplayText": "OutTempAve", "PersistedNamedValueEntityReference": None, "Expression": None, "Usage": "DirectOutput", "IsParameter": True, "Scope": None, "SystemData": {}, "SerializedNamedExpression": None, "Description": None, "ErrorMessage": None, "HasRemovedLinksFromMigration": False, "Value": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.005 [K]"}, "ValueSpec": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Temperature"}}</member-data>
       </Object>
       <Object Name="/Parameters/Parameter:P6" Version="1.0">
         <class-type valType="String">Parameter</class-type>
@@ -1034,7 +882,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 5606, "Input": 5609, "Output": 1389}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 5787, "Input": 5790, "Output": 1389}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Schematic/System:CFX" Version="1.0">
