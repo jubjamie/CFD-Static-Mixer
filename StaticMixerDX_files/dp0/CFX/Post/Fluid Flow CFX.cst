@@ -1,4 +1,4 @@
-# State file created:  2018/12/05 10:45:58
+# State file created:  2018/12/05 10:54:18
 # CFX-19.1
 
 COMMENT:User Data
@@ -16,9 +16,9 @@ DATA READER:
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
   Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp0\\
-CFX\CFX\Fluid Flow CFX_002.res
+CFX\CFX\Fluid Flow CFX_003.res
   Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp0\CFX\CFX\Fluid Flow CFX_002.res
+dp0\CFX\CFX\Fluid Flow CFX_003.res
   Current Timestep = -1
   Current Timevalue = 0
   Edit Case Names = false
@@ -47,9 +47,9 @@ dp0\CFX\CFX\Fluid Flow CFX_002.res
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
     Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp0\\
-CFX\CFX\Fluid Flow CFX_002.res
+CFX\CFX\Fluid Flow CFX_003.res
     Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp0\CFX\CFX\Fluid Flow CFX_002.res
+dp0\CFX\CFX\Fluid Flow CFX_003.res
     Current Timestep = -1
     Current Timevalue = 0
     File Angle Units = rad
@@ -866,12 +866,12 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 47
-      Current Time Step = 47
+      Accumulated Time Step = 147
+      Current Time Step = 147
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       Reference Pressure = 1 [atm]
-      Sequence Step = 47
+      Sequence Step = 147
       Time = 0 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step
@@ -1151,6 +1151,18 @@ END
 SCALAR VARIABLE:Static Enthalpy
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Static Enthalpy.Beta
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Static Enthalpy.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Static Enthalpy.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Static Enthalpy.Gradient Z
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Static Entropy
   Boundary Values = Conservative
 END
@@ -1175,13 +1187,40 @@ END
 SCALAR VARIABLE:Turbulence Eddy Dissipation
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Turbulence Eddy Dissipation.Beta
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient Z
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Turbulence Eddy Frequency
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Turbulence Kinetic Energy
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Turbulence Kinetic Energy.Beta
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient Z
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Velocity u
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity u.Beta
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity u.Gradient X
@@ -1196,6 +1235,9 @@ END
 SCALAR VARIABLE:Velocity v
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Velocity v.Beta
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Velocity v.Gradient X
   Boundary Values = Conservative
 END
@@ -1206,6 +1248,9 @@ SCALAR VARIABLE:Velocity v.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity w
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity w.Beta
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity w.Gradient X
@@ -1499,6 +1544,15 @@ VECTOR VARIABLE:Normal
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Pressure.Gradient
+  Boundary Values = Conservative
+END
+VECTOR VARIABLE:Static Enthalpy.Gradient
+  Boundary Values = Conservative
+END
+VECTOR VARIABLE:Turbulence Eddy Dissipation.Gradient
+  Boundary Values = Conservative
+END
+VECTOR VARIABLE:Turbulence Kinetic Energy.Gradient
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Velocity

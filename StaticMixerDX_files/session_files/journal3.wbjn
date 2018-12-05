@@ -864,3 +864,279 @@ White Background = On
 END
 >print""")
 Save(Overwrite=True)
+solution1.Exit()
+results2.Exit()
+results1.Exit()
+mesh2 = system1.GetContainer(ComponentName="Mesh")
+mesh2.Edit()
+mesh2.Exit()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.245853
+    Pan = 0, 0
+    Rotation Quaternion = -0.234377, -0.374003, -0.740137, 0.507324
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = High Resolution
+    ADVECTION SCHEME: 
+      Option = High Resolution
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 100
+      Minimum Number of Iterations = 5
+      Timescale Control = Auto Timescale
+      Timescale Factor = 1.0
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1.E-4
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.245853
+    Pan = 0, 0
+    Rotation Quaternion = -0.118167, -0.382259, -0.790385, 0.463894
+    
+  END
+
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = High Resolution
+    ADVECTION SCHEME: 
+      Option = High Resolution
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 100
+      Minimum Number of Iterations = 5
+      Timescale Control = Auto Timescale
+      Timescale Factor = 1.0
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1.E-4
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+parameter1 = Parameters.GetParameter(Name="P11")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.4 [m]")
+parameter2 = Parameters.GetParameter(Name="P12")
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.4 [m]")
+parameter3 = Parameters.GetParameter(Name="P13")
+designPoint1.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.03 [m]")
+parameter4 = Parameters.GetParameter(Name="P14")
+designPoint1.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.03 [m]")
+parameter5 = Parameters.GetParameter(Name="P15")
+designPoint1.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.3 [m]")
+designPoint2 = Parameters.CreateDesignPoint()
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.2 [m]")
+designPoint2.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.2 [m]")
+designPoint2.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.015 [m]")
+designPoint2.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0 [m]")
+designPoint2.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.015 [m]")
+designPoint2.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.2 [m]")
+designPoint3 = Parameters.CreateDesignPoint()
+designPoint3.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.15 [m]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.15 [m]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.011 [m]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.011 [m]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0 [m]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.015 [m]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.15 [m]")
+designPoint4 = Parameters.CreateDesignPoint()
+designPoint4.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.12 [m]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0 [m]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="12 [m]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.009 [m]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.009 [m]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.12 [m]")
+designPoint2.Retained = True
+designPoint3.Retained = True
+designPoint4.Retained = True
+designPoint4.Retained = False
+designPoint3.Retained = False
+designPoint2.Retained = False
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Clean()
+boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+setup1.Edit()
+setup1.Exit()
+setupComponent1.Clean()
+designPoint2.Retained = True
+Parameters.SetBaseDesignPoint(DesignPoint=designPoint2)
+setupComponent1.Update(AllDependencies=True)
+solution2 = system1.GetContainer(ComponentName="Solution")
+solution2.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp1\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 1
+        Start Method = Serial
+      END
+    END
+  END
+END
+""")
+solutionComponent2 = system1.GetComponent(Name="Solution")
+solutionComponent2.Update(Force=True)
+setupComponent1.Clean()
+setupComponent1.Clean()
+designPoint3.Retained = True
+boolean2 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+setupComponent1.Clean()
+boolean3 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Save(Overwrite=True)
+boolean4 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+setupComponent1.Clean()
+solutionComponent2.Clean()
+resultsComponent1 = system1.GetComponent(Name="Results")
+resultsComponent1.Clean()
+setupComponent1.Clean()
+boolean5 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+setupComponent1.Clean()
+solutionComponent2.Clean()
+resultsComponent1.Clean()
+setupComponent1.Clean()
+boolean6 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+designPoint4.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.12 [m]")
+setupComponent1.Clean()
+solutionComponent2.Clean()
+resultsComponent1.Clean()
+boolean7 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+setupComponent1.Clean()
+meshComponent1 = system1.GetComponent(Name="Mesh")
+meshComponent1.Clean()
+boolean8 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+boolean9 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Save(Overwrite=True)
