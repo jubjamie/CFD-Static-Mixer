@@ -49,7 +49,9 @@ session_files/journal1.wbjn
 session_files/journal2.wbjn
 session_files/journal3.wbjn
 session_files/journal4.wbjn
+session_files/journal4_crashed.wbjn
 dp10/
+dp11/
 dp6/
 dp7/
 dp8/
@@ -64,6 +66,9 @@ dp10/CFX/MECH/
 dp10/CFX/Post/
 dp10/global/MECH/
 dp10/global/MECH/CFX/
+dp11/global/
+dp11/global/MECH/
+dp11/global/MECH/CFX/
 dp6/CFX/
 dp6/global/
 dp6/CFX/CFX/
