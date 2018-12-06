@@ -18,6 +18,7 @@
 
   <ParameterSets>
     <ParameterSet ID="6FD0B2B8-735A-4130-A65D-72913B151C36"/>
+    <ParameterSet ID="1693D326-C696-4DAB-A2F2-E7DF95F41696"/>
   </ParameterSets>
 
   <ExpressionIds>
@@ -555,7 +556,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>9.70459e-003</Value>
+        <Value>7.38525e-003</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -720,7 +721,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>300.002</Value>
+        <Value>300.003</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
