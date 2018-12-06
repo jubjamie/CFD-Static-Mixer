@@ -74,7 +74,6 @@ dp10/CFX/DM/
 dp10/CFX/MECH/
 dp10/CFX/Post/
 dp10/global/MECH/
-dp10/global/MECH/CFX/
 dp11/CFX/
 dp11/global/
 dp11/CFX/CFX/
@@ -82,7 +81,6 @@ dp11/CFX/DM/
 dp11/CFX/MECH/
 dp11/CFX/Post/
 dp11/global/MECH/
-dp11/global/MECH/CFX/
 dp6/CFX/
 dp6/global/
 dp6/CFX/CFX/
@@ -90,7 +88,6 @@ dp6/CFX/DM/
 dp6/CFX/MECH/
 dp6/CFX/Post/
 dp6/global/MECH/
-dp6/global/MECH/CFX/
 dp7/CFX/
 dp7/global/
 dp7/CFX/CFX/
@@ -98,7 +95,6 @@ dp7/CFX/DM/
 dp7/CFX/MECH/
 dp7/CFX/Post/
 dp7/global/MECH/
-dp7/global/MECH/CFX/
 dp8/CFX/
 dp8/global/
 dp8/CFX/CFX/
@@ -106,7 +102,6 @@ dp8/CFX/DM/
 dp8/CFX/MECH/
 dp8/CFX/Post/
 dp8/global/MECH/
-dp8/global/MECH/CFX/
 dp9/CFX/
 dp9/global/
 dp9/CFX/CFX/
