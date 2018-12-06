@@ -16,6 +16,15 @@ dp11/CFX/MECH/CFX.cmdb
 dp11/CFX/Post/Fluid Flow CFX.cst
 dp11/global/MECH/CFX.mshdb
 dp11/designPoint.wbdp
+dp12/CFX/CFX/Fluid Flow CFX.cfx
+dp12/CFX/CFX/Fluid Flow CFX.def
+dp12/CFX/CFX/Fluid Flow CFX_008.out
+dp12/CFX/CFX/Fluid Flow CFX_008.res
+dp12/CFX/DM/CFX.agdb
+dp12/CFX/MECH/CFX.cmdb
+dp12/CFX/Post/Fluid Flow CFX.cst
+dp12/global/MECH/CFX.mshdb
+dp12/designPoint.wbdp
 dp6/CFX/CFX/Fluid Flow CFX.cfx
 dp6/CFX/CFX/Fluid Flow CFX_007.out
 dp6/CFX/CFX/Fluid Flow CFX_007.res
@@ -59,8 +68,10 @@ session_files/journal2.wbjn
 session_files/journal3.wbjn
 session_files/journal4.wbjn
 session_files/journal5.wbjn
+session_files/journal6.wbjn
 dp10/
 dp11/
+dp12/
 dp6/
 dp7/
 dp8/
@@ -81,6 +92,14 @@ dp11/CFX/DM/
 dp11/CFX/MECH/
 dp11/CFX/Post/
 dp11/global/MECH/
+dp12/CFX/
+dp12/global/
+dp12/CFX/CFX/
+dp12/CFX/DM/
+dp12/CFX/MECH/
+dp12/CFX/Post/
+dp12/global/MECH/
+dp12/global/MECH/CFX/
 dp6/CFX/
 dp6/global/
 dp6/CFX/CFX/

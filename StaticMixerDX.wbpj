@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Storage>
-  <Project Version="9.0">
+  <Project Version="9.1">
     <base-designpoint-name valType="String">6</base-designpoint-name>
-    <timestamp-max valType="Int64">38107</timestamp-max>
-    <framework-build-version valType="String">19.1.103.0</framework-build-version>
-    <external-version-string valType="String">Release 19.1</external-version-string>
-    <last-saved-utc valType="String">12/05/2018 17:24:10</last-saved-utc>
+    <timestamp-max valType="Int64">38448</timestamp-max>
+    <framework-build-version valType="String">19.2.120.0</framework-build-version>
+    <external-version-string valType="String">Release 19.2</external-version-string>
+    <last-saved-utc valType="String">12/06/2018 11:58:20</last-saved-utc>
     <managed-categories valType="String">[report, misc, progress]</managed-categories>
     <logHistory valType="StringArray">
       <ArrayEntry Index="0">jc2182@ENPC-LAB140:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents8884.log</ArrayEntry>
@@ -13,6 +13,7 @@
       <ArrayEntry Index="2">jc2182@ENPC-LAB124:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents9900.log</ArrayEntry>
       <ArrayEntry Index="3">jc2182@ENPC-LAB137:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents11508.log</ArrayEntry>
       <ArrayEntry Index="4">jc2182@ENPC-LAB137:C:\Users\jc2182\AppData\Local\Temp\WorkbenchLogs\CoreEvents7788.log</ArrayEntry>
+      <ArrayEntry Index="5">Jamie@JAMIE-DESKTOP:C:\Users\Jamie\AppData\Local\Temp\WorkbenchLogs\CoreEvents8592.log</ArrayEntry>
     </logHistory>
     <expression-scope-container valType="String">Parameters</expression-scope-container>
     <project-type valType="String">WB2</project-type>
@@ -934,7 +935,16 @@
 "cab32f01-542d-421f-9747-0e826687eb0f": "/DXOptimizationEvaluateContainer/SamplesChart:Samples",
 "1a0fa0d7-6421-4460-8afe-c2e9fdc3f9c6": "/DXOptimizationEvaluateContainer/SensitivitiesChart:Sensitivities",
 "a1a199e1-5e0d-4f5f-abc6-13f8aff2b998": "/DXOptimizationEvaluateContainer/CandidatesChart:Candidates",
-"9ad796d8-7d40-4781-ba60-46940f1ab8f0": "/DXOptimizationEvaluateContainer/CandidatePoint:CandidatePoint 2"
+"9ad796d8-7d40-4781-ba60-46940f1ab8f0": "/DXOptimizationEvaluateContainer/CandidatePoint:CandidatePoint 2",
+"1d858cfb-8699-4c98-886c-3cb8cba7aa3b": "/FileContainer/FileReference:F275",
+"51447996-0983-4fdf-8c96-10d686b2111e": "/FileContainer/FileReference:F277",
+"9192f452-3ab3-4731-b7cf-ca3719d47cf0": "/FileContainer/FileReference:F279",
+"4ae31335-5669-4b68-b1c9-20cdf7b3796e": "/FileContainer/FileReference:F280",
+"30b4b9c6-0b9c-430e-942e-49bade8d6226": "/FileContainer/FileReference:F278",
+"deac924b-ef8f-4667-acb9-28ecf408282b": "/FileContainer/FileReference:F281",
+"c63bbdc3-c67d-4d26-8cb3-9c399ee44d6d": "/FileContainer/FileReference:F282",
+"514291d0-34ec-44d5-96f3-43a6ee33c8d2": "/FileContainer/FileReference:F276",
+"b80e7af8-2510-4dac-8e2c-3f674c028e82": "/Parameters/DesignPoint:12"
 }</ReferenceList>
       </ProjectReferenceList>
       <DesignPointReferenceListCollection>
@@ -1118,17 +1128,48 @@
 "10d97155-c95e-46fd-996f-98d8005e1840": "/Solution/CFXSolverRun:Fluid Flow CFX_008"
 }</ReferenceList>
         </DesignPointReferenceList>
+        <DesignPointReferenceList Name="12">
+          <ReferenceList valType="String">{
+"1a8f6427-2756-4269-9219-a267e4a8af9b": "/Mesh/MeshingGeneratedMeshOutputProvider:MeshingGeneratedMeshOutputProvider",
+"245dfc30-25f7-4b6b-863a-3638c1c99ca5": "/Mesh/GeneratedMeshOutputForAQWAModelProvider:GeneratedMeshOutputForAQWAModelProvider",
+"58e461b0-d094-4156-9e43-45400508be55": "/Geometry/Geometry:GeometryDataObject",
+"4b0d658f-c1d3-4d4c-9838-7f00eb022fe9": "/Mesh/MeshingMesh:MeshingMeshDataObject",
+"64d570fc-a66a-4627-825d-cd866a4b113d": "/Setup/CFXMeshDataLink:MeshingMeshDataObject",
+"69188d55-b80f-4f05-962d-f2ac12c0a124": "/Setup/CFXSetupProperties:Setup Source",
+"20ead413-6947-41ec-96b7-51291b4ad302": "/Setup/CFXSetup:Setup Provider",
+"08838af3-5702-40a3-8497-5e1e2b196590": "/Solution/CFXSetupDataLink:Setup Provider",
+"a0120215-0473-4ad5-96af-198625ed9816": "/Solution/CFXSolutionProperties:Solution Source",
+"5cb5b8a3-d27f-4f15-8447-7f189fa57708": "/Solution/CFXSolution:Solution Provider",
+"2795bb06-617b-460b-8ba8-3a66ea8ab26b": "/Results/SolutionDataLink:Solution Provider",
+"6d7e2ddb-c31f-438f-9fc6-fdefa743c9e7": "/Results/CFDResults:Results Source",
+"72cc9407-8e1e-434e-a1d5-49a5c55d0563": "/Geometry/ParameterAdapter1:DesignModelerParameter",
+"4529a34f-32b6-4740-bfac-c8d72c00dbd6": "/Geometry/ParameterAdapter2:DesignModelerParameter",
+"c9f38a32-f99a-4b87-87a2-0bb4e7064956": "/Mesh/MechanicalModel:MechanicalModel",
+"d4cff3a2-d413-4575-a84b-818d76a31001": "/Mesh/MechanicalMeshFile:CMDBMesh",
+"77e121d5-5c22-43e9-8b9d-2f9d46e200d8": "/Setup/ParameterAdapter1:inMassFlow",
+"b35f70e7-2b7d-449a-bc40-3fc90ff4075f": "/Results/ParameterAdapter1:OutTempRange",
+"dd8b67ef-2b78-450a-a3aa-5c665ad31586": "/Results/ParameterAdapter2:OutTempAve",
+"e1696982-4d7e-4ace-a8fb-cff1160c7e05": "/Mesh/ParameterAdapter1:c92b357e-04a8-4659-8a06-e8e629069263",
+"f9e2ece2-7234-41fe-ab68-228a3637fb87": "/Mesh/ParameterAdapter2:3720679f-8443-45a1-8053-7c2c7ffaa04a",
+"c842c499-5dac-451c-b07b-0aa76ca084db": "/Mesh/ParameterAdapter3:2408ee9e-0917-4cc4-b3f5-6aee6b810b5f",
+"8e07d885-a316-4808-a4e2-32710eee33dd": "/Mesh/ParameterAdapter4:e65f4d3f-7e9b-45f5-821b-f29d76d994b8",
+"bc223c24-b75e-407e-8c9c-45a5933ca988": "/Mesh/ParameterAdapter5:7da3dd65-2bde-422d-842d-2e5d4764d148",
+"f844e708-15a6-4b30-b1d9-2d1948ba5df4": "/Solution/CFXSolverRun:Fluid Flow CFX_007",
+"f46e3fd3-0d81-4edc-b089-a61329fc9e68": "/Geometry/ParameterAdapter3:DesignModelerParameter",
+"11414e90-8929-48a2-99cf-d27c01940b9e": "/Solution/CFXSolverRun:Fluid Flow CFX_008"
+}</ReferenceList>
+        </DesignPointReferenceList>
       </DesignPointReferenceListCollection>
     </ReferenceCache>
   </Project>
   <Addins>
     <addin-list valType="String">[Ansys.ParameterManager.ParameterManagerAddin, Ansys.ProjectSchematic.ProjectSchematicAddin, Ansys.ProjectReporting.Addin, Ansys.Graphics.GraphicsAddin, Ansys.Units.Commands.Addin, Ansys.DesignXplorer.Commands.Addin]</addin-list>
     <Addin Name="Ansys.ParameterManager.ParameterManagerAddin" Version="7.3" />
-    <Addin Name="Ansys.ProjectSchematic.ProjectSchematicAddin" Version="11.2" />
+    <Addin Name="Ansys.ProjectSchematic.ProjectSchematicAddin" Version="11.3" />
     <Addin Name="Ansys.ProjectReporting.Addin" Version="6.0" />
     <Addin Name="Ansys.Graphics.GraphicsAddin" Version="1.1" />
     <Addin Name="Ansys.Units.Commands.Addin" Version="7.1" />
-    <Addin Name="Ansys.DesignXplorer.Commands.Addin" Version="191.1">
+    <Addin Name="Ansys.DesignXplorer.Commands.Addin" Version="192.1">
       <ManagedParameterSetID valType="String">6FD0B2B8-735A-4130-A65D-72913B151C36</ManagedParameterSetID>
       <AAP-extensions valType="String">AAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACP7///8LAAEAAAD/////AQAAAAAAAAAEAQAAAAxTeXN0ZW0uSW50MzIBAAAAB21fdmFsdWUACAAAAAAL</AAP-extensions>
       <Preferences>
@@ -1149,7 +1190,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 38107, "Input": 1382, "Output": 1382}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 38293, "Input": 1382, "Output": 1382}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/FileContainer/FileReference:F1" Version="1.0">
@@ -1406,6 +1447,46 @@
         <class-type valType="String">FileReference</class-type>
         <object-name valType="String">F230</object-name>
         <member-data valType="String">{"DisplayText": "Fluid Flow CFX_008.res", "FileType": $$1d60d066-cfc2-4b57-9f62-a08c2a5be334, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp11\CFX\CFX\Fluid Flow CFX_008.res", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F275" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F275</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.agdb", "FileType": $$1541192c-5f74-4cd3-8df4-e76f8ed8c70b, "DependentFiles": [], "ContainerAssociations": ["Geometry"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\DM\CFX.agdb", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F276" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F276</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.cst", "FileType": $$fc1c225b-930f-42dd-96e6-aeb394e61c5b, "DependentFiles": [], "ContainerAssociations": ["Results"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\Post\Fluid Flow CFX.cst", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F277" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F277</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.mshdb", "FileType": $$bc7489a2-f9a4-43d2-958c-fc95d2fbe50a, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\global\MECH\CFX.mshdb", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F278" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F278</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.cfx", "FileType": $$afe2e4e9-11db-4b56-a437-a3e9ab0be8ab, "DependentFiles": [], "ContainerAssociations": ["Setup"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\CFX\Fluid Flow CFX.cfx", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F279" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F279</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.cmdb", "FileType": $$bc815507-af8c-4ca9-9934-6f9476f84037, "DependentFiles": [], "ContainerAssociations": ["Mesh"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\MECH\CFX.cmdb", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F280" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F280</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX.def", "FileType": $$11511442-9b36-4334-a719-ccff0135db15, "DependentFiles": [], "ContainerAssociations": ["Setup"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\CFX\Fluid Flow CFX.def", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F281" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F281</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_008.res", "FileType": $$1d60d066-cfc2-4b57-9f62-a08c2a5be334, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\CFX\Fluid Flow CFX_008.res", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F282" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F282</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_008.out", "FileType": $$db103ad3-3c45-4ae4-b440-7a9e5d90f62d, "DependentFiles": [], "ContainerAssociations": ["Solution"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp12\CFX\CFX\Fluid Flow CFX_008.out", "ReferenceCount": 1}</member-data>
       </Object>
     </Container>
     <Container Name="Messages" Version="1.0">
@@ -1722,10 +1803,10 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <container-type valType="String">Ansys.ParameterManager.ParameterManagerAddin:parameters</container-type>
       <static-id valType="String">Parameters</static-id>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
-      <maxUpdateOrder valType="Double">10</maxUpdateOrder>
+      <maxUpdateOrder valType="Double">11</maxUpdateOrder>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 38104, "Input": 38088, "Output": 1386}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 38446, "Input": 38428, "Output": 1386}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Parameters/DesignPoint:7" Version="1.0">
@@ -1763,6 +1844,12 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
         <object-name valType="String">11</object-name>
         <member-data valType="String">{"DisplayText": "DP 11", "JustDuplicated": False, "PartiallyRetainedData": None, "ValidRetainedData": ["Scopes", "Geometry", "Mesh", "Setup", "Solution", "Results"], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Geometry in CFX, Mesh in CFX, Setup in CFX, Solution in CFX, Results in CFX", "DidCompleteUpdate": "True"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "0.75003179869960446 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "-44.9916006900328 [degree]", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "1000.3110949982151 [kg s^-1]", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "0.15 [m]", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "0.15 [m]", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "0.011 [m]", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "0.011 [m]", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "0.15 [m]", "$$b0ff0546-1515-49a6-8fd5-bc88c3da84e5": "0.40608799296607578 [m]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.75003179869960446 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "-44.9916006900328 [degree]"}, "$$134c1323-0d7c-4924-80e5-324cd3bd0934": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1000.3110949982151 [kg s^-1]"}, "$$57e5828a-140c-41fc-84aa-ee7155d14646": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.00296021 [K]"}, "$$0f84e95b-76c7-4249-9f5c-df46107133ad": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "300.065 [K]"}, "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$b0ff0546-1515-49a6-8fd5-bc88c3da84e5": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.40608799296607578 [m]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "UpToDate", "$$57e5828a-140c-41fc-84aa-ee7155d14646": "UpToDate", "$$0f84e95b-76c7-4249-9f5c-df46107133ad": "UpToDate", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "UpToDate", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "UpToDate", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "UpToDate", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "UpToDate", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "UpToDate", "$$b0ff0546-1515-49a6-8fd5-bc88c3da84e5": "UpToDate"}, "Note": "Created from Optimization / Candidate Point 3", "IsUpToDate": True, "Exported": False, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": True, "UpdateOrder": 0}</member-data>
         <properties-setByUserFlag-data valType="String">["Retained", "Exported", "UpdateOrder", "Note", "IsDataModelValid"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Parameters/DesignPoint:12" Version="1.0">
+        <class-type valType="String">DesignPoint</class-type>
+        <object-name valType="String">12</object-name>
+        <member-data valType="String">{"DisplayText": "DP 12", "JustDuplicated": False, "PartiallyRetainedData": None, "ValidRetainedData": ["Scopes", "Geometry", "Mesh", "Setup", "Solution", "Results"], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Geometry in CFX, Mesh in CFX, Setup in CFX, Solution in CFX, Results in CFX", "DidCompleteUpdate": "True"}, "Parameters": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "1 [m]", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "0 [degree]", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "1500 [kg s^-1]", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "0.15 [m]", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "0.15 [m]", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "0.011 [m]", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "0.011 [m]", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "0.15 [m]", "$$b0ff0546-1515-49a6-8fd5-bc88c3da84e5": "0.6 [m]"}, "ParameterErrors": {}, "CurrentValues": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1 [m]"}, "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0 [degree]"}, "$$134c1323-0d7c-4924-80e5-324cd3bd0934": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "1500 [kg s^-1]"}, "$$57e5828a-140c-41fc-84aa-ee7155d14646": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.0162659 [K]"}, "$$0f84e95b-76c7-4249-9f5c-df46107133ad": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "299.995 [K]"}, "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.011 [m]"}, "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.15 [m]"}, "$$b0ff0546-1515-49a6-8fd5-bc88c3da84e5": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.QuantitySpec", "value": "0.6 [m]"}}, "ParameterStatus": {"$$20540f57-d584-42e8-9d65-9d1701f4089a": "UpToDate", "$$c5be4e5c-6e28-4c06-80bb-33eeab1fa101": "UpToDate", "$$134c1323-0d7c-4924-80e5-324cd3bd0934": "UpToDate", "$$57e5828a-140c-41fc-84aa-ee7155d14646": "UpToDate", "$$0f84e95b-76c7-4249-9f5c-df46107133ad": "UpToDate", "$$bd4dd89d-1aba-4386-b108-dbc99d5d0b86": "UpToDate", "$$6d3e8cd1-7200-46c4-b2b5-3014abd39dd9": "UpToDate", "$$1cdbc162-b2c6-475d-9942-ddd9d456e832": "UpToDate", "$$6299b5a0-22b6-4b35-ab55-74aa23608dcd": "UpToDate", "$$c6304e15-5092-4f5f-9d74-beb8e53265b4": "UpToDate", "$$b0ff0546-1515-49a6-8fd5-bc88c3da84e5": "UpToDate"}, "Note": None, "IsUpToDate": True, "Exported": False, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": True, "UpdateOrder": 11}</member-data>
+        <properties-setByUserFlag-data valType="String">["Note", "Exported", "Retained", "IsDataModelValid"]</properties-setByUserFlag-data>
       </Object>
       <Object Name="/Parameters/DesignPointReportSetting:Design Points Report Setting" Version="1.0">
         <class-type valType="String">DesignPointReportSetting</class-type>
@@ -1910,7 +1997,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 38028, "Input": 37903, "Output": 1389}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 38239, "Input": 38367, "Output": 1389}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Schematic/System:CFX" Version="1.0">
@@ -1931,7 +2018,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Schematic/DesignPointSolveSettings:Design Points Update Settings" Version="1.0">
         <class-type valType="String">DesignPointSolveSettings</class-type>
         <object-name valType="String">Design Points Update Settings</object-name>
-        <member-data valType="String">{"DisplayText": "Design Points Update Settings", "UpdateOption": "Foreground", "RsmUserString": None, "ConfiguredQueue": {"OptionIcons": None, "OptionLabels": "Local", "Options": "Local", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": "Local"}, "RsmJobName": "Workbench", "UpdateMethod": "Foreground", "JobControl": "OneJobAllDesignPoints", "MaxNumberOfJobs": 1, "UpdateOrder": "UpdateFromCurrentDesignPoint", "PreRSMUpdate": "None", "AllowRemoteGeometryUpdate": False, "PartialUpdate": "None", "RetainPartialUpdate": "None", "LicenseCheckout": "OnDemand", "DelayReservedLicenseCheckout": False, "ReservedLicensingExcludesPreRsmUpdate": False, "ComponentExecutionMode": "Serial", "NumberOfCoresPerJob": 2, "KeepFailedDesignPointFiles": False, "RetainFailedDesignPoints": False, "DesignPointRetainedOrExportedUpdate": "FullProject"}</member-data>
+        <member-data valType="String">{"DisplayText": "Design Points Update Settings", "UpdateOption": "Foreground", "RsmUserString": None, "ConfiguredQueue": {"OptionIcons": None, "OptionLabels": "Local", "Options": "Local", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": "Local"}, "RsmJobName": "Workbench", "UpdateMethod": "Foreground", "JobControl": "OneJobAllDesignPoints", "MaxNumberOfJobs": 1, "UpdateOrder": "UpdateFromCurrentDesignPoint", "PreRSMUpdate": "None", "AllowRemoteGeometryUpdate": False, "PartialUpdate": "None", "RetainPartialUpdate": "None", "LicenseCheckout": "OnDemand", "DelayReservedLicenseCheckout": False, "ReservedLicensingExcludesPreRsmUpdate": False, "ComponentExecutionMode": "Serial", "NumberOfCoresPerJob": 2, "KeepFailedDesignPointFiles": False, "RetainFailedDesignPoints": False, "DesignPointRetainedOrExportedUpdate": "FullProject", "DesignPointUpdateTimeout": -1}</member-data>
         <properties-setByUserFlag-data valType="String">["DesignPointRetainedOrExportedUpdate"]</properties-setByUserFlag-data>
       </Object>
       <Object Name="/Schematic/HeldLicenseSettings:User Reserved Licenses" Version="1.0">
@@ -1972,27 +2059,27 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Schematic/Component:Geometry" Version="1.0">
         <class-type valType="String">Component</class-type>
         <object-name valType="String">Geometry</object-name>
-        <member-data valType="String">{"DisplayText": "Geometry", "ImageName": "cad_designmodeler", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Geometry", "_overwrittenUpdatable": None, "Template": $$d19e940f-62fe-448e-bc77-b1b2f1558433, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": []}, "Notes": None, "UsedLicenses": {"aa_t_a": 1}, "ActiveTransferComponents": [], "Solver": None, "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Geometry", "ImageName": "cad_designmodeler", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Geometry", "_overwrittenUpdatable": None, "Template": $$d19e940f-62fe-448e-bc77-b1b2f1558433, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": []}, "Notes": None, "UsedLicenses": {"aa_t_i": 1}, "ActiveTransferComponents": [], "Solver": None, "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
       </Object>
       <Object Name="/Schematic/Component:Mesh" Version="1.0">
         <class-type valType="String">Component</class-type>
         <object-name valType="String">Mesh</object-name>
-        <member-data valType="String">{"DisplayText": "Mesh", "ImageName": "model2", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Mesh", "_overwrittenUpdatable": None, "Template": $$5402376c-ff2d-4ea9-97c5-fda780d78500, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "Geometry", "Component": $$f9254046-90e4-4015-860f-5b8c977aaac6, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_a": 1}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Mesh", "ImageName": "model2", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Mesh", "_overwrittenUpdatable": None, "Template": $$5402376c-ff2d-4ea9-97c5-fda780d78500, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "Geometry", "Component": $$f9254046-90e4-4015-860f-5b8c977aaac6, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_i": 1}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
       </Object>
       <Object Name="/Schematic/Component:Setup" Version="1.0">
         <class-type valType="String">Component</class-type>
         <object-name valType="String">Setup</object-name>
-        <member-data valType="String">{"DisplayText": "Setup", "ImageName": "setup", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Setup", "_overwrittenUpdatable": None, "Template": $$75a8feba-348a-40ca-9e59-83dfea8d9926, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "SimulationGeneratedMesh", "Component": $$10d978ff-c487-471a-94ad-5c02aff17bbf, "Transfer": None}], [{"DataType": "SimulationGeneratedMesh", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}], [{"DataType": "CFXMesh", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}], [{"DataType": "MechanicalSetup", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_a": 1}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Setup", "ImageName": "setup", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Setup", "_overwrittenUpdatable": None, "Template": $$75a8feba-348a-40ca-9e59-83dfea8d9926, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "SimulationGeneratedMesh", "Component": $$10d978ff-c487-471a-94ad-5c02aff17bbf, "Transfer": None}], [{"DataType": "SimulationGeneratedMesh", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}], [{"DataType": "CFXMesh", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}], [{"DataType": "MechanicalSetup", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_i": 1}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
       </Object>
       <Object Name="/Schematic/Component:Solution" Version="1.0">
         <class-type valType="String">Component</class-type>
         <object-name valType="String">Solution</object-name>
-        <member-data valType="String">{"DisplayText": "Solution", "ImageName": "solution", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Solution", "_overwrittenUpdatable": None, "Template": $$b064fa1b-c39a-4e60-8ea5-3a8d4bc6ebdc, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "CFXSetup", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_a": 1}, "ActiveTransferComponents": [], "Solver": "CFX", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Solution", "ImageName": "solution", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Solution", "_overwrittenUpdatable": None, "Template": $$b064fa1b-c39a-4e60-8ea5-3a8d4bc6ebdc, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "CFXSetup", "Component": $$fc77aee0-bacc-48ac-aa6a-971653459401, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_i": 1}, "ActiveTransferComponents": [], "Solver": "CFX", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
       </Object>
       <Object Name="/Schematic/Component:Results" Version="1.0">
         <class-type valType="String">Component</class-type>
         <object-name valType="String">Results</object-name>
-        <member-data valType="String">{"DisplayText": "Results", "ImageName": "results", "ComponentStateOnLastFailure": "OutOfDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": [$$c784f5aa-a3fd-481c-b9db-d4854657e091, $$af38dd86-9fad-4434-8d40-ee9c7b6db290, $$a34d7fa9-733e-4f46-9215-7f256c3917dc, $$fd8f1644-858c-46c4-8c49-a9bb7a64a2ea, $$d498f491-f9da-4258-bf70-3f2f0f2cc0e0, $$a9049498-afa3-4b11-a1a1-866aba86e884], "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Results", "_overwrittenUpdatable": None, "Template": $$5f5511d5-598f-4ce6-bcdb-a2490df3ac07, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "CFXSolution", "Component": $$0bd4b5bf-c5f9-4211-aeda-bf653f2792f3, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_a": 1}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Results", "ImageName": "results", "ComponentStateOnLastFailure": "OutOfDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": [$$c784f5aa-a3fd-481c-b9db-d4854657e091, $$af38dd86-9fad-4434-8d40-ee9c7b6db290, $$a34d7fa9-733e-4f46-9215-7f256c3917dc, $$fd8f1644-858c-46c4-8c49-a9bb7a64a2ea, $$d498f491-f9da-4258-bf70-3f2f0f2cc0e0, $$a9049498-afa3-4b11-a1a1-866aba86e884, $$b80e7af8-2510-4dac-8e2c-3f674c028e82], "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Results", "_overwrittenUpdatable": None, "Template": $$5f5511d5-598f-4ce6-bcdb-a2490df3ac07, "InSystem": $$96f68bf5-80cf-4080-8d5f-c672bf60ad49, "MasterSources": {"Sources": [[{"DataType": "CFXSolution", "Component": $$0bd4b5bf-c5f9-4211-aeda-bf653f2792f3, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"aa_t_i": 1}, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
       </Object>
       <Object Name="/Schematic/Component:Design of Experiment" Version="1.0">
         <class-type valType="String">Component</class-type>
@@ -4540,7 +4627,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Design of Experiment/InputParameter:P15" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P15</object-name>
-        <member-data valType="String">{"DisplayText": "P15 - Mesh Maximum Thickness", "ID": "05D2C0F0-85BE-4980-8AAD-A608848B8927", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": True, "CanBeNonContinous": True, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": None}</member-data>
+        <member-data valType="String">{"DisplayText": "P15 - Mesh Maximum Thickness", "ID": "05D2C0F0-85BE-4980-8AAD-A608848B8927", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": True, "CanBeNonContinous": True, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": None}</member-data>
         <custom-data>
           <DXParameterID valType="String">05D2C0F0-85BE-4980-8AAD-A608848B8927</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -4570,7 +4657,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Design of Experiment/InputParameter:P12" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P12</object-name>
-        <member-data valType="String">{"DisplayText": "P12 - Mesh Max Size", "ID": "DD31C575-B547-4E8B-B294-C2AB83D616CE", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": True, "CanBeNonContinous": True, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": None}</member-data>
+        <member-data valType="String">{"DisplayText": "P12 - Mesh Max Size", "ID": "DD31C575-B547-4E8B-B294-C2AB83D616CE", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": True, "CanBeNonContinous": True, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": None}</member-data>
         <custom-data>
           <DXParameterID valType="String">DD31C575-B547-4E8B-B294-C2AB83D616CE</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -4580,7 +4667,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Design of Experiment/InputParameter:P11" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P11</object-name>
-        <member-data valType="String">{"DisplayText": "P11 - Mesh Element Size", "ID": "F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": True, "CanBeNonContinous": True, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": None}</member-data>
+        <member-data valType="String">{"DisplayText": "P11 - Mesh Element Size", "ID": "F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": True, "CanBeNonContinous": True, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": None}</member-data>
         <custom-data>
           <DXParameterID valType="String">F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -4668,7 +4755,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
           </MetaModelsMap>
         </custom-data>
       </Object>
-      <Object Name="/Design of Experiment/DOEModel:Design of Experiment" Version="6.0">
+      <Object Name="/Design of Experiment/DOEModel:Design of Experiment" Version="7.0">
         <class-type valType="String">DOEModel</class-type>
         <object-name valType="String">Design of Experiment</object-name>
         <member-data valType="String">{"DisplayText": "Design of Experiment", "ID": "66914DC5-4E3F-4847-A837-AE55093EC53A", "SolveStatus": "MMSOLVE_OK", "Nature": "NatureDOE", "Dirty": False, "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "HasParent": False, "Edited": False, "Caption": "Design of Experiment", "TimeStamp": "1039", "PreserveDesignPoints": False, "ExportDesignPoints": False, "RetainDesignPoints": False, "OptimizeUpdateOrder": True, "DesignPointsStatus": $$a1b6f8f8-4bb4-4c71-ae3f-7b39815503c1, "NumberOfRetries": 0, "RetryDelay": "120 [s]", "DOEType": "DOETYPE_CCD", "MethodName": "ANSYS_CCD", "CCDType": "CCDTYPE_AUTO", "CCDTemplateType": "CCD_STANDARD_TEMPLATE", "OSFDType": "SFDTYPE_MDIST", "MaxNumCycles": 10, "SampType": "SFD_CCD", "NumSamp": 10, "TotalNumSamp": 1, "RandomSeedGenerator": 0, "RandomGeneratorSeed": 0, "MinimumNumberOfDPsPerCombination": 25, "Method": $$50d26828-9a41-49d6-8281-077a696a0a72, "EmptyTable": False}</member-data>
@@ -4685,145 +4772,145 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
             <Enabled valType="String">False</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.135</LowerBound>
             <UpperBound valType="String">0.165</UpperBound>
-            <DistributionLowerBound valType="String">0.135</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0.165</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.135</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0.165</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </Properties05D2C0F0-85BE-4980-8AAD-A608848B8927>
           <PropertiesCC6243E2-1B4E-4C3A-ACD4-306CE7C64E81>
             <Enabled valType="String">False</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.0099</LowerBound>
             <UpperBound valType="String">0.0121</UpperBound>
-            <DistributionLowerBound valType="String">0.0099</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0.0121</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.0099</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0.0121</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </PropertiesCC6243E2-1B4E-4C3A-ACD4-306CE7C64E81>
           <Properties2F54C3B9-AE73-4DBD-A52A-095D197D28E7>
             <Enabled valType="String">False</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.0099</LowerBound>
             <UpperBound valType="String">0.0121</UpperBound>
-            <DistributionLowerBound valType="String">0.0099</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0.0121</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.0099</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0.0121</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </Properties2F54C3B9-AE73-4DBD-A52A-095D197D28E7>
           <PropertiesDD31C575-B547-4E8B-B294-C2AB83D616CE>
             <Enabled valType="String">False</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.135</LowerBound>
             <UpperBound valType="String">0.165</UpperBound>
-            <DistributionLowerBound valType="String">0.135</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0.165</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.135</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0.165</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </PropertiesDD31C575-B547-4E8B-B294-C2AB83D616CE>
           <PropertiesF1E15CBE-0A91-4BE0-9462-9BD6C984F7C5>
             <Enabled valType="String">False</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.135</LowerBound>
             <UpperBound valType="String">0.165</UpperBound>
-            <DistributionLowerBound valType="String">0.135</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0.165</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.135</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0.165</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </PropertiesF1E15CBE-0A91-4BE0-9462-9BD6C984F7C5>
           <Properties5C4108BB-9870-4575-9CEF-14E89025A1A0>
             <Enabled valType="String">True</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">1000</LowerBound>
             <UpperBound valType="String">2000</UpperBound>
-            <DistributionLowerBound valType="String">1000</DistributionLowerBound>
-            <DistributionUpperBound valType="String">2000</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">1000</DistributionLowerBound>
+            <DistributionUpperBound valType="String">2000</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </Properties5C4108BB-9870-4575-9CEF-14E89025A1A0>
           <PropertiesD9CA93AE-C0BE-4A24-8092-BBE886AEC856>
             <Enabled valType="String">True</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">-45</LowerBound>
             <UpperBound valType="String">0</UpperBound>
-            <DistributionLowerBound valType="String">-45</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">-45</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </PropertiesD9CA93AE-C0BE-4A24-8092-BBE886AEC856>
           <Properties4A36D638-2E31-4D9D-BD3C-19F806A10014>
             <Enabled valType="String">True</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.75</LowerBound>
             <UpperBound valType="String">1.25</UpperBound>
-            <DistributionLowerBound valType="String">0.75</DistributionLowerBound>
-            <DistributionUpperBound valType="String">1.25</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.75</DistributionLowerBound>
+            <DistributionUpperBound valType="String">1.25</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </Properties4A36D638-2E31-4D9D-BD3C-19F806A10014>
           <Properties0A33A900-7FBD-4922-B0A7-674CF762E1C5>
             <Enabled valType="String">True</Enabled>
             <Attribute1 valType="String">0</Attribute1>
             <Attribute2 valType="String">0</Attribute2>
-            <DistributionType valType="String">3</DistributionType>
             <LowerBound valType="String">0.4</LowerBound>
             <UpperBound valType="String">0.6</UpperBound>
-            <DistributionLowerBound valType="String">0.4</DistributionLowerBound>
-            <DistributionUpperBound valType="String">0.6</DistributionUpperBound>
+            <NumberOfLevels valType="String">0</NumberOfLevels>
+            <DistributionType valType="String">3</DistributionType>
             <Type valType="String">0</Type>
             <Nature valType="String">0</Nature>
-            <NumberOfLevels valType="String">0</NumberOfLevels>
-            <UseManufacturableValues valType="String">False</UseManufacturableValues>
             <LevelValues valType="String"></LevelValues>
-            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "DistributionType": System.Int32, "LowerBound": System.Double, "UpperBound": System.Double, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double, "Type": System.Int32, "Nature": System.Int32, "NumberOfLevels": System.Int32, "UseManufacturableValues": System.Boolean, "LevelValues": System.String}</value-keys>
+            <UseManufacturableValues valType="String">False</UseManufacturableValues>
+            <DistributionLowerBound valType="String">0.4</DistributionLowerBound>
+            <DistributionUpperBound valType="String">0.6</DistributionUpperBound>
+            <value-keys valType="String">{"Enabled": System.Boolean, "Attribute1": System.Double, "Attribute2": System.Double, "LowerBound": System.Double, "UpperBound": System.Double, "NumberOfLevels": System.Int32, "DistributionType": System.Int32, "Type": System.Int32, "Nature": System.Int32, "LevelValues": System.String, "UseManufacturableValues": System.Boolean, "DistributionLowerBound": System.Double, "DistributionUpperBound": System.Double}</value-keys>
           </Properties0A33A900-7FBD-4922-B0A7-674CF762E1C5>
           <ModelState>
             <Version valType="String">5</Version>
@@ -5070,7 +5157,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Response Surface/InputParameter:P11" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P11</object-name>
-        <member-data valType="String">{"DisplayText": "P11 - Mesh Element Size", "ID": "F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
+        <member-data valType="String">{"DisplayText": "P11 - Mesh Element Size", "ID": "F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
         <custom-data>
           <DXParameterID valType="String">F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -5080,7 +5167,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Response Surface/InputParameter:P12" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P12</object-name>
-        <member-data valType="String">{"DisplayText": "P12 - Mesh Max Size", "ID": "DD31C575-B547-4E8B-B294-C2AB83D616CE", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
+        <member-data valType="String">{"DisplayText": "P12 - Mesh Max Size", "ID": "DD31C575-B547-4E8B-B294-C2AB83D616CE", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
         <custom-data>
           <DXParameterID valType="String">DD31C575-B547-4E8B-B294-C2AB83D616CE</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -5110,7 +5197,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Response Surface/InputParameter:P15" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P15</object-name>
-        <member-data valType="String">{"DisplayText": "P15 - Mesh Maximum Thickness", "ID": "05D2C0F0-85BE-4980-8AAD-A608848B8927", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
+        <member-data valType="String">{"DisplayText": "P15 - Mesh Maximum Thickness", "ID": "05D2C0F0-85BE-4980-8AAD-A608848B8927", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
         <custom-data>
           <DXParameterID valType="String">05D2C0F0-85BE-4980-8AAD-A608848B8927</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -5130,7 +5217,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Response Surface/OutputParameter:P4" Version="1.0">
         <class-type valType="String">OutputParameter</class-type>
         <object-name valType="String">P4</object-name>
-        <member-data valType="String">{"DisplayText": "P4 - OutTempRange", "ID": "817EFD69-E46E-44BE-B27F-6121DCF8FDAC", "Input": False, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Temperature", "Units": "K", "DataUnits": "K", "LowerBound": 0.0024749252890251456, "CurrentValue": 0.00970459, "UpperBound": 0.011942184448408435, "MaximumPredictedError": 0.0017864070668752443, "InheritFromModelSettings": True, "MaxPredictedRelativeError": 5, "PredictedRelativeError": -1, "EnableAutoRefinement": False, "Tolerance": None, "TransformationType": "TransTypeYeo", "Scaling": True, "FTestFiltering": True, "IgnoreForFiltering": False, "CalculatedExtremum": True, "IsDerived": False}</member-data>
+        <member-data valType="String">{"DisplayText": "P4 - OutTempRange", "ID": "817EFD69-E46E-44BE-B27F-6121DCF8FDAC", "Input": False, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Temperature", "Units": "K", "DataUnits": "K", "LowerBound": 0.0024749252890251456, "CurrentValue": 0.00970459, "UpperBound": 0.011942184448408435, "MaximumPredictedError": 0.00178640706688, "InheritFromModelSettings": True, "MaxPredictedRelativeError": 5, "PredictedRelativeError": -1, "EnableAutoRefinement": False, "Tolerance": None, "TransformationType": "TransTypeYeo", "Scaling": True, "FTestFiltering": True, "IgnoreForFiltering": False, "CalculatedExtremum": True, "IsDerived": False}</member-data>
         <custom-data>
           <DXParameterID valType="String">817EFD69-E46E-44BE-B27F-6121DCF8FDAC</DXParameterID>
           <_lowerbound valType="String">0.0024749252890251456</_lowerbound>
@@ -5141,7 +5228,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Response Surface/OutputParameter:P5" Version="1.0">
         <class-type valType="String">OutputParameter</class-type>
         <object-name valType="String">P5</object-name>
-        <member-data valType="String">{"DisplayText": "P5 - OutTempAve", "ID": "8308A632-6A65-410C-ADE6-506BF0110EC4", "Input": False, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Temperature", "Units": "K", "DataUnits": "K", "LowerBound": 299.89398019581665, "CurrentValue": 300.002, "UpperBound": 300.23356212907049, "MaximumPredictedError": 0.0270188930980124, "InheritFromModelSettings": True, "MaxPredictedRelativeError": 5, "PredictedRelativeError": -1, "EnableAutoRefinement": False, "Tolerance": None, "TransformationType": "TransTypeYeo", "Scaling": True, "FTestFiltering": True, "IgnoreForFiltering": False, "CalculatedExtremum": True, "IsDerived": False}</member-data>
+        <member-data valType="String">{"DisplayText": "P5 - OutTempAve", "ID": "8308A632-6A65-410C-ADE6-506BF0110EC4", "Input": False, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Temperature", "Units": "K", "DataUnits": "K", "LowerBound": 299.89398019581665, "CurrentValue": 300.002, "UpperBound": 300.23356212907049, "MaximumPredictedError": 0.027018893098, "InheritFromModelSettings": True, "MaxPredictedRelativeError": 5, "PredictedRelativeError": -1, "EnableAutoRefinement": False, "Tolerance": None, "TransformationType": "TransTypeYeo", "Scaling": True, "FTestFiltering": True, "IgnoreForFiltering": False, "CalculatedExtremum": True, "IsDerived": False}</member-data>
         <custom-data>
           <DXParameterID valType="String">8308A632-6A65-410C-ADE6-506BF0110EC4</DXParameterID>
           <_lowerbound valType="String">299.89398019581665</_lowerbound>
@@ -5329,7 +5416,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/DXResponse SurfaceEvaluateContainer/GoodnessOfFit:GoodnessOfFit" Version="2.0">
         <class-type valType="String">GoodnessOfFit</class-type>
         <object-name valType="String">GoodnessOfFit</object-name>
-        <member-data valType="String">{"DisplayText": "Goodness Of Fit", "IsUpToDate": True, "Model": $$7297e77a-0a0f-4bce-b9ca-4639c79de957, "DiscreteExpressions": {}, "GOFTable": $$e4d83f9b-30c8-42df-b1b1-ffbb824da1eb, "ScatterChart": $$2222b011-b123-4c72-b665-3d064ee2b6bb, "AdvancedGoodnessOfFitAvailable": False, "VPGOFTable": $$e58c93f1-35dc-4a81-9305-ba129c9c6219, "CVGOFTable": $$7a55b0fc-2357-4ef1-be8c-e8cb8a3441f2, "ConfidenceLevel": 0.95}</member-data>
+        <member-data valType="String">{"DisplayText": "Goodness Of Fit", "IsUpToDate": True, "Model": $$7297e77a-0a0f-4bce-b9ca-4639c79de957, "DiscreteExpressions": {}, "GOFTable": $$e4d83f9b-30c8-42df-b1b1-ffbb824da1eb, "ScatterChart": $$2222b011-b123-4c72-b665-3d064ee2b6bb, "AdvancedGoodnessOfFitAvailable": False, "VPGOFTable": $$e58c93f1-35dc-4a81-9305-ba129c9c6219, "CVGOFTable": $$7a55b0fc-2357-4ef1-be8c-e8cb8a3441f2, "ConfidenceLevel": 0.95, "Region": None}</member-data>
         <custom-data>
           <State valType="String">2</State>
           <value-keys valType="String">{"State": System.Int32}</value-keys>
@@ -5695,7 +5782,13 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
         <ArrayEntry Index="8">9e56391b-f5c7-45a9-9f73-6648c038cf21</ArrayEntry>
         <ArrayEntry Index="9">78d7bdcc-0172-4337-8a64-c00cf44f2553</ArrayEntry>
       </InputParameters_0>
-      <OutputSystemsCount valType="Int32">0</OutputSystemsCount>
+      <OutputSystemsCount valType="Int32">1</OutputSystemsCount>
+      <OutputParameters_0Count valType="Int32">3</OutputParameters_0Count>
+      <OutputParameters_0 valType="StringArray">
+        <ArrayEntry Index="0">96f68bf5-80cf-4080-8d5f-c672bf60ad49</ArrayEntry>
+        <ArrayEntry Index="1">7ec2dc80-b0b8-472b-9c96-91accae23605</ArrayEntry>
+        <ArrayEntry Index="2">654a97e8-4ff3-40d5-bce0-7ed8c4cfdec7</ArrayEntry>
+      </OutputParameters_0>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">36441</last-updated>
       <last-modified-by-usage valType="String">{"Extrinsic": 36440, "Input": 31104, "Output": 35929}</last-modified-by-usage>
@@ -5711,7 +5804,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Optimization/InputParameter:P15" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P15</object-name>
-        <member-data valType="String">{"DisplayText": "P15 - Mesh Maximum Thickness", "ID": "05D2C0F0-85BE-4980-8AAD-A608848B8927", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
+        <member-data valType="String">{"DisplayText": "P15 - Mesh Maximum Thickness", "ID": "05D2C0F0-85BE-4980-8AAD-A608848B8927", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
         <custom-data>
           <DXParameterID valType="String">05D2C0F0-85BE-4980-8AAD-A608848B8927</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -5741,7 +5834,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Optimization/InputParameter:P12" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P12</object-name>
-        <member-data valType="String">{"DisplayText": "P12 - Mesh Max Size", "ID": "DD31C575-B547-4E8B-B294-C2AB83D616CE", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
+        <member-data valType="String">{"DisplayText": "P12 - Mesh Max Size", "ID": "DD31C575-B547-4E8B-B294-C2AB83D616CE", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
         <custom-data>
           <DXParameterID valType="String">DD31C575-B547-4E8B-B294-C2AB83D616CE</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
@@ -5751,7 +5844,7 @@ CommandName: CFX.UpdateSolution(Container=\"Solution\", UpdateOptions=Set(HeldLi
       <Object Name="/Optimization/InputParameter:P11" Version="2.0">
         <class-type valType="String">InputParameter</class-type>
         <object-name valType="String">P11</object-name>
-        <member-data valType="String">{"DisplayText": "P11 - Mesh Element Size", "ID": "F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15000000000000002}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
+        <member-data valType="String">{"DisplayText": "P11 - Mesh Element Size", "ID": "F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5", "Input": True, "ParameterSetID": "CDCDF82A-0B65-416F-9276-33DF0B5B0001", "DXContextName": "48a5c4c6-a062-4918-8311-0bfc29dd440f", "QuantityName": "Length", "Units": "m", "DataUnits": "m", "Enabled": False, "AllowUncertainty": False, "IsEditable": False, "CanBeNonContinous": False, "Type": "DesignVariable", "Nature": "NatureContinuous", "LowerBound": 0.135, "UpperBound": 0.165, "ConstantValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "CurrentValue": {"__FRAMEWORK_ANY_SPEC__": "Ansys.Core.DataSpecs.RealSpec`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]", "value": 0.15}, "UseManufacturableValues": False, "NumberOfLevels": 0, "DistributionType": "Gauss", "DistributionLowerBound": 0.135, "DistributionUpperBound": 0.165, "Attribute1": 0, "Attribute2": 0, "Mean": 0, "StandardDeviation": 0, "Skewness": 0, "Kurtosis": 0, "DistributionChart": None, "DiscreteLevels": [], "DiscreteLevelValues": [], "DiscreteType": "Integer", "ManufacturableValues": [], "CustomDefinitionList": []}</member-data>
         <custom-data>
           <DXParameterID valType="String">F1E15CBE-0A91-4BE0-9462-9BD6C984F7C5</DXParameterID>
           <NativeInitialValue valType="String">0.15</NativeInitialValue>
