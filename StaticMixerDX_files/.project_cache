@@ -1,70 +1,8 @@
 ﻿dp10/designPoint.wbdp
 dp11/designPoint.wbdp
 dp12/designPoint.wbdp
-dp6/CFX/CFX/Fluid Flow CFX_001/0_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/100_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/105_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/10_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/110_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/115_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/120_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/125_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/130_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/135_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/140_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/145_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/150_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/155_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/15_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/160_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/165_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/170_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/175_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/180_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/185_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/190_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/195_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/200_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/205_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/20_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/210_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/215_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/220_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/225_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/230_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/235_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/240_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/245_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/250_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/255_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/25_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/260_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/265_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/270_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/275_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/280_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/285_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/290_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/295_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/30_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/35_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/40_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/45_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/50_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/55_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/5_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/60_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/65_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/70_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/75_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/80_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/85_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/90_full.trn
-dp6/CFX/CFX/Fluid Flow CFX_001/95_full.trn
 dp6/CFX/CFX/Fluid Flow CFX.cfx
 dp6/CFX/CFX/Fluid Flow CFX.def
-dp6/CFX/CFX/Fluid Flow CFX_001.out
-dp6/CFX/CFX/Fluid Flow CFX_001.res
 dp6/CFX/DM/CFX.agdb
 dp6/CFX/MECH/CFX1.cmdb
 dp6/CFX/Post/Fluid Flow CFX.cst
@@ -99,7 +37,6 @@ dp6/CFX/CFX/
 dp6/CFX/DM/
 dp6/CFX/MECH/
 dp6/CFX/Post/
-dp6/CFX/CFX/Fluid Flow CFX_001/
 dp6/global/MECH/
 dp6/global/MECH/CFX/
 dpall/global/
