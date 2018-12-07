@@ -1,4 +1,4 @@
-# State file created:  2018/12/07 11:04:32
+# State file created:  2018/12/07 13:17:34
 # CFX-19.1
 
 COMMENT:User Data
@@ -20,7 +20,7 @@ CFX\CFX\Fluid Flow CFX_001.res
   Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
 dp6\CFX\CFX\Fluid Flow CFX_001.res
   Current Timestep = -1
-  Current Timevalue = 8
+  Current Timevalue = 30
   Edit Case Names = false
   File Angle Units = rad
   File Chemical Amount Units = mol
@@ -35,8 +35,6 @@ dp6\CFX\CFX\Fluid Flow CFX_001.res
   Force File Reload = False
   Keep Camera Position = True
   Load Particle Tracks = true
-  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_001.res
   Multi Configuration File Load Option = Last Case
   Open in New View = true
   Open to Compare = false
@@ -52,8 +50,8 @@ CFX\CFX\Fluid Flow CFX_001.res
 CFX\CFX\Fluid Flow CFX_001.res
     Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
 dp6\CFX\CFX\Fluid Flow CFX_001.res
-    Current Timestep = 80
-    Current Timevalue = 8
+    Current Timestep = 300
+    Current Timevalue = 30
     File Angle Units = rad
     File Chemical Amount Units = mol
     File Current Units = A
@@ -858,7 +856,7 @@ DEFAULT LEGEND:Default Legend View 1
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:MidDown
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -881,7 +879,7 @@ DEFAULT LEGEND:Default Legend View 2
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:MidDown
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -904,7 +902,7 @@ DEFAULT LEGEND:Default Legend View 3
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:MidDown
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -927,7 +925,7 @@ DEFAULT LEGEND:Default Legend View 4
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:MidDown
+  Legend Plot = /PLANE:mid
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -973,13 +971,13 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 80
-      Current Time Step = 80
+      Accumulated Time Step = 300
+      Current Time Step = 300
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       Reference Pressure = 1 [atm]
-      Sequence Step = 80
-      Time = 8 [s]
+      Sequence Step = 300
+      Time = 30 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step
       inMassFlow = 1500 [kg s^-1]
@@ -1541,6 +1539,9 @@ END
 SCALAR VARIABLE:Element Volume Ratio
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:First Blending Function for BSL and SST model
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Force X
   Boundary Values = Conservative
 END
@@ -1598,6 +1599,9 @@ END
 SCALAR VARIABLE:Real Partition Number
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Second Blending Function for SST model
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Shear Strain Rate
   Boundary Values = Conservative
 END
@@ -1614,18 +1618,6 @@ SCALAR VARIABLE:Specific Volume
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Static Enthalpy
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Static Enthalpy.Beta
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Static Enthalpy.Gradient X
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Static Enthalpy.Gradient Y
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Static Enthalpy.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Static Entropy
@@ -1652,34 +1644,10 @@ END
 SCALAR VARIABLE:Turbulence Eddy Dissipation
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Beta
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient X
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient Y
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient Z
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Turbulence Eddy Frequency
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Turbulence Kinetic Energy
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Kinetic Energy.Beta
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient X
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient Y
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity Correlation uu
@@ -1703,9 +1671,6 @@ END
 SCALAR VARIABLE:Velocity u
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Velocity u.Beta
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Velocity u.Gradient X
   Boundary Values = Conservative
 END
@@ -1718,9 +1683,6 @@ END
 SCALAR VARIABLE:Velocity v
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Velocity v.Beta
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Velocity v.Gradient X
   Boundary Values = Conservative
 END
@@ -1731,9 +1693,6 @@ SCALAR VARIABLE:Velocity v.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity w
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Velocity w.Beta
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity w.Gradient X
@@ -1817,10 +1776,25 @@ END
 SCALAR VARIABLE:Wall Adjacent Temperature
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Wall Distance
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Wall Heat Flux
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Wall Heat Transfer Coefficient
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Wall Shear X
@@ -2029,15 +2003,6 @@ END
 VECTOR VARIABLE:Pressure.Gradient
   Boundary Values = Conservative
 END
-VECTOR VARIABLE:Static Enthalpy.Gradient
-  Boundary Values = Conservative
-END
-VECTOR VARIABLE:Turbulence Eddy Dissipation.Gradient
-  Boundary Values = Conservative
-END
-VECTOR VARIABLE:Turbulence Kinetic Energy.Gradient
-  Boundary Values = Conservative
-END
 VECTOR VARIABLE:Velocity
   Boundary Values = Conservative
 END
@@ -2057,6 +2022,9 @@ VECTOR VARIABLE:Velocity.Swirling Normal
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Velocity.Swirling Vector
+  Boundary Values = Conservative
+END
+VECTOR VARIABLE:Wall Scale.Gradient
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Wall Shear
@@ -2082,11 +2050,11 @@ WIREFRAME:Wireframe
   Standard View = Isometric Y
   CAMERA:
     Option = Pivot Point and Quaternion
-    Pan = 0,0
+    Pan = 0.199758,-0.503442
     Pivot Point = 0,0,0
     Rotation = -90, 0, 0
-    Rotation Quaternion = -0.564552,-0.42301,-0.423891,0.568044
-    Scale = 0.310606
+    Rotation Quaternion = -0.539014,-0.317899,-0.573887,0.528275
+    Scale = 0.590023
     Send To Viewer = True
   END
 END
