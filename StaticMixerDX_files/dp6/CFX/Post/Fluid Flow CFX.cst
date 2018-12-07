@@ -1,4 +1,4 @@
-# State file created:  2018/12/05 14:22:34
+# State file created:  2018/12/07 11:04:32
 # CFX-19.1
 
 COMMENT:User Data
@@ -8,7 +8,7 @@ COMMENT:User Data
 END
 DATA READER:
   Active Case Name = Case CFX
-  Append Results = False
+  Append Results = True
   Apply X Offset = false
   Apply Y Offset = false
   Apply Z Offset = false
@@ -16,11 +16,11 @@ DATA READER:
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
   Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_007.res
+CFX\CFX\Fluid Flow CFX_001.res
   Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_007.res
+dp6\CFX\CFX\Fluid Flow CFX_001.res
   Current Timestep = -1
-  Current Timevalue = 0
+  Current Timevalue = 8
   Edit Case Names = false
   File Angle Units = rad
   File Chemical Amount Units = mol
@@ -35,8 +35,10 @@ dp6\CFX\CFX\Fluid Flow CFX_007.res
   Force File Reload = False
   Keep Camera Position = True
   Load Particle Tracks = true
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
+CFX\CFX\Fluid Flow CFX_001.res
   Multi Configuration File Load Option = Last Case
-  Open in New View = True
+  Open in New View = true
   Open to Compare = false
   Reference Acoustic Pressure = 2.0e-5 [Pa]
   Reference Length = 1.0 [m]
@@ -47,11 +49,11 @@ dp6\CFX\CFX\Fluid Flow CFX_007.res
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
     Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_007.res
+CFX\CFX\Fluid Flow CFX_001.res
     Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_007.res
-    Current Timestep = -1
-    Current Timevalue = 0
+dp6\CFX\CFX\Fluid Flow CFX_001.res
+    Current Timestep = 80
+    Current Timevalue = 8
     File Angle Units = rad
     File Chemical Amount Units = mol
     File Current Units = A
@@ -193,6 +195,38 @@ dp6\CFX\CFX\Fluid Flow CFX_007.res
       Visibility = false
     END
     COMPOSITE:Assembly
+      Apply Instancing Transform = On
+      Apply Texture = Off
+      Blend Texture = On
+      Colour = 1, 0.5, 0
+      Colour Map = Default Colour Map
+      Colour Mode = Constant
+      Colour Scale = Linear
+      Colour Variable Boundary Values = Hybrid
+      Culling Mode = No Culling
+      Draw Faces = On
+      Draw Lines = Off
+      Instancing Transform = Default Transform
+      Lighting = true
+      Line Colour = 0, 0, 0
+      Line Colour Mode = Default
+      Line Width = 1
+      Range = Global
+      Render Edge Angle = 0 [degree]
+      Specular Lighting = On
+      Surface Drawing = Smooth Shading
+      Texture Angle = 0
+      Texture Direction = 0.0, 1.0, 0.0
+      Texture Material = Metal
+      Texture Position = 0.0, 0.0
+      Texture Scale = 1.0
+      Texture Type = Predefined
+      Tile Texture = Off
+      Transform Texture = Off
+      Transparency = 0.0
+      Visibility = false
+    END
+    COMPOSITE:TurbWalls
       Apply Instancing Transform = On
       Apply Texture = Off
       Blend Texture = On
@@ -688,6 +722,72 @@ dp6\CFX\CFX\Fluid Flow CFX_007.res
       Transparency = 0.0
       Visibility = false
     END
+    PRIMITIVE2D:F29.17
+      Apply Instancing Transform = On
+      Apply Texture = Off
+      Blend Texture = On
+      Colour = 1, 0.5, 0
+      Colour Map = Default Colour Map
+      Colour Mode = Constant
+      Colour Scale = Linear
+      Colour Variable Boundary Values = Hybrid
+      Culling Mode = No Culling
+      Draw Faces = On
+      Draw Lines = Off
+      Instancing Transform = Default Transform
+      Lighting = true
+      Line Colour = 0, 0, 0
+      Line Colour Mode = Default
+      Line Width = 1
+      Range = Global
+      Render Edge Angle = 0 [degree]
+      Set Number = 10
+      Specular Lighting = On
+      Surface Drawing = Smooth Shading
+      Texture Angle = 0
+      Texture Direction = 0.0, 1.0, 0.0
+      Texture Material = Metal
+      Texture Position = 0.0, 0.0
+      Texture Scale = 1.0
+      Texture Type = Predefined
+      Tile Texture = Off
+      Transform Texture = Off
+      Transparency = 0.0
+      Visibility = false
+    END
+    PRIMITIVE2D:F30.17
+      Apply Instancing Transform = On
+      Apply Texture = Off
+      Blend Texture = On
+      Colour = 1, 0.5, 0
+      Colour Map = Default Colour Map
+      Colour Mode = Constant
+      Colour Scale = Linear
+      Colour Variable Boundary Values = Hybrid
+      Culling Mode = No Culling
+      Draw Faces = On
+      Draw Lines = Off
+      Instancing Transform = Default Transform
+      Lighting = true
+      Line Colour = 0, 0, 0
+      Line Colour Mode = Default
+      Line Width = 1
+      Range = Global
+      Render Edge Angle = 0 [degree]
+      Set Number = 11
+      Specular Lighting = On
+      Surface Drawing = Smooth Shading
+      Texture Angle = 0
+      Texture Direction = 0.0, 1.0, 0.0
+      Texture Material = Metal
+      Texture Position = 0.0, 0.0
+      Texture Scale = 1.0
+      Texture Type = Predefined
+      Tile Texture = Off
+      Transform Texture = Off
+      Transparency = 0.0
+      Visibility = false
+    END
     PRIMITIVE3D:B17
       Apply Instancing Transform = On
       Apply Texture = Off
@@ -722,6 +822,13 @@ dp6\CFX\CFX\Fluid Flow CFX_007.res
       Visibility = false
     END
   END
+  CASE COMPARISON:
+    Absolute Value of Difference = false
+    Mode Is Active = false
+    Same Mesh Detection Mode = Auto Detect
+    Synchronize Camera on Activate = true
+    Synchronize Visibility on Activate = true
+  END
 END
 DEFAULT INSTANCE TRANSFORM:Default Transform
   Angle Definition Method = Instances in 360
@@ -751,7 +858,7 @@ DEFAULT LEGEND:Default Legend View 1
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /PLANE:MidDown
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -774,7 +881,7 @@ DEFAULT LEGEND:Default Legend View 2
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /PLANE:MidDown
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -797,7 +904,7 @@ DEFAULT LEGEND:Default Legend View 3
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /PLANE:MidDown
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -820,7 +927,7 @@ DEFAULT LEGEND:Default Legend View 4
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /PLANE:MidDown
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -866,13 +973,13 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 356
-      Current Time Step = 356
+      Accumulated Time Step = 80
+      Current Time Step = 80
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       Reference Pressure = 1 [atm]
-      Sequence Step = 356
-      Time = 0 [s]
+      Sequence Step = 80
+      Time = 8 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step
       inMassFlow = 1500 [kg s^-1]
@@ -892,6 +999,361 @@ PARAMETERIZATION:
   RESPONSE FIELD:OutTempRange
     Expression Name = OutTempRange
     Method = Expression
+  END
+END
+PLANE:MidDown
+  Apply Instancing Transform = On
+  Apply Texture = Off
+  Blend Texture = On
+  Bound Radius = 0.5 [m]
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Hybrid
+  Culling Mode = No Culling
+  Direction 1 Bound = 1.0 [m]
+  Direction 1 Orientation = 0 [degree]
+  Direction 1 Points = 10
+  Direction 2 Bound = 1.0 [m]
+  Direction 2 Points = 10
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Invert Plane Bound = Off
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Colour Mode = Default
+  Line Width = 1
+  Max = 0.0 [K]
+  Min = 0.0 [K]
+  Normal = 1 , 0 , 0
+  Option = YZ Plane
+  Plane Bound = None
+  Plane Type = Slice
+  Point = 0 [m], 0 [m], 0 [m]
+  Point 1 = 0 [m], 0 [m], 0 [m]
+  Point 2 = 1 [m], 0 [m], 0 [m]
+  Point 3 = 0 [m], 1 [m], 0 [m]
+  Range = Global
+  Render Edge Angle = 0 [degree]
+  Specular Lighting = On
+  Surface Drawing = Smooth Shading
+  Texture Angle = 0
+  Texture Direction = 0 , 1 , 0
+  Texture Material = Metal
+  Texture Position = 0 , 0
+  Texture Scale = 1
+  Texture Type = Predefined
+  Tile Texture = Off
+  Transform Texture = Off
+  Transparency = 0.0
+  Visibility = On
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
+  END
+END
+PLANE:MidDown2
+  Apply Instancing Transform = On
+  Apply Texture = Off
+  Blend Texture = On
+  Bound Radius = 0.5 [m]
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Hybrid
+  Culling Mode = No Culling
+  Direction 1 Bound = 1.0 [m]
+  Direction 1 Orientation = 0 [degree]
+  Direction 1 Points = 10
+  Direction 2 Bound = 1.0 [m]
+  Direction 2 Points = 10
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Invert Plane Bound = Off
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Colour Mode = Default
+  Line Width = 1
+  Max = 0.0 [K]
+  Min = 0.0 [K]
+  Normal = 1 , 0 , 0
+  Option = ZX Plane
+  Plane Bound = None
+  Plane Type = Slice
+  Point = 0 [m], 0 [m], 0 [m]
+  Point 1 = 0 [m], 0 [m], 0 [m]
+  Point 2 = 1 [m], 0 [m], 0 [m]
+  Point 3 = 0 [m], 1 [m], 0 [m]
+  Range = Global
+  Render Edge Angle = 0 [degree]
+  Specular Lighting = On
+  Surface Drawing = Smooth Shading
+  Texture Angle = 0
+  Texture Direction = 0 , 1 , 0
+  Texture Material = Metal
+  Texture Position = 0 , 0
+  Texture Scale = 1
+  Texture Type = Predefined
+  Tile Texture = Off
+  Transform Texture = Off
+  Transparency = 0.0
+  Visibility = On
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
+  END
+END
+PLANE:Side
+  Apply Instancing Transform = On
+  Apply Texture = Off
+  Blend Texture = On
+  Bound Radius = 0.5 [m]
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Hybrid
+  Culling Mode = No Culling
+  Direction 1 Bound = 1.0 [m]
+  Direction 1 Orientation = 0 [degree]
+  Direction 1 Points = 10
+  Direction 2 Bound = 1.0 [m]
+  Direction 2 Points = 10
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Invert Plane Bound = Off
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Colour Mode = Default
+  Line Width = 1
+  Max = 0.0 [K]
+  Min = 0.0 [K]
+  Normal = 1 , 0 , 0
+  Option = YZ Plane
+  Plane Bound = None
+  Plane Type = Slice
+  Point = 0 [m], 0 [m], 0 [m]
+  Point 1 = 0 [m], 0 [m], 0 [m]
+  Point 2 = 1 [m], 0 [m], 0 [m]
+  Point 3 = 0 [m], 1 [m], 0 [m]
+  Range = Global
+  Render Edge Angle = 0 [degree]
+  Specular Lighting = On
+  Surface Drawing = Smooth Shading
+  Texture Angle = 0
+  Texture Direction = 0 , 1 , 0
+  Texture Material = Metal
+  Texture Position = 0 , 0
+  Texture Scale = 1
+  Texture Type = Predefined
+  Tile Texture = Off
+  Transform Texture = Off
+  Transparency = 0.0
+  Visibility = Off
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
+  END
+END
+PLANE:TurnIn1
+  Apply Instancing Transform = On
+  Apply Texture = Off
+  Blend Texture = On
+  Bound Radius = 0.5 [m]
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Hybrid
+  Culling Mode = No Culling
+  Direction 1 Bound = 1.0 [m]
+  Direction 1 Orientation = 0 [degree]
+  Direction 1 Points = 10
+  Direction 2 Bound = 1.0 [m]
+  Direction 2 Points = 10
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Invert Plane Bound = Off
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Colour Mode = Default
+  Line Width = 1
+  Max = 0.0 [K]
+  Min = 0.0 [K]
+  Normal = 1 , 0 , 0
+  Option = Point and Normal
+  Plane Bound = None
+  Plane Type = Slice
+  Point = -1 [m], 0 [m], 0 [m]
+  Point 1 = 0 [m], 0 [m], 0 [m]
+  Point 2 = 1 [m], 0 [m], 0 [m]
+  Point 3 = 0 [m], 1 [m], 0 [m]
+  Range = Global
+  Render Edge Angle = 0 [degree]
+  Specular Lighting = On
+  Surface Drawing = Smooth Shading
+  Texture Angle = 0
+  Texture Direction = 0 , 1 , 0
+  Texture Material = Metal
+  Texture Position = 0 , 0
+  Texture Scale = 1
+  Texture Type = Predefined
+  Tile Texture = Off
+  Transform Texture = Off
+  Transparency = 0.0
+  Visibility = On
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
+  END
+END
+PLANE:TurnIn2
+  Apply Instancing Transform = On
+  Apply Texture = Off
+  Blend Texture = On
+  Bound Radius = 0.5 [m]
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Hybrid
+  Culling Mode = No Culling
+  Direction 1 Bound = 1.0 [m]
+  Direction 1 Orientation = 0 [degree]
+  Direction 1 Points = 10
+  Direction 2 Bound = 1.0 [m]
+  Direction 2 Points = 10
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Invert Plane Bound = Off
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Colour Mode = Default
+  Line Width = 1
+  Max = 0.0 [K]
+  Min = 0.0 [K]
+  Normal = 1 , 0 , 0
+  Option = Point and Normal
+  Plane Bound = None
+  Plane Type = Slice
+  Point = 1 [m], 0 [m], 0 [m]
+  Point 1 = 0 [m], 0 [m], 0 [m]
+  Point 2 = 1 [m], 0 [m], 0 [m]
+  Point 3 = 0 [m], 1 [m], 0 [m]
+  Range = Global
+  Render Edge Angle = 0 [degree]
+  Specular Lighting = On
+  Surface Drawing = Smooth Shading
+  Texture Angle = 0
+  Texture Direction = 0 , 1 , 0
+  Texture Material = Metal
+  Texture Position = 0 , 0
+  Texture Scale = 1
+  Texture Type = Predefined
+  Tile Texture = Off
+  Transform Texture = Off
+  Transparency = 0.0
+  Visibility = On
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
   END
 END
 PLANE:mid
@@ -1133,6 +1595,9 @@ END
 SCALAR VARIABLE:Pressure.Gradient Z
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Real Partition Number
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Shear Strain Rate
   Boundary Values = Conservative
 END
@@ -1215,6 +1680,24 @@ SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient Y
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Turbulence Kinetic Energy.Gradient Z
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity Correlation uu
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity Correlation uv
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity Correlation uw
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity Correlation vv
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity Correlation vw
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity Correlation ww
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity u
@@ -1591,7 +2074,8 @@ VIEW:View 1
   Highlight Type = Surface Mesh
   Is A Figure = false
   Light Angle = 50, 110
-  Object Visibility List = /DEFAULT LEGEND:Default Legend View 1,/PLANE:mid,/\
+  Object Visibility List = /DEFAULT LEGEND:Default Legend View 1,/\
+PLANE:MidDown,/PLANE:MidDown2,/PLANE:TurnIn1,/PLANE:TurnIn2,/PLANE:mid,/\
 WIREFRAME:Wireframe
   Projection = Orthographic
   Ruler Visibility = true
@@ -1601,8 +2085,8 @@ WIREFRAME:Wireframe
     Pan = 0,0
     Pivot Point = 0,0,0
     Rotation = -90, 0, 0
-    Rotation Quaternion = 0,0,0,1
-    Scale = 0.30303
+    Rotation Quaternion = -0.564552,-0.42301,-0.423891,0.568044
+    Scale = 0.310606
     Send To Viewer = True
   END
 END

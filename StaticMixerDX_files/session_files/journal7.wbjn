@@ -10,3 +10,4141 @@ designPoint1.Retained = True
 boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
 backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
 Save(Overwrite=True)
+system1 = GetSystem(Name="CFX")
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.232387
+    Pan = 0, 0
+    Rotation Quaternion = -0.118167, -0.382259, -0.790385, 0.463894
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 2 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 6 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 2 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.5 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   OUTPUT CONTROL: 
+    RESULTS: 
+      File Compression Level = Default
+      Option = Standard
+    END # RESULTS:
+    TRANSIENT RESULTS: Transient Results 1
+      File Compression Level = Default
+      Option = Standard
+      OUTPUT FREQUENCY: 
+        Option = Every Timestep
+      END # OUTPUT FREQUENCY:
+    END # TRANSIENT RESULTS:Transient Results 1
+  END # OUTPUT CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   OUTPUT CONTROL: 
+    RESULTS: 
+      File Compression Level = Default
+      Option = Standard
+    END # RESULTS:
+    TRANSIENT RESULTS: Transient Results 1
+      File Compression Level = Default
+      Option = Standard
+      OUTPUT FREQUENCY: 
+        Option = Every Timestep
+      END # OUTPUT FREQUENCY:
+    END # TRANSIENT RESULTS:Transient Results 1
+  END # OUTPUT CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.SendCommand(Command="""ANIMATION:ANIMATION
+QAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+
+END""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command=r"""DATA READER:
+  Active Case Name = Case CFX
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_008.res
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_008.res
+END
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>load timestep=358""")
+results1.SendCommand(Command=r"""DATA READER:
+  Active Case Name = Case CFX
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_008.res
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_008.res
+END
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>load timestep=356""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.Exit()
+solutionComponent1.Clean()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.232387
+    Pan = 0, 0
+    Rotation Quaternion = -0.118167, -0.382259, -0.790385, 0.463894
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 2 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.1 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 2 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.1 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometry1.Exit()
+meshComponent1 = system1.GetComponent(Name="Mesh")
+meshComponent1.Refresh()
+mesh1 = system1.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+mesh1.Exit()
+setup1.Edit()
+meshComponent1.Update(AllDependencies=True)
+solution1.Exit()
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.29022
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 2 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.1 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 2 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.1 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.250308
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: Default Domain
+&replace     BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.250308
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic with Value
+          Relative Pressure = 0 [Pa]
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic with Value
+          Relative Pressure = 0 [Pa]
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.250308
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic with Value
+          Relative Pressure = 0 [Pa]
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic with Value
+          Temperature = 290 [K]
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic with Value
+          Relative Pressure = 0 [Pa]
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic with Value
+          Temperature = 290 [K]
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+Camera Mode = User Specified
+CAMERA:
+Option = Pivot Point and Quaternion
+Pivot Point = 0, 0, 0
+Scale = 0.30303
+Pan = 0, 0
+Rotation Quaternion = -0.00763301, 0.0555313, 0.00159034, 0.998427
+
+END
+
+END
+
+> update
+ANIMATION:ANIMATION
+QAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+
+END""")
+results1.SendCommand(Command=r"""DATA READER:
+  Active Case Name = Case CFX
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_004.res
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_004.res
+END
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>load timestep=0""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command="> autolegend plot=/PLANE:Side, view=VIEW:View 1")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.414703, -0.513818, -0.469201, 0.586398
+    
+  END
+
+END
+
+> update
+PLANE:Side
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = YZ Plane
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PLANE:Side, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.513143, -0.502432, -0.494027, 0.490085
+    
+  END
+
+END
+
+> update
+> load timestep=10""")
+solution1.Exit()
+results1.Exit()
+setup1.Edit()
+results1.Edit()
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /PLANE:mid, view=/VIEW:View 1""")
+results1.SendCommand(Command="> autolegend plot=/PLANE:TurnIn1, view=VIEW:View 1")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.702107, 0.00421771, -0.0111682, 0.71197
+    
+  END
+
+END
+
+> update
+PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PLANE:TurnIn1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.563869, -0.181408, -0.20611, 0.778883
+    
+  END
+
+END
+
+> update
+PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 1 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.332367, -0.100188, -0.265298, 0.899505
+    
+  END
+
+END
+
+> update
+PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 1 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.647143, 0.0354155, -0.0931233, 0.755828
+    
+  END
+
+END
+
+> update
+VIEWPORT MANAGER:
+Viewport Layout = No Split
+Maximized Viewport = -1
+END""")
+results1.SendCommand(Command="""PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 1 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 1 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 1 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.564022, 0.0375282, -0.14656, 0.811781
+    
+  END
+
+END
+
+> update
+PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = -1 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.586228, 0.419208, 0.322134, 0.613864
+    
+  END
+
+END
+
+> update
+PLANE:TurnIn1
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = -1 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.691959, 0.122587, 0.00357431, 0.711442
+    
+  END
+
+END
+
+> update
+# Sending visibility action from ViewUtilities
+>show /PLANE:mid, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /PLANE:Side, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+Camera Mode = User Specified
+CAMERA:
+Option = Pivot Point and Quaternion
+Pivot Point = 0, 0, 0
+Scale = 0.310606
+Pan = 0, 0
+Rotation Quaternion = -0.473687, -0.505532, -0.479095, 0.539004
+
+END
+
+END
+
+> update
+ANIMATION:ANIMATION
+QAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+
+END""")
+results1.SendCommand(Command="""ANIMATION: ANIMATION
+QAnim Object List = /PLANE:Side,/PLANE:TurnIn1
+QAnim Frames = 46
+QAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate quickAnimate""")
+results1.SendCommand(Command=r"""DATA READER:
+  Active Case Name = Case CFX
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_004.res
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_004.res
+END
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>load timestep=0""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.471314, -0.497691, -0.514448, 0.515276
+    
+  END
+
+END
+
+> update
+> load timestep=0""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = On
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = H:/dos/CFD/CW/CFD-Static-Mixer/Post Vids/attempt1.mp4
+TimeAnim Save MPEG = On
+TimeAnim Looping Cycles = 3
+Video Format = mp4
+END""")
+results1.SendCommand(Command="""ANIMATION:
+Animation Bit Rate = 5152000
+Animation Frame Rate = 24
+Animation Quality = Medium
+Animation Speed Factor = 2
+Antialiasing = On
+Drop Last MPEG Frame = Off
+Hardcopy Tolerance = 0.0001
+Intermediate File Format = jpg
+Keep Intermediate Files = Off
+MPEG Height = 480
+MPEG Scale = 100
+MPEG Size = 640 x 480
+MPEG Width = 640
+Output Directory = .
+Output to User Directory = Off
+QAnim Override Symbol = On
+QAnim Symbol Size = 1.0
+QAnim Symbol Spacing = 0.6
+QAnim Symbol Type = Ball
+Screen Capture = Off
+Speed Adjustment Selection = Normal
+Speed Scaling Method = Distribute Frames Smoothly
+Timestep Interpolation Method = Timestep
+Variable Bit Rate = On
+White Background = Off
+END""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = H:/dos/CFD/CW/CFD-Static-Mixer/Post Vids/attempt1.mp4
+TimeAnim Save MPEG = On
+TimeAnim Looping Cycles = 3
+Video Format = mp4
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.497394, -0.149059, -0.254192, 0.815946
+    
+  END
+
+END
+
+> update
+> autolegend plot=/PLANE:TurnIn2, view=VIEW:View 1""")
+results1.SendCommand(Command="""PLANE:TurnIn2
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PLANE:TurnIn2, view=/VIEW:View 1""")
+results1.SendCommand(Command="""PLANE:TurnIn2
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 1 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.472157, 0.0490461, -0.298139, 0.828116
+    
+  END
+
+END
+
+> update
+PLANE:TurnIn2
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = Point and Normal
+Plane Bound = None
+Plane Type = Slice
+Point = 1 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command=r"""DATA READER:
+  Active Case Name = Case CFX
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_004.res
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_004.res
+END
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = H:/dos/CFD/CW/CFD-Static-Mixer/Post Vids/attempt1.mp4
+TimeAnim Save MPEG = On
+TimeAnim Looping Cycles = 3
+Video Format = mp4
+END
+>load timestep=0""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.461538, -0.153326, -0.304676, 0.818932
+    
+  END
+
+END
+
+> update
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = H:/dos/CFD/CW/CFD-Static-Mixer/Post Vids/attempt1.mp4
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 3
+Video Format = mp4
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = H:/dos/CFD/CW/CFD-Static-Mixer/Post Vids/attempt1.mp4
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = mp4
+END""")
+Save(Overwrite=True)
+results1.Exit()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.250308
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+  DOMAIN: Default Domain
+&replace     BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Fractional Intensity = 0.01
+          Option = Intensity and Auto Compute Length
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: Default Domain
+&replace     BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Fractional Intensity = 0.01
+          Option = Intensity and Auto Compute Length
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Fractional Intensity = 0.01
+          Option = Intensity and Auto Compute Length
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic with Value
+          Relative Pressure = 0 [Pa]
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic with Value
+          Temperature = 290 [K]
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = High Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = B17
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Create Other Side = Off
+      Interface Boundary = Off
+      Location = F12.17,F14.17,F16.17,F19.17,F20.17,F21.17,F29.17,F30.17
+      BOUNDARY CONDITIONS: 
+        HEAT TRANSFER: 
+          Option = Adiabatic
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:Default Domain Default
+    BOUNDARY: in1
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in1
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 315 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Fractional Intensity = 0.01
+          Option = Intensity and Auto Compute Length
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in1
+    BOUNDARY: in2
+      Boundary Type = INLET
+      Interface Boundary = Off
+      Location = in2
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        HEAT TRANSFER: 
+          Option = Static Temperature
+          Static Temperature = 285 [K]
+        END # HEAT TRANSFER:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = inMassFlow
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:in2
+    BOUNDARY: out
+      Boundary Type = OUTLET
+      Interface Boundary = Off
+      Location = out
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Static Pressure
+          Relative Pressure = 0 [Pa]
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:out
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Option = Stationary
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 1 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = Thermal Energy
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = k epsilon
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Scalable
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+    INITIALISATION: 
+      Option = Automatic
+      INITIAL CONDITIONS: 
+        Velocity Type = Cartesian
+        CARTESIAN VELOCITY COMPONENTS: 
+          Option = Automatic with Value
+          U = 0 [m s^-1]
+          V = 0 [m s^-1]
+          W = 0 [m s^-1]
+        END # CARTESIAN VELOCITY COMPONENTS:
+        STATIC PRESSURE: 
+          Option = Automatic with Value
+          Relative Pressure = 0 [Pa]
+        END # STATIC PRESSURE:
+        TEMPERATURE: 
+          Option = Automatic with Value
+          Temperature = 290 [K]
+        END # TEMPERATURE:
+        TURBULENCE INITIAL CONDITIONS: 
+          Option = High Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE INITIAL CONDITIONS:
+      END # INITIAL CONDITIONS:
+    END # INITIALISATION:
+  END # DOMAIN:Default Domain
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.250308
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 8 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.1 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   ANALYSIS TYPE: 
+    Option = Transient
+    EXTERNAL SOLVER COUPLING: 
+      Option = None
+    END # EXTERNAL SOLVER COUPLING:
+    INITIAL TIME: 
+      Option = Value
+      Time = 0 [s]
+    END # INITIAL TIME:
+    TIME DURATION: 
+      Option = Total Time
+      Total Time = 8 [s]
+    END # TIME DURATION:
+    TIME STEPS: 
+      Option = Timesteps
+      Timesteps = 0.1 [s]
+    END # TIME STEPS:
+  END # ANALYSIS TYPE:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+solution1.Exit()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solutionComponent1.Clean()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, -0.288617
+    Scale = 0.250308
+    Pan = 0, 0
+    Rotation Quaternion = -0.615263, -0.438724, -0.540978, 0.369191
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   OUTPUT CONTROL: 
+    RESULTS: 
+      File Compression Level = Default
+      Option = Standard
+    END # RESULTS:
+    TRANSIENT RESULTS: Transient Results 1
+      File Compression Level = Default
+      Option = Standard
+      OUTPUT FREQUENCY: 
+        Option = Time Interval
+        Time Interval = 0.5 [s]
+      END # OUTPUT FREQUENCY:
+    END # TRANSIENT RESULTS:Transient Results 1
+  END # OUTPUT CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   OUTPUT CONTROL: 
+    RESULTS: 
+      File Compression Level = Default
+      Option = Standard
+    END # RESULTS:
+    TRANSIENT RESULTS: Transient Results 1
+      File Compression Level = Default
+      Option = Standard
+      OUTPUT FREQUENCY: 
+        Option = Time Interval
+        Time Interval = 0.5 [s]
+      END # OUTPUT FREQUENCY:
+    END # TRANSIENT RESULTS:Transient Results 1
+  END # OUTPUT CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+results1.Edit()
+results1.SendCommand(Command="""ANIMATION:ANIMATION
+QAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+QAnim Save MPEG = Off
+QAnim Looping = Bounce
+QAnim Looping Cycles = 1
+Video Format = wmv
+
+END""")
+results1.SendCommand(Command=r"""DATA READER:
+  Active Case Name = Case CFX
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
+  Master Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
+END
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>load timestep=0""")
+results1.SendCommand(Command="""DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.521003, -0.147764, -0.201014, 0.816284
+    
+  END
+
+END
+
+> update
+> autolegend plot=/PLANE:MidDown, view=VIEW:View 1""")
+results1.SendCommand(Command="""PLANE:MidDown
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = YZ Plane
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PLANE:MidDown, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.530536, -0.0544394, -0.136182, 0.834884
+    
+  END
+
+END
+
+> update
+> autolegend plot=/PLANE:MidDown2, view=VIEW:View 1""")
+results1.SendCommand(Command="""PLANE:MidDown2
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [K]
+Min = 0.0 [K]
+Normal = 1 , 0 , 0 
+Option = ZX Plane
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PLANE:MidDown2, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.310606
+    Pan = 0, 0
+    Rotation Quaternion = -0.618092, -0.0845582, -0.115848, 0.772916
+    
+  END
+
+END
+
+> update
+DATA READER:
+Timestep Match Criterion = Same Step
+Timestep Sync Mode = By Time Value
+Timevalue Match Criterion = Same Value
+END
+ANIMATION: ANIMATION
+TimeAnim Control Case = Case CFX
+TimeAnim Control Variable = Timestep
+TimeAnim Frame Interval = All Timesteps
+TimeAnim Frame Spacing = Equal In Time
+TimeAnim Number Of Frames = 21
+TimeAnim Timestep Interval = 1
+TimeAnim Specify Range = Off
+TimeAnim MPEG Filename = //myfiles/jc2182/dos/CFX.wmv
+TimeAnim Save MPEG = Off
+TimeAnim Looping Cycles = 1
+Video Format = wmv
+END
+>animate timestepAnimate""")
+results1.Exit()
+Save(Overwrite=True)
