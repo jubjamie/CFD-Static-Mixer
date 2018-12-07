@@ -41,6 +41,7 @@
     <ParameterSet ID="1E64CEA1-01E7-45F2-94E5-38C06C8B6F5F"/>
     <ParameterSet ID="6874CC2B-5357-4466-854D-27754B082FED"/>
     <ParameterSet ID="C9549C0A-CC38-477E-9457-FF0D007CFAF4"/>
+    <ParameterSet ID="B0E25DEB-30EA-4D24-9582-1BBB00BA3D31"/>
   </ParameterSets>
 
   <ExpressionIds>
@@ -5920,7 +5921,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>75581.3</Value>
+        <Value>61521.7</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -6801,7 +6802,7 @@
           <AttributeValueBase>
             <Name>MaximumPredictedErrorOutput</Name>
             <Type>1</Type>
-            <DoubleValue>-1.</DoubleValue>
+            <DoubleValue>1.78640706688e-003</DoubleValue>
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
@@ -6998,7 +6999,7 @@
           <AttributeValueBase>
             <Name>MaximumPredictedErrorOutput</Name>
             <Type>1</Type>
-            <DoubleValue>-1.</DoubleValue>
+            <DoubleValue>2.7018893098e-002</DoubleValue>
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
@@ -8281,7 +8282,7 @@
           <AttributeValueBase>
             <Name>MaximumPredictedErrorOutput</Name>
             <Type>1</Type>
-            <DoubleValue>-1.</DoubleValue>
+            <DoubleValue>2723.19507054</DoubleValue>
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>

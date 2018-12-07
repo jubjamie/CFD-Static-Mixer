@@ -1,4 +1,4 @@
-# State file created:  2018/12/07 13:23:28
+# State file created:  2018/12/07 18:49:18
 # CFX-19.1
 
 COMMENT:User Data
@@ -15,9 +15,9 @@ DATA READER:
   Clear All Objects = False
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
-  Current Case Name = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
+  Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
 CFX\CFX\Fluid Flow CFX_007.res
-  Current Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
+  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
 dp6\CFX\CFX\Fluid Flow CFX_007.res
   Current Timestep = -1
   Current Timevalue = 0
@@ -46,9 +46,9 @@ dp6\CFX\CFX\Fluid Flow CFX_007.res
   Timevalue Match Criterion = Same Value
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
-    Current Case Name = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_007.res
-    Current Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
+    Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
+CFX\CFX\Fluid Flow CFX_007.res
+    Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
 dp6\CFX\CFX\Fluid Flow CFX_007.res
     Current Timestep = -1
     Current Timevalue = 0
@@ -870,8 +870,8 @@ LIBRARY:
       Current Time Step = 356
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
-      PressureLoss = ((ave(Pressure)@in1 +ave(Pressure)@in2 )/2)-\
-(ave(Pressure)@out )
+      PressureLoss = ((massFlowAve(Total Pressure)@in1 +massFlowAve(Total \
+Pressure)@in2 )/2)-(massFlowAve(Total Pressure)@out )
       Reference Pressure = 1 [atm]
       Sequence Step = 356
       Time = 0 [s]
