@@ -1,68 +1,60 @@
-﻿dp10/CFX/CFX/Fluid Flow CFX.cfx
-dp10/CFX/CFX/Fluid Flow CFX.def
-dp10/CFX/CFX/Fluid Flow CFX_008.out
+﻿dp10/CFX/CFX/Fluid Flow CFX_008.out
 dp10/CFX/CFX/Fluid Flow CFX_008.res
+dp10/CFX/CFX/Fluid Flow CFX.def
+dp10/CFX/CFX/Fluid Flow CFX.cfx
+dp10/CFX/CFX/Fluid Flow CFX_007.out
+dp10/CFX/CFX/Fluid Flow CFX_007.res
 dp10/CFX/DM/CFX.agdb
 dp10/CFX/MECH/CFX.cmdb
+dp10/CFX/MECH/CFX1.cmdb
 dp10/CFX/Post/Fluid Flow CFX.cst
 dp10/global/MECH/CFX.mshdb
 dp10/designPoint.wbdp
-dp11/CFX/CFX/Fluid Flow CFX.cfx
-dp11/CFX/CFX/Fluid Flow CFX.def
-dp11/CFX/CFX/Fluid Flow CFX_008.out
-dp11/CFX/CFX/Fluid Flow CFX_008.res
-dp11/CFX/DM/CFX.agdb
-dp11/CFX/MECH/CFX.cmdb
-dp11/CFX/Post/Fluid Flow CFX.cst
-dp11/global/MECH/CFX.mshdb
-dp11/designPoint.wbdp
-dp12/CFX/CFX/Fluid Flow CFX.cfx
-dp12/CFX/CFX/Fluid Flow CFX.def
-dp12/CFX/CFX/Fluid Flow CFX_008.out
-dp12/CFX/CFX/Fluid Flow CFX_008.res
-dp12/CFX/DM/CFX.agdb
-dp12/CFX/MECH/CFX.cmdb
-dp12/CFX/Post/Fluid Flow CFX.cst
-dp12/global/MECH/CFX.mshdb
-dp12/designPoint.wbdp
-dp6/CFX/CFX/Fluid Flow CFX.cfx
 dp6/CFX/CFX/Fluid Flow CFX_007.out
 dp6/CFX/CFX/Fluid Flow CFX_007.res
+dp6/CFX/CFX/Fluid Flow CFX.cfx
 dp6/CFX/DM/CFX.agdb
-dp6/CFX/MECH/CFX1.cmdb
 dp6/CFX/Post/Fluid Flow CFX.cst
+dp6/CFX/MECH/CFX1.cmdb
 dp6/global/MECH/CFX.mshdb
 dp6/designPoint.wbdp
-dp7/CFX/CFX/Fluid Flow CFX.cfx
-dp7/CFX/CFX/Fluid Flow CFX.def
 dp7/CFX/CFX/Fluid Flow CFX_008.out
 dp7/CFX/CFX/Fluid Flow CFX_008.res
+dp7/CFX/CFX/Fluid Flow CFX.def
+dp7/CFX/CFX/Fluid Flow CFX.cfx
+dp7/CFX/CFX/Fluid Flow CFX_007.out
+dp7/CFX/CFX/Fluid Flow CFX_007.res
 dp7/CFX/DM/CFX.agdb
 dp7/CFX/MECH/CFX.cmdb
+dp7/CFX/MECH/CFX1.cmdb
 dp7/CFX/Post/Fluid Flow CFX.cst
 dp7/global/MECH/CFX.mshdb
 dp7/designPoint.wbdp
-dp8/CFX/CFX/Fluid Flow CFX.cfx
-dp8/CFX/CFX/Fluid Flow CFX.def
 dp8/CFX/CFX/Fluid Flow CFX_008.out
 dp8/CFX/CFX/Fluid Flow CFX_008.res
+dp8/CFX/CFX/Fluid Flow CFX.def
+dp8/CFX/CFX/Fluid Flow CFX.cfx
+dp8/CFX/CFX/Fluid Flow CFX_007.out
+dp8/CFX/CFX/Fluid Flow CFX_007.res
 dp8/CFX/DM/CFX.agdb
 dp8/CFX/MECH/CFX.cmdb
+dp8/CFX/MECH/CFX1.cmdb
 dp8/CFX/Post/Fluid Flow CFX.cst
 dp8/global/MECH/CFX.mshdb
 dp8/designPoint.wbdp
-dp9/CFX/CFX/Fluid Flow CFX.cfx
-dp9/CFX/CFX/Fluid Flow CFX.def
 dp9/CFX/CFX/Fluid Flow CFX_008.out
 dp9/CFX/CFX/Fluid Flow CFX_008.res
+dp9/CFX/CFX/Fluid Flow CFX.def
+dp9/CFX/CFX/Fluid Flow CFX.cfx
+dp9/CFX/CFX/Fluid Flow CFX_007.out
+dp9/CFX/CFX/Fluid Flow CFX_007.res
 dp9/CFX/DM/CFX.agdb
 dp9/CFX/MECH/CFX1.cmdb
 dp9/CFX/Post/Fluid Flow CFX.cst
 dp9/global/MECH/CFX.mshdb
 dp9/designPoint.wbdp
-dpall/global/DX/parameters.dxdb
 dpall/global/DX/parameters.params
-dpall/global/DX/Response Surface.log
+dpall/global/DX/parameters.dxdb
 session_files/journal1.wbjn
 session_files/journal2.wbjn
 session_files/journal3.wbjn
@@ -70,15 +62,41 @@ session_files/journal4.wbjn
 session_files/journal5.wbjn
 session_files/journal6_crashed.wbjn
 session_files/journal7.wbjn
+session_files/journal8_crashed.wbjn
+session_files/journal9.wbjn
+dp11/CFX/CFX/Fluid Flow CFX_008.out
+dp11/CFX/CFX/Fluid Flow CFX_008.res
+dp11/CFX/CFX/Fluid Flow CFX.def
+dp11/CFX/CFX/Fluid Flow CFX.cfx
+dp11/CFX/CFX/Fluid Flow CFX_007.out
+dp11/CFX/CFX/Fluid Flow CFX_007.res
+dp11/CFX/DM/CFX.agdb
+dp11/CFX/MECH/CFX.cmdb
+dp11/CFX/MECH/CFX1.cmdb
+dp11/CFX/Post/Fluid Flow CFX.cst
+dp11/global/MECH/CFX.mshdb
+dp11/designPoint.wbdp
+dp12/CFX/CFX/Fluid Flow CFX_008.out
+dp12/CFX/CFX/Fluid Flow CFX_008.res
+dp12/CFX/CFX/Fluid Flow CFX.cfx
+dp12/CFX/CFX/Fluid Flow CFX.def
+dp12/CFX/CFX/Fluid Flow CFX_007.out
+dp12/CFX/CFX/Fluid Flow CFX_007.res
+dp12/CFX/DM/CFX.agdb
+dp12/CFX/MECH/CFX.cmdb
+dp12/CFX/MECH/CFX1.cmdb
+dp12/CFX/Post/Fluid Flow CFX.cst
+dp12/global/MECH/CFX.mshdb
+dp12/designPoint.wbdp
 dp10/
-dp11/
-dp12/
 dp6/
 dp7/
 dp8/
 dp9/
 dpall/
 session_files/
+dp11/
+dp12/
 dp10/CFX/
 dp10/global/
 dp10/CFX/CFX/
@@ -86,7 +104,37 @@ dp10/CFX/DM/
 dp10/CFX/MECH/
 dp10/CFX/Post/
 dp10/global/MECH/
-dp10/global/MECH/CFX/
+dp6/CFX/
+dp6/global/
+dp6/CFX/CFX/
+dp6/CFX/DM/
+dp6/CFX/Post/
+dp6/CFX/MECH/
+dp6/global/MECH/
+dp6/global/MECH/CFX/
+dp7/CFX/
+dp7/global/
+dp7/CFX/CFX/
+dp7/CFX/DM/
+dp7/CFX/MECH/
+dp7/CFX/Post/
+dp7/global/MECH/
+dp8/CFX/
+dp8/global/
+dp8/CFX/CFX/
+dp8/CFX/DM/
+dp8/CFX/MECH/
+dp8/CFX/Post/
+dp8/global/MECH/
+dp9/CFX/
+dp9/global/
+dp9/CFX/CFX/
+dp9/CFX/DM/
+dp9/CFX/MECH/
+dp9/CFX/Post/
+dp9/global/MECH/
+dpall/global/
+dpall/global/DX/
 dp11/CFX/
 dp11/global/
 dp11/CFX/CFX/
@@ -101,37 +149,3 @@ dp12/CFX/DM/
 dp12/CFX/MECH/
 dp12/CFX/Post/
 dp12/global/MECH/
-dp12/global/MECH/CFX/
-dp6/CFX/
-dp6/global/
-dp6/CFX/CFX/
-dp6/CFX/DM/
-dp6/CFX/MECH/
-dp6/CFX/Post/
-dp6/global/MECH/
-dp6/global/MECH/CFX/
-dp7/CFX/
-dp7/global/
-dp7/CFX/CFX/
-dp7/CFX/DM/
-dp7/CFX/MECH/
-dp7/CFX/Post/
-dp7/global/MECH/
-dp7/global/MECH/CFX/
-dp8/CFX/
-dp8/global/
-dp8/CFX/CFX/
-dp8/CFX/DM/
-dp8/CFX/MECH/
-dp8/CFX/Post/
-dp8/global/MECH/
-dp8/global/MECH/CFX/
-dp9/CFX/
-dp9/global/
-dp9/CFX/CFX/
-dp9/CFX/DM/
-dp9/CFX/MECH/
-dp9/CFX/Post/
-dp9/global/MECH/
-dpall/global/
-dpall/global/DX/
