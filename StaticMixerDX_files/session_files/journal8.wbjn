@@ -1754,3 +1754,4 @@ END
 solutionComponent1.Update(Force=True)
 solutionComponent1.Clean()
 Save(Overwrite=True)
+Save(Overwrite=True)
