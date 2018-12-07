@@ -1,5 +1,5 @@
- This run of the CFX Release 19.1 Solver started at 14:59:20 on 06 Dec
- 2018 by user jc2182 on ENPC-LAB137 (intel_xeon64.sse2_winnt) using the
+ This run of the CFX Release 19.1 Solver started at 15:20:51 on 07 Dec
+ 2018 by user jc2182 on ENPC-LAB118 (intel_xeon64.sse2_winnt) using the
  command:
  
   "C:\Program Files\ANSYS Inc\v191\CFX\bin\perllib\cfx5solve.pl" -batch
@@ -282,8 +282,8 @@
        END
      END
      PARALLEL HOST LIBRARY:
-       HOST DEFINITION: enpclab137
-         Remote Host Name = ENPC-LAB137
+       HOST DEFINITION: enpclab118
+         Remote Host Name = ENPC-LAB118
          Host Architecture String = winnt-amd64
          Installation Root = C:\Program Files\ANSYS Inc\v%v\CFX
        END
@@ -372,9 +372,9 @@
 
  Run mode:       serial run
 
- Host computer:  ENPC-LAB137 (PID:6848)
+ Host computer:  ENPC-LAB118 (PID:10440)
 
- Job started:    Thu Dec  6 14:59:21 2018
+ Job started:    Fri Dec  7 15:20:52 2018
 
 
  +--------------------------------------------------------------------+
@@ -393,7 +393,7 @@
  +--------------------------------------------------------------------+
  |          Host           |     System     |   Allocated    |   %    |
  +-------------------------+----------------+----------------+--------+
- | ENPC-LAB137             |     16240.97   |        14.35   |   0.09 |
+ | ENPC-LAB118             |     16241.86   |        14.35   |   0.09 |
  +-------------------------+----------------+----------------+--------+
 
  ======================================================================
@@ -458,22 +458,22 @@
  Interpolation Step              Time    Percentage
                                 (secs.   %total)
  ----------------------------------------------------------------------
- Tree Setup                     1.67E-01    4.7 %
- Interpolation                  1.55E+00   43.2 %
- Miscellaneous                  1.87E+00   52.1 %
+ Tree Setup                     1.78E-01    4.5 %
+ Interpolation                  1.98E+00   49.5 %
+ Miscellaneous                  1.84E+00   46.0 %
                                 --------
- Total                          3.59E+00
+ Total                          3.99E+00
 
  +--------------------------------------------------------------------+
  |                   Job Information at End of Run                    |
  +--------------------------------------------------------------------+
 
- Host computer:  ENPC-LAB137 (PID:6848)
+ Host computer:  ENPC-LAB118 (PID:10440)
 
- Job finished:   Thu Dec  6 14:59:24 2018
+ Job finished:   Fri Dec  7 15:20:56 2018
 
- Total wall clock time: 3.591E+00 seconds
-             or: (          0:         0:         0:     3.591 )
+ Total wall clock time: 4.011E+00 seconds
+             or: (          0:         0:         0:     4.011 )
                  (       Days:     Hours:   Minutes:   Seconds )
 
  
@@ -514,16 +514,16 @@
 
  Run mode:       serial run
 
- Host computer:  ENPC-LAB137 (PID:11524)
+ Host computer:  ENPC-LAB118 (PID:8472)
 
- Job started:    Thu Dec  6 14:59:27 2018
+ Job started:    Fri Dec  7 15:20:59 2018
 
  +--------------------------------------------------------------------+
  |                        License Information                         |
  +--------------------------------------------------------------------+
  
  License Cap:    ANSYS CFX Solver (Max 128K Nodes)
- License ID:     VIGO_campus_bath_ac_uk-SYSTEM-1456-896337
+ License ID:     VIGO_campus_bath_ac_uk-SYSTEM-1456-1282848
 
 
  +--------------------------------------------------------------------+
@@ -542,7 +542,7 @@
  +--------------------------------------------------------------------+
  |          Host           |     System     |   Allocated    |   %    |
  +-------------------------+----------------+----------------+--------+
- | ENPC-LAB137             |     16240.97   |        98.91   |   0.61 |
+ | ENPC-LAB118             |     16241.86   |        98.91   |   0.61 |
  +-------------------------+----------------+----------------+--------+
 
 
@@ -672,7 +672,7 @@
    K-TurbKE
    E-Diss.K
                    
- CFD Solver started: Thu Dec  6 14:59:31 2018
+ CFD Solver started: Fri Dec  7 15:21:02 2018
 
 
  +--------------------------------------------------------------------+
@@ -695,7 +695,7 @@
  +----------------------+-----------------------+---------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  362 (    1) CPU SECONDS = 2.529E+02 (3.660E+00)
+ OUTER LOOP ITERATION =  362 (    1) CPU SECONDS = 2.527E+02 (3.420E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -711,7 +711,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  363 (    2) CPU SECONDS = 2.541E+02 (4.809E+00)
+ OUTER LOOP ITERATION =  363 (    2) CPU SECONDS = 2.538E+02 (4.507E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -727,7 +727,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  364 (    3) CPU SECONDS = 2.551E+02 (5.819E+00)
+ OUTER LOOP ITERATION =  364 (    3) CPU SECONDS = 2.547E+02 (5.461E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -743,7 +743,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  365 (    4) CPU SECONDS = 2.561E+02 (6.833E+00)
+ OUTER LOOP ITERATION =  365 (    4) CPU SECONDS = 2.557E+02 (6.413E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -774,7 +774,7 @@
  +----------------------+-----------------------+---------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  366 (    5) CPU SECONDS = 2.571E+02 (7.865E+00)
+ OUTER LOOP ITERATION =  366 (    5) CPU SECONDS = 2.566E+02 (7.386E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -790,7 +790,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  367 (    6) CPU SECONDS = 2.582E+02 (8.925E+00)
+ OUTER LOOP ITERATION =  367 (    6) CPU SECONDS = 2.576E+02 (8.375E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -806,7 +806,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  368 (    7) CPU SECONDS = 2.592E+02 (9.982E+00)
+ OUTER LOOP ITERATION =  368 (    7) CPU SECONDS = 2.586E+02 (9.366E+00)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -822,7 +822,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  369 (    8) CPU SECONDS = 2.603E+02 (1.103E+01)
+ OUTER LOOP ITERATION =  369 (    8) CPU SECONDS = 2.596E+02 (1.036E+01)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -838,7 +838,7 @@
  +----------------------+------+---------+---------+------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  370 (    9) CPU SECONDS = 2.613E+02 (1.209E+01)
+ OUTER LOOP ITERATION =  370 (    9) CPU SECONDS = 2.606E+02 (1.134E+01)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -869,7 +869,7 @@
  +----------------------+-----------------------+---------------------+
 
  ======================================================================
- OUTER LOOP ITERATION =  371 (   10) CPU SECONDS = 2.624E+02 (1.314E+01)
+ OUTER LOOP ITERATION =  371 (   10) CPU SECONDS = 2.616E+02 (1.233E+01)
  ----------------------------------------------------------------------
  |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
  +----------------------+------+---------+---------+------------------+
@@ -884,8 +884,8 @@
  | E-Diss.K             | 0.95 | 2.4E-04 | 4.4E-03 |  7.2  1.5E-02  OK|
  +----------------------+------+---------+---------+------------------+
                    
- CFD Solver finished: Thu Dec  6 14:59:42 2018
- CFD Solver wall clock seconds: 1.0536E+01
+ CFD Solver finished: Fri Dec  7 15:21:12 2018
+ CFD Solver wall clock seconds: 9.9050E+00
 
  ======================================================================
               Termination and Interrupt Condition Summary
@@ -1097,29 +1097,29 @@
  Subsystem Name                  Discretization       Linear Solution
                                 (secs.   %total)     (secs.   %total) 
  ----------------------------------------------------------------------
- Momentum and Mass              3.67E+00  21.5 %     1.16E+00   6.8 %
- Heat Transfer                  1.23E+00   7.2 %     4.06E-01   2.4 %
- TurbKE and Diss.K              1.88E+00  11.0 %     8.91E-01   5.2 %
+ Momentum and Mass              3.45E+00  21.3 %     1.10E+00   6.8 %
+ Heat Transfer                  1.15E+00   7.1 %     3.80E-01   2.3 %
+ TurbKE and Diss.K              1.75E+00  10.8 %     8.45E-01   5.2 %
                                 -------- -------     --------  ------
- Subsystem Summary              6.78E+00  39.6 %     2.46E+00  14.4 %
+ Subsystem Summary              6.36E+00  39.2 %     2.33E+00  14.4 %
 
- File Reading                   1.67E-01    1.0 %
- Variable Updates               1.20E+00    7.0 %
- File Writing                   3.72E-01    2.2 %
- Miscellaneous                  6.12E+00   35.8 %
+ File Reading                   1.19E-01    0.7 %
+ Variable Updates               1.13E+00    7.0 %
+ File Writing                   3.47E-01    2.1 %
+ Miscellaneous                  5.91E+00   36.5 %
                                 --------
- Total                          1.71E+01
+ Total                          1.62E+01
 
  +--------------------------------------------------------------------+
  |                   Job Information at End of Run                    |
  +--------------------------------------------------------------------+
 
- Host computer:  ENPC-LAB137 (PID:11524)
+ Host computer:  ENPC-LAB118 (PID:8472)
 
- Job finished:   Thu Dec  6 14:59:44 2018
+ Job finished:   Fri Dec  7 15:21:15 2018
 
- Total wall clock time: 1.709E+01 seconds
-             or: (          0:         0:         0:    17.093 )
+ Total wall clock time: 1.619E+01 seconds
+             or: (          0:         0:         0:    16.188 )
                  (       Days:     Hours:   Minutes:   Seconds )
 
 End of solution stage.

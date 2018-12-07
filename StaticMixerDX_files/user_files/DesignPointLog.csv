@@ -93,3 +93,18 @@ DP 6,1,0,1500,0.00738525,300.003,0.15,0.15,0.011,0.011,0.15
 DP 7,1,-45,1500,0.00695801,300.076,0.15,0.15,0.011,0.011,0.15
 DP 8,1.5,0,1500,0.00402832,299.865,0.15,0.15,0.011,0.011,0.15
 DP 9,1,0,1600,0.00363159,300.003,0.15,0.15,0.011,0.011,0.15
+# 
+# A non parametric change occurred and invalidated design point results.
+# 12/07/2018 15:12:18
+# 
+# 
+# 12/07/2018 15:18:26
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P1 - inDia [m],P2 - in2Angle [degree],P3 - inMassFlow [kg s^-1],P4 - OutTempRange [K],P5 - OutTempAve [K],P11 - Mesh Element Size [m],P12 - Mesh Max Size [m],P13 - Mesh Min Size [m],P14 - Mesh Proximity Min Size [m],P15 - Mesh Maximum Thickness [m],P16 - Mesh Elements,P17 - Mesh Nodes
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2,P3,P4,P5,P11,P12,P13,P14,P15,P16,P17
+DP 7,1,-45,1500,0.00695801,300.076,0.15,0.15,0.011,0.011,0.15,98397,27294
+DP 8,1.5,0,1500,0.00402832,299.865,0.15,0.15,0.011,0.011,0.15,104953,29171
+DP 9,1,0,1600,0.00363159,300.003,0.15,0.15,0.011,0.011,0.15,98490,27344
+DP 10,1,-37.830200345807874,1000.1065792576104,0.00271606,300.02,0.15,0.15,0.011,0.011,0.15,98159,27225
