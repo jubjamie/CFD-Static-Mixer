@@ -1,4 +1,4 @@
-# State file created:  2018/12/07 13:17:34
+# State file created:  2018/12/07 15:25:26
 # CFX-19.1
 
 COMMENT:User Data
@@ -15,9 +15,9 @@ DATA READER:
   Clear All Objects = False
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
-  Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
+  Current Case Name = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
 CFX\CFX\Fluid Flow CFX_001.res
-  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
+  Current Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
 dp6\CFX\CFX\Fluid Flow CFX_001.res
   Current Timestep = -1
   Current Timevalue = 30
@@ -35,6 +35,8 @@ dp6\CFX\CFX\Fluid Flow CFX_001.res
   Force File Reload = False
   Keep Camera Position = True
   Load Particle Tracks = true
+  Master Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
+dp6\CFX\CFX\Fluid Flow CFX_001.res
   Multi Configuration File Load Option = Last Case
   Open in New View = true
   Open to Compare = false
@@ -46,9 +48,9 @@ dp6\CFX\CFX\Fluid Flow CFX_001.res
   Timevalue Match Criterion = Same Value
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
-    Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_001.res
-    Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
+    Current Case Name = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
+dp6\CFX\CFX\Fluid Flow CFX_001.res
+    Current Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
 dp6\CFX\CFX\Fluid Flow CFX_001.res
     Current Timestep = 300
     Current Timevalue = 30
@@ -856,7 +858,7 @@ DEFAULT LEGEND:Default Legend View 1
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /STREAMLINE:Streamline 2
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -879,7 +881,7 @@ DEFAULT LEGEND:Default Legend View 2
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /STREAMLINE:Streamline 2
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -902,7 +904,7 @@ DEFAULT LEGEND:Default Legend View 3
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /STREAMLINE:Streamline 2
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -925,7 +927,7 @@ DEFAULT LEGEND:Default Legend View 4
   Legend Aspect = 0.07
   Legend Format = %10.3e
   Legend Orientation = Vertical
-  Legend Plot = /PLANE:mid
+  Legend Plot = /STREAMLINE:Streamline 2
   Legend Position = 0.02, 0.15
   Legend Resolution = 256
   Legend Shading = Smooth
@@ -1048,7 +1050,7 @@ PLANE:MidDown
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -1119,7 +1121,7 @@ PLANE:MidDown2
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -1261,7 +1263,7 @@ PLANE:TurnIn1
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -1332,7 +1334,7 @@ PLANE:TurnIn2
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -1403,7 +1405,7 @@ PLANE:mid
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -1539,9 +1541,6 @@ END
 SCALAR VARIABLE:Element Volume Ratio
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:First Blending Function for BSL and SST model
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Force X
   Boundary Values = Conservative
 END
@@ -1555,6 +1554,9 @@ SCALAR VARIABLE:Heat Flux
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Interpolated Mass Flow
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Kinematic Eddy Viscosity
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Length
@@ -1599,9 +1601,6 @@ END
 SCALAR VARIABLE:Real Partition Number
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Second Blending Function for SST model
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Shear Strain Rate
   Boundary Values = Conservative
 END
@@ -1620,10 +1619,25 @@ END
 SCALAR VARIABLE:Static Enthalpy
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Static Enthalpy.Beta
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Static Enthalpy.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Static Enthalpy.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Static Enthalpy.Gradient Z
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Static Entropy
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Streamline Number on Streamline 1
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Streamline Number on Streamline 2
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Temperature
@@ -1635,19 +1649,16 @@ END
 SCALAR VARIABLE:Time on Streamline 1
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Time on Streamline 2
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Total Pressure
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Total Temperature
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Turbulence Eddy Dissipation
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Frequency
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Kinetic Energy
+SCALAR VARIABLE:VISKTRBWALL
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity Correlation uu
@@ -1671,6 +1682,9 @@ END
 SCALAR VARIABLE:Velocity u
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Velocity u.Beta
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Velocity u.Gradient X
   Boundary Values = Conservative
 END
@@ -1683,6 +1697,9 @@ END
 SCALAR VARIABLE:Velocity v
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Velocity v.Beta
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Velocity v.Gradient X
   Boundary Values = Conservative
 END
@@ -1693,6 +1710,9 @@ SCALAR VARIABLE:Velocity v.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity w
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Velocity w.Beta
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Velocity w.Gradient X
@@ -1776,25 +1796,10 @@ END
 SCALAR VARIABLE:Wall Adjacent Temperature
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Wall Distance
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Wall Heat Flux
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Wall Heat Transfer Coefficient
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Wall Scale
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Wall Scale.Gradient X
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Wall Scale.Gradient Y
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Wall Scale.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Wall Shear X
@@ -1880,6 +1885,86 @@ STREAMLINE:Streamline 1
   Variable = Velocity
   Variable Boundary Values = Conservative
   Visibility = Off
+  OBJECT VIEW TRANSFORM:
+    Apply Reflection = Off
+    Apply Rotation = Off
+    Apply Scale = Off
+    Apply Translation = Off
+    Principal Axis = Z
+    Reflection Plane Option = XY Plane
+    Rotation Angle = 0.0 [degree]
+    Rotation Axis From = 0 [m], 0 [m], 0 [m]
+    Rotation Axis To = 0 [m], 0 [m], 0 [m]
+    Rotation Axis Type = Principal Axis
+    Scale Vector = 1 , 1 , 1
+    Translation Vector = 0 [m], 0 [m], 0 [m]
+    X = 0.0 [m]
+    Y = 0.0 [m]
+    Z = 0.0 [m]
+  END
+END
+STREAMLINE:Streamline 2
+  Absolute Tolerance = 0.0 [m]
+  Add Sample Vertex Normals = Off
+  Apply Instancing Transform = On
+  Colour = 0.75, 0.75, 0.75
+  Colour Map = Default Colour Map
+  Colour Mode = Variable
+  Colour Scale = Linear
+  Colour Variable = Temperature
+  Colour Variable Boundary Values = Conservative
+  Cross Periodics = On
+  Culling Mode = No Culling
+  Domain List = /DOMAIN GROUP:All Domains
+  Draw Faces = On
+  Draw Lines = Off
+  Draw Streams = On
+  Draw Symbols = Off
+  Grid Tolerance = 0.01
+  Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+  Lighting = On
+  Line Colour = 0, 0, 0
+  Line Width = 1
+  Location List = in1
+  Locator Sampling Method = Equally Spaced
+  Max = 0.0 [K]
+  Maximum Number of Items = 25
+  Min = 0.0 [K]
+  Number of Samples = 25
+  Number of Sides = 8
+  Random Seed = 1
+  Range = Global
+  Reduction Factor = 1.0
+  Reduction or Max Number = Max Number
+  Sample Spacing = 0.1
+  Sampling Accuracy = High
+  Sampling Aspect Ratio = 1
+  Sampling Grid Angle = 0 [degree]
+  Seed Point Type = Equally Spaced Samples
+  Simplify Geometry = Off
+  Specular Lighting = On
+  Stream Drawing Mode = Line
+  Stream Initial Direction = 0 , 0 , 0
+  Stream Size = 1.0
+  Stream Symbol = Ball
+  Streamline Direction = Forward
+  Streamline Maximum Periods = 20
+  Streamline Maximum Segments = 10000
+  Streamline Maximum Time = 0.0 [s]
+  Streamline Solver Type = RungeKutta2
+  Streamline Type = 3D Streamline
+  Streamline Width = 2
+  Surface Drawing = Smooth Shading
+  Surface Streamline Direction = Forward and Backward
+  Symbol Size = 1.0
+  Symbol Start Time = 10.0 [s]
+  Symbol Stop Time = -10.0 [s]
+  Symbol Time Interval = 1.0 [s]
+  Tolerance Mode = Grid Relative
+  Transparency = 0.0
+  Variable = Velocity
+  Variable Boundary Values = Conservative
+  Visibility = On
   OBJECT VIEW TRANSFORM:
     Apply Reflection = Off
     Apply Rotation = Off
@@ -2003,6 +2088,9 @@ END
 VECTOR VARIABLE:Pressure.Gradient
   Boundary Values = Conservative
 END
+VECTOR VARIABLE:Static Enthalpy.Gradient
+  Boundary Values = Conservative
+END
 VECTOR VARIABLE:Velocity
   Boundary Values = Conservative
 END
@@ -2024,9 +2112,6 @@ END
 VECTOR VARIABLE:Velocity.Swirling Vector
   Boundary Values = Conservative
 END
-VECTOR VARIABLE:Wall Scale.Gradient
-  Boundary Values = Conservative
-END
 VECTOR VARIABLE:Wall Shear
   Boundary Values = Conservative
 END
@@ -2043,18 +2128,17 @@ VIEW:View 1
   Is A Figure = false
   Light Angle = 50, 110
   Object Visibility List = /DEFAULT LEGEND:Default Legend View 1,/\
-PLANE:MidDown,/PLANE:MidDown2,/PLANE:TurnIn1,/PLANE:TurnIn2,/PLANE:mid,/\
-WIREFRAME:Wireframe
+STREAMLINE:Streamline 2,/WIREFRAME:Wireframe
   Projection = Orthographic
   Ruler Visibility = true
   Standard View = Isometric Y
   CAMERA:
     Option = Pivot Point and Quaternion
-    Pan = 0.199758,-0.503442
+    Pan = 0.341522,-0.899616
     Pivot Point = 0,0,0
     Rotation = -90, 0, 0
-    Rotation Quaternion = -0.539014,-0.317899,-0.573887,0.528275
-    Scale = 0.590023
+    Rotation Quaternion = -0.55506,-0.385298,-0.440129,0.591412
+    Scale = 0.349048
     Send To Viewer = True
   END
 END

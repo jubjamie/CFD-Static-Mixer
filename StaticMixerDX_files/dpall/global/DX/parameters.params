@@ -31,6 +31,7 @@
     <ParameterSet ID="1E64CEA1-01E7-45F2-94E5-38C06C8B6F5F"/>
     <ParameterSet ID="6874CC2B-5357-4466-854D-27754B082FED"/>
     <ParameterSet ID="198DF340-1BF2-45E6-8D6A-D3DCCBBA0319"/>
+    <ParameterSet ID="96870E66-9DA0-4B87-909C-ED05E101A573"/>
   </ParameterSets>
 
   <ExpressionIds>
@@ -580,7 +581,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>0.417908</Value>
+        <Value>0.</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -745,7 +746,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>299.788</Value>
+        <Value>0.</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -899,7 +900,7 @@
     <Caption>P11 - Mesh Element Size</Caption>
     <ExpressionID>P6</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>0.15</CurrentValue>
+      <CurrentValue>0.1</CurrentValue>
       <InitialValue>0.15</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
