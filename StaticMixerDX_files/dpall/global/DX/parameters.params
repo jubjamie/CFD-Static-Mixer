@@ -19,6 +19,7 @@
   <ParameterSets>
     <ParameterSet ID="6FD0B2B8-735A-4130-A65D-72913B151C36"/>
     <ParameterSet ID="DB7F7F19-3D9B-4D3E-BB1E-52985C16163B"/>
+    <ParameterSet ID="F13FC754-079D-49ED-A4DA-E190A9CD6FA6"/>
   </ParameterSets>
 
   <ExpressionIds>
@@ -556,7 +557,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>1.00708e-003</Value>
+        <Value>5.49316e-002</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -721,7 +722,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>299.994</Value>
+        <Value>300.012</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -875,7 +876,7 @@
     <Caption>P11 - Mesh Element Size</Caption>
     <ExpressionID>P6</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>0.15</CurrentValue>
+      <CurrentValue>0.2</CurrentValue>
       <InitialValue>0.15</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
@@ -1040,7 +1041,7 @@
     <Caption>P12 - Mesh Max Size</Caption>
     <ExpressionID>P7</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>0.15</CurrentValue>
+      <CurrentValue>0.2</CurrentValue>
       <InitialValue>0.15</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
@@ -1205,7 +1206,7 @@
     <Caption>P13 - Mesh Min Size</Caption>
     <ExpressionID>P8</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>1.1e-002</CurrentValue>
+      <CurrentValue>1.5e-002</CurrentValue>
       <InitialValue>1.1e-002</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
@@ -1370,7 +1371,7 @@
     <Caption>P14 - Mesh Proximity Min Size</Caption>
     <ExpressionID>P9</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>1.1e-002</CurrentValue>
+      <CurrentValue>1.5e-002</CurrentValue>
       <InitialValue>1.1e-002</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
@@ -1535,7 +1536,7 @@
     <Caption>P15 - Mesh Maximum Thickness</Caption>
     <ExpressionID>P10</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>0.15</CurrentValue>
+      <CurrentValue>0.2</CurrentValue>
       <InitialValue>0.15</InitialValue>
       <ValueTypes/>
       <DoubleValues/>

@@ -1,4 +1,4 @@
-# State file created:  2018/12/06 14:29:36
+# State file created:  2018/12/08 16:16:11
 # CFX-19.1
 
 COMMENT:User Data
@@ -15,10 +15,10 @@ DATA READER:
   Clear All Objects = False
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
-  Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_008.res
-  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_008.res
+  Current Case Name = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
+  Current Results File = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
   Current Timestep = -1
   Current Timevalue = 0
   Edit Case Names = false
@@ -46,10 +46,10 @@ dp6\CFX\CFX\Fluid Flow CFX_008.res
   Timevalue Match Criterion = Same Value
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
-    Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_008.res
-    Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_008.res
+    Current Case Name = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
+    Current Results File = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
     Current Timestep = -1
     Current Timevalue = 0
     File Angle Units = rad
@@ -866,12 +866,12 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 452
-      Current Time Step = 452
+      Accumulated Time Step = 100
+      Current Time Step = 100
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       Reference Pressure = 1 [atm]
-      Sequence Step = 452
+      Sequence Step = 100
       Time = 0 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step
@@ -1131,6 +1131,9 @@ SCALAR VARIABLE:Pressure.Gradient Y
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Pressure.Gradient Z
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Real Partition Number
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Shear Strain Rate
@@ -1579,6 +1582,33 @@ END
 VECTOR VARIABLE:Wall Shear
   Boundary Values = Conservative
 END
+VIEW:Turbo Initialisation View
+  Angular Coord Shift = 0.0
+  Auto Center = false
+  Axis Visibility = true
+  Border Visibility = false
+  Camera Mode = User Specified
+  Clip Scene = false
+  Coord Transform = Cartesian
+  Hide Difference Case = false
+  Highlight Type = Surface Mesh
+  Is A Figure = false
+  Light Angle = 50, 110
+  Object Visibility List = /WIREFRAME:Wireframe
+  Projection = Orthographic
+  Ruler Visibility = true
+  Standard View = Isometric Y
+  Valid Case = All Cases
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pan = 0, 0
+    Pivot Point = 0, 0, 0
+    Rotation = -90, 0, 0
+    Rotation Quaternion = -0.608752, -0.110481, 0.0214804, 0.785336
+    Scale = 0.222681
+    Send To Viewer = True
+  END
+END
 VIEW:View 1
   Angular Coord Shift = 0.0
   Auto Center = false
@@ -1601,8 +1631,8 @@ WIREFRAME:Wireframe
     Pan = 0,0
     Pivot Point = 0,0,0
     Rotation = -90, 0, 0
-    Rotation Quaternion = 0,0,0,1
-    Scale = 0.30303
+    Rotation Quaternion = -0.0511863,-0.00431252,0.00964189,0.998636
+    Scale = 0.301624
     Send To Viewer = True
   END
 END

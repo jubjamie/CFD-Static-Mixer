@@ -1,0 +1,253 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+designPoint1 = Parameters.GetDesignPoint(Name="6")
+parameter1 = Parameters.GetParameter(Name="P11")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.2 [m]")
+parameter2 = Parameters.GetParameter(Name="P12")
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0.2 [m]")
+parameter3 = Parameters.GetParameter(Name="P13")
+designPoint1.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="0.015 [m]")
+parameter4 = Parameters.GetParameter(Name="P14")
+designPoint1.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="0.015 [m]")
+parameter5 = Parameters.GetParameter(Name="P15")
+designPoint1.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0.2 [m]")
+system1 = GetSystem(Name="CFX")
+meshComponent1 = system1.GetComponent(Name="Mesh")
+meshComponent1.Refresh()
+mesh1 = system1.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+mesh1.Exit()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.Exit()
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.548465, 0.0524083, -0.0206406, 0.834278
+    
+  END
+
+END
+
+> update
+# Sending visibility action from ViewUtilities
+>show /DATA READER/CASE:Case CFX/BOUNDARY:Default Domain Default, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /DATA READER/CASE:Case CFX/BOUNDARY:Default Domain Default, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /DATA READER/CASE:Case CFX/BOUNDARY:Default Domain Default, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.654739, 0.0670133, 0.0111801, 0.7528
+    
+  END
+
+END
+
+> update
+# Sending visibility action from ViewUtilities
+>hide /WIREFRAME:Wireframe, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /WIREFRAME:Wireframe, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /WIREFRAME:Wireframe, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /WIREFRAME:Wireframe, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /DATA READER/CASE:Case CFX/BOUNDARY:Default Domain Default, view=/VIEW:View 1""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.301624
+    Pan = 0, 0
+    Rotation Quaternion = -0.503556, -0.0739815, -0.0746693, 0.857549
+    
+  END
+
+END
+
+> update
+>report save, format=preview""")
+results1.SendCommand(Command="""VIEW:Turbo Initialisation View
+ Object Visibility List = /WIREFRAME:Wireframe
+ Is A Figure = false
+END""")
+results1.SendCommand(Command="""# Setting Single View: /VIEW:Turbo Initialisation View
+VIEWPORT MANAGER:
+  Viewport Layout = No Split
+  Maximized Viewport = -1
+END
+>setViewportView cmd=set, view=/VIEW:Turbo Initialisation View, viewport=1""")
+results1.SendCommand(Command="""VIEW:Turbo Initialisation View
+ Object Visibility List = /WIREFRAME:Wireframe
+ Is A Figure = false
+END""")
+results1.SendCommand(Command="""# Setting Single View: /VIEW:Turbo Initialisation View
+VIEWPORT MANAGER:
+  Viewport Layout = No Split
+  Maximized Viewport = -1
+END
+>setViewportView cmd=set, view=/VIEW:Turbo Initialisation View, viewport=1""")
+results1.SendCommand(Command="""VIEWPORT MANAGER:
+  Synchronize Visibility = false
+END""")
+results1.SendCommand(Command="""VIEW:Turbo Initialisation View
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.222681
+    Pan = 0, 0
+    Rotation Quaternion = -0.608752, -0.110481, 0.0214804, 0.785336
+    
+  END
+
+END
+
+> update
+
+VIEWPORT MANAGER:
+  Maximized Viewport = -1
+  Synchronize Camera = false
+  Synchronize Visibility = true
+  View Length Units = m
+  Viewer Camera Z = -5
+  Viewer Eye Point = Normal
+  Viewer Eye Separation = 5
+  Viewport 1 View = View 1
+  Viewport 2 View = View 2
+  Viewport 3 View = View 3
+  Viewport 4 View = View 4
+  Viewport Layout = No Split
+  X Split = 0.5
+  Y Split = 0.5
+END""")
+Save(Overwrite=True)
+results1.Exit()
+solution1.Exit()
+mesh1.Edit()
+mesh1.Exit()
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Update(AllDependencies=True)
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 4
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+results1.Edit()
+results1.Exit()
+Save(Overwrite=True)
