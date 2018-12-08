@@ -31,6 +31,12 @@ dp12/CFX/MECH/CFX.cmdb
 dp12/CFX/MECH/CFX1.cmdb
 dp12/global/MECH/CFX.mshdb
 dp12/designPoint.wbdp
+dp6/CFX/CFX/Fluid Flow CFX_001/108_full.trn
+dp6/CFX/CFX/Fluid Flow CFX_001/124_full.trn
+dp6/CFX/CFX/Fluid Flow CFX_001/128_full.trn
+dp6/CFX/CFX/Fluid Flow CFX_001/248_full.trn
+dp6/CFX/CFX/Fluid Flow CFX_001/268_full.trn
+dp6/CFX/CFX/Fluid Flow CFX_001/8_full.trn
 dp6/CFX/CFX/Fluid Flow CFX.cfx
 dp6/CFX/CFX/Fluid Flow CFX_007.out
 dp6/CFX/CFX/Fluid Flow CFX_007.res
@@ -77,6 +83,8 @@ dpall/global/DX/parameters.params
 dpall/global/DX/Response Surface.log
 session_files/journal1.wbjn
 session_files/journal10.wbjn
+session_files/journal10_crashed.wbjn
+session_files/journal11.wbjn
 session_files/journal2.wbjn
 session_files/journal3.wbjn
 session_files/journal4.wbjn
@@ -119,6 +127,7 @@ dp6/CFX/CFX/
 dp6/CFX/DM/
 dp6/CFX/MECH/
 dp6/CFX/Post/
+dp6/CFX/CFX/Fluid Flow CFX_001/
 dp6/global/MECH/
 dp6/global/MECH/CFX/
 dp7/CFX/

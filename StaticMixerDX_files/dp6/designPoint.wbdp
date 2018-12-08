@@ -32,7 +32,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">2018</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 62308, "Input": 2016, "Output": 2016}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 70376, "Input": 2016, "Output": 2016}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>

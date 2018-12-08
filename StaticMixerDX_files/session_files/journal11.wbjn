@@ -1,0 +1,146 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+chart1 = Graphics.GetChartXYZ(Name="Response_ResponseXYZ")
+chart1.ModelView = "1.3503 -0.151907 -0.301302 0 -0.327859 -0.296784 -1.3197 0 0.079768 1.35131 -0.323689 0 -0.551105 -0.451309 0.972344 1 "
+chart1.ModelView = "-0.0189471 -0.23114 -1.37234 0 -1.39162 0.0113015 0.0173065 0 0.00825719 1.37237 -0.231253 0 0.701166 -0.576308 0.793143 1 "
+system1 = GetSystem(Name="RSO")
+responseSurface1 = system1.GetContainer(ComponentName="Response Surface")
+responseSurfaceModel1 = responseSurface1.GetModel()
+chart2 = responseSurfaceModel1.GetChart(Name="Response")
+chart2.Mode = "Slices2D"
+outputParameter1 = responseSurfaceModel1.GetParameter(Name="P4")
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="YAxis")
+outputParameter2 = responseSurfaceModel1.GetParameter(Name="P17")
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="YAxis")
+inputParameter1 = responseSurfaceModel1.GetParameter(Name="P3")
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter1,
+    Axis="SweepAxis")
+inputParameter2 = responseSurfaceModel1.GetParameter(Name="P1")
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="SweepAxis")
+inputParameter3 = responseSurfaceModel1.GetParameter(Name="P16")
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="SweepAxis")
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="XAxis")
+responsePoint1 = responseSurfaceModel1.GetResponsePoint(Name="ResponsePoint")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="1.25 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="0.75 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="1.03 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="1.025 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="1.01 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="0.98 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="1 [m]")
+inputParameter4 = responseSurfaceModel1.GetParameter(Name="P2")
+responsePoint1.SetParameter(
+    Parameter=inputParameter4,
+    Expression="0 [degree]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter3,
+    Expression="0.6 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="1.25 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter4,
+    Expression="-45 [degree]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter4,
+    Expression="0 [degree]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter1,
+    Expression="1000 [kg s^-1]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter1,
+    Expression="2000 [kg s^-1]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter1,
+    Expression="1000 [kg s^-1]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter3,
+    Expression="0.4 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter3,
+    Expression="0.594 [m]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter3,
+    Expression="0.598 [m]")
+chart2.Mode = "Surface3D"
+chart1.ModelView = "-0.0211192 -0.257639 -1.52967 0 -1.55119 0.0125974 0.0192909 0 0.00920421 1.52976 -0.257776 0 0.781551 -0.642361 0.884077 1 "
+chart1.ModelView = "-1.55131 -0.00407048 -0.0196325 0 -0.0196316 0.00775976 1.55114 0 -0.00401326 1.55133 -0.00780881 0 0.787446 -0.777492 -0.761731 1 "
+chart1.ModelView = "-0.129718 -0.0771953 -1.54397 0 -1.54601 0.00856495 0.129419 0 0.00204288 1.5494 -0.0776395 0 0.836847 -0.740374 0.746228 1 "
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="XAxis")
+chart1.ModelView = "0.552086 -0.49253 -1.53909 0 -1.61543 -0.212251 -0.51153 0 -0.0438031 1.62131 -0.534526 0 0.553611 -0.458282 1.29258 1 "
+chart1.ModelView = "-1.03257 -0.149331 -1.35193 0 -1.34773 0.341631 0.991514 0 0.183726 1.66647 -0.32442 0 1.0983 -0.929422 0.342394 1 "
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter4,
+    Axis="YAxis")
+chart1.ModelView = "1.4471 -0.232822 -0.876301 0 -0.905719 -0.448105 -1.37664 0 -0.0422818 1.63124 -0.503228 0 -0.249537 -0.475188 1.37799 1 "
+chart1.ModelView = "1.59181 -0.256104 -0.963931 0 -0.996291 -0.492916 -1.5143 0 -0.04651 1.79436 -0.553551 0 -0.274492 -0.522704 1.5158 1 "
+chart1.ModelView = "1.75099 -0.281714 -1.06032 0 -1.09592 -0.542208 -1.66573 0 -0.051161 1.9738 -0.608906 0 -0.301942 -0.574971 1.66739 1 "
+chart1.ModelView = "1.92609 -0.309885 -1.16635 0 -1.20551 -0.596429 -1.8323 0 -0.0562771 2.17118 -0.669797 0 -0.332137 -0.632465 1.83414 1 "
+chart1.ModelView = "1.75099 -0.281714 -1.06032 0 -1.09592 -0.542208 -1.66573 0 -0.051161 1.9738 -0.608906 0 -0.301941 -0.574971 1.66739 1 "
+chart1.ModelView = "1.59181 -0.256104 -0.963927 0 -0.996291 -0.492916 -1.5143 0 -0.04651 1.79436 -0.553551 0 -0.274491 -0.522704 1.5158 1 "
+chart1.ModelView = "1.4471 -0.232822 -0.876297 0 -0.905719 -0.448105 -1.37664 0 -0.0422818 1.63124 -0.503228 0 -0.249536 -0.475189 1.37799 1 "
+chart1.ModelView = "1.31555 -0.211656 -0.796634 0 -0.823381 -0.407368 -1.25149 0 -0.038438 1.48295 -0.45748 0 -0.22685 -0.431993 1.25271 1 "
+chart1.ModelView = "1.19595 -0.192415 -0.724213 0 -0.748528 -0.370335 -1.13772 0 -0.0349436 1.34814 -0.415891 0 -0.206226 -0.392724 1.13882 1 "
+chart1.ModelView = "1.08723 -0.174923 -0.658376 0 -0.68048 -0.336668 -1.03429 0 -0.0317669 1.22558 -0.378083 0 -0.187477 -0.357024 1.03528 1 "
+chart1.ModelView = "0.988391 -0.159021 -0.598524 0 -0.618618 -0.306062 -0.940264 0 -0.028879 1.11416 -0.343712 0 -0.170432 -0.32457 0.941155 1 "
+chart1.ModelView = "0.898537 -0.144565 -0.544113 0 -0.56238 -0.278238 -0.854785 0 -0.0262536 1.01287 -0.312465 0 -0.154937 -0.295067 0.855587 1 "
+chart1.ModelView = "0.907818 -0.196101 -0.511604 0 -0.547284 -0.371527 -0.828724 0 -0.0260112 0.973508 -0.41932 0 -0.167247 -0.202979 0.879733 1 "
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="ZAxis")
+chart1.ModelView = "0.420298 -0.230124 -0.945903 0 -0.939864 -0.364341 -0.328982 0 -0.253648 0.968769 -0.348404 0 0.386624 -0.187187 0.811554 1 "
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="YAxis")
+chart1.ModelView = "-0.188506 -0.185587 -1.02683 0 -1.04134 0.100033 0.173088 0 0.0665527 1.03919 -0.200041 0 0.581653 -0.476807 0.526802 1 "
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter4,
+    Axis="XAxis")
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter1,
+    Axis="XAxis")
+chart1.ModelView = "1.38759 -0.212999 0.323576 0 0.302269 -0.157394 -1.39986 0 0.242266 1.41609 -0.106913 0 -0.965989 -0.522875 0.591564 1 "
+chart1.ModelView = "1.05539 0.0182764 0.98049 0 0.97072 -0.223849 -1.04081 0 0.139095 1.42303 -0.17631 0 -1.08254 -0.608754 0.118285 1 "
+chart1.ModelView = "0.890259 0.644016 0.93174 0 1.12689 -0.38429 -0.811162 0 -0.11407 1.23002 -0.741313 0 -0.951477 -0.744866 0.310283 1 "
+chart1.ModelView = "1.41076 -0.0251144 0.290623 0 0.286064 -0.162044 -1.40281 0 0.0571576 1.43136 -0.153754 0 -0.876966 -0.622031 0.632847 1 "
+chart1.ModelView = "1.09834 0.229333 0.903692 0 0.92691 -0.119186 -1.09657 0 -0.0997589 1.41737 -0.238464 0 -0.962681 -0.763688 0.215516 1 "
+chart2.ShowDesignPoints = True
+chart1.ModelView = "0.285519 0.346449 1.36916 0 1.41126 -0.116893 -0.264845 0 0.0473889 1.39356 -0.362604 0 -0.872051 -0.811515 -0.371016 1 "
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="ZAxis")
+chart1.ModelView = "0.751815 0.124982 1.22278 0 1.22532 -0.187028 -0.734475 0 0.0950075 1.42304 -0.203933 0 -1.036 -0.68047 -0.142358 1 "
+chart2.Mode = "Slices2D"
+chart2.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="XAxis")
+chart2.ShowDesignPoints = False
+Save(Overwrite=True)
