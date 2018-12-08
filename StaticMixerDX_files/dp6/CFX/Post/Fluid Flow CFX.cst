@@ -1,4 +1,4 @@
-# State file created:  2018/12/07 16:37:28
+# State file created:  2018/12/08 21:41:51
 # CFX-19.1
 
 COMMENT:User Data
@@ -15,10 +15,10 @@ DATA READER:
   Clear All Objects = False
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
-  Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_003.res
-  Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_003.res
+  Current Case Name = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
+  Current Results File = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
   Current Timestep = -1
   Current Timevalue = 0
   Edit Case Names = false
@@ -46,10 +46,10 @@ dp6\CFX\CFX\Fluid Flow CFX_003.res
   Timevalue Match Criterion = Same Value
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
-    Current Case Name = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\dp6\\
-CFX\CFX\Fluid Flow CFX_003.res
-    Current Results File = H:\dos\CFD\CW\CFD-Static-Mixer\StaticMixerDX_files\\
-dp6\CFX\CFX\Fluid Flow CFX_003.res
+    Current Case Name = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
+    Current Results File = B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-\
+Static-Mixer\StaticMixerDX_files\dp6\CFX\CFX\Fluid Flow CFX_001.res
     Current Timestep = -1
     Current Timevalue = 0
     File Angle Units = rad
@@ -866,12 +866,12 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 238
-      Current Time Step = 238
+      Accumulated Time Step = 100
+      Current Time Step = 100
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       Reference Pressure = 1 [atm]
-      Sequence Step = 238
+      Sequence Step = 100
       Time = 0 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step
@@ -1131,6 +1131,9 @@ SCALAR VARIABLE:Pressure.Gradient Y
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Pressure.Gradient Z
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Real Partition Number
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Shear Strain Rate
