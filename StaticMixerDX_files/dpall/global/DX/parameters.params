@@ -31,6 +31,7 @@
     <ParameterSet ID="1693D326-C696-4DAB-A2F2-E7DF95F41696"/>
     <ParameterSet ID="73009FF7-CBA9-4831-B35D-1B3C10F503A8"/>
     <ParameterSet ID="894F1E18-B324-431B-A0F1-405AC1923ADE"/>
+    <ParameterSet ID="AE256A61-6560-4ABB-A7A3-854CB528AEC8"/>
     <ParameterSet ID="C52D9782-DF9C-437F-92EC-6C1D3899E417"/>
   </ParameterSets>
 
@@ -583,7 +584,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>5.43518e-002</Value>
+        <Value>0.291229</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -748,7 +749,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>300.047</Value>
+        <Value>300.012</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>

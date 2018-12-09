@@ -1,4 +1,4 @@
-# State file created:  2018/12/08 21:41:51
+# State file created:  2018/12/09 15:02:29
 # CFX-19.1
 
 COMMENT:User Data
@@ -1079,6 +1079,9 @@ END
 SCALAR VARIABLE:Element Volume Ratio
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:First Blending Function for BSL and SST model
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Force X
   Boundary Values = Conservative
 END
@@ -1136,6 +1139,9 @@ END
 SCALAR VARIABLE:Real Partition Number
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Second Blending Function for SST model
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Shear Strain Rate
   Boundary Values = Conservative
 END
@@ -1190,19 +1196,19 @@ END
 SCALAR VARIABLE:Turbulence Eddy Dissipation
   Boundary Values = Conservative
 END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Beta
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient X
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient Y
-  Boundary Values = Conservative
-END
-SCALAR VARIABLE:Turbulence Eddy Dissipation.Gradient Z
-  Boundary Values = Conservative
-END
 SCALAR VARIABLE:Turbulence Eddy Frequency
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Frequency.Beta
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Frequency.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Frequency.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Turbulence Eddy Frequency.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Turbulence Kinetic Energy
@@ -1337,10 +1343,25 @@ END
 SCALAR VARIABLE:Wall Adjacent Temperature
   Boundary Values = Conservative
 END
+SCALAR VARIABLE:Wall Distance
+  Boundary Values = Conservative
+END
 SCALAR VARIABLE:Wall Heat Flux
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Wall Heat Transfer Coefficient
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale.Gradient X
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale.Gradient Y
+  Boundary Values = Conservative
+END
+SCALAR VARIABLE:Wall Scale.Gradient Z
   Boundary Values = Conservative
 END
 SCALAR VARIABLE:Wall Shear X
@@ -1552,7 +1573,7 @@ END
 VECTOR VARIABLE:Static Enthalpy.Gradient
   Boundary Values = Conservative
 END
-VECTOR VARIABLE:Turbulence Eddy Dissipation.Gradient
+VECTOR VARIABLE:Turbulence Eddy Frequency.Gradient
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Turbulence Kinetic Energy.Gradient
@@ -1577,6 +1598,9 @@ VECTOR VARIABLE:Velocity.Swirling Normal
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Velocity.Swirling Vector
+  Boundary Values = Conservative
+END
+VECTOR VARIABLE:Wall Scale.Gradient
   Boundary Values = Conservative
 END
 VECTOR VARIABLE:Wall Shear
