@@ -1,0 +1,88 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+system1 = GetSystem(Name="RSO")
+designofExperimentComponent1 = system1.GetComponent(Name="Design of Experiment")
+designofExperimentComponent1.Refresh()
+designofExperiment1 = system1.GetContainer(ComponentName="Design of Experiment")
+dOEModel1 = designofExperiment1.GetModel()
+designPointsTable1 = dOEModel1.PreviewDesignPoints()
+designofExperimentComponent1.Update(AllDependencies=True)
+responseSurfaceComponent1 = system1.GetComponent(Name="Response Surface")
+responseSurfaceComponent1.Update(AllDependencies=True)
+responseSurface1 = system1.GetContainer(ComponentName="Response Surface")
+responseSurfaceModel1 = responseSurface1.GetModel()
+chart1 = responseSurfaceModel1.GetChart(Name="Response")
+chart1.Mode = "Slices2D"
+axis1 = Graphics.GetAxisContinuous(Name="Response_ResponseXY Y Axis")
+axis1.RangeMin = 0.00705159
+axis1.RangeMax = 0.00792202
+axis1.RangeMin = 0.0069925
+axis1.RangeMax = 0.00926279
+inputParameter1 = responseSurfaceModel1.GetParameter(Name="P3")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter1,
+    Axis="SweepAxis")
+inputParameter2 = responseSurfaceModel1.GetParameter(Name="P16")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="XAxis")
+chart1.NumberOfSlices = 10
+outputParameter1 = responseSurfaceModel1.GetParameter(Name="P17")
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="YAxis")
+chart1.NumberOfSlices = 9
+designPoint1 = Parameters.GetDesignPoint(Name="14")
+parameter1 = Parameters.GetParameter(Name="P16")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.5 [m]")
+boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+inputParameter3 = responseSurfaceModel1.GetParameter(Name="P1")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="XAxis")
+inputParameter4 = responseSurfaceModel1.GetParameter(Name="P2")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter4,
+    Axis="SweepAxis")
+outputParameter2 = responseSurfaceModel1.GetParameter(Name="P4")
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="YAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter4,
+    Axis="XAxis")
+chart1.Mode = "Surface3D"
+chart2 = Graphics.GetChartXYZ(Name="Response_ResponseXYZ")
+chart2.ModelView = "-0.248387 -0.434803 -0.927925 0 -0.93666 -0.29093 0.387056 0 -0.415637 0.915478 -0.317713 0 0.800348 -0.0948674 0.429292 1 "
+chart2.ModelView = "0.54159 0.249673 0.869568 0 0.89927 -0.259345 -0.485648 0 0.0988778 0.991061 -0.346144 0 -0.769868 -0.490686 -0.0188786 1 "
+chart2.ModelView = "0.778938 0.450126 0.549924 0 0.710649 -0.490324 -0.605293 0 -0.00267036 0.817786 -0.665593 0 -0.74346 -0.388787 0.360485 1 "
+chart2.ModelView = "0.810872 0.278828 0.613607 0 0.673308 -0.29194 -0.757131 0 -0.0303258 0.974079 -0.402556 0 -0.726928 -0.480477 0.27304 1 "
+chart2.ModelView = "0.968806 0.229656 0.346949 0 0.416013 -0.520625 -0.817162 0 -0.00666114 0.887752 -0.568976 0 -0.689084 -0.298368 0.519591 1 "
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter1,
+    Axis="XAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="YAxis")
+chart2.ModelView = "0.20952 0.019247 1.03216 0 1.03213 0.0172101 -0.209816 0 -0.0206967 1.05302 -0.0154095 0 -0.610472 -0.544755 -0.403459 1 "
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="ZAxis")
+chart2.ModelView = "0.418261 0.159452 1.51736 0 1.52575 -0.0563129 -0.414571 0 0.0122178 1.57303 -0.168619 0 -0.978073 -0.838071 -0.467046 1 "
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.48 [m]")
+boolean2 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+designPoint2 = Parameters.GetDesignPoint(Name="15")
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.38 [m]")
+boolean3 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Save(Overwrite=True)
+Save(Overwrite=True)

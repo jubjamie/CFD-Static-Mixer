@@ -4,11 +4,11 @@ ________________________________________________________________________________
 Generation 12
 
 Rank = 1 ,  Ensemble Genome , 4 Members :
- member 0, weight = 0.38034,  Kriging, Kernel Type = Bessel, Kernel Variation Type = Anisotropic, Regression Type = Linear
- member 1, weight = 0.38621,  Kriging, Kernel Type = Gaussian, Kernel Variation Type = Anisotropic, Regression Type = Linear
- member 2, weight = 0.080617, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = Yeo-Johnson, Confidence Level = 0.95
- member 3, weight = 0.15283, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = None, Confidence Level = 0.93
- GOFs: RMSE = 0.000194522, PRESS_RMSE = 0.00112941, PRESS_R2 = 0.806734, PRESS_RMAE = 1.11082, PRESS_RAAE = 0.311879
+ member 0, weight = 0.15567, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = None, Confidence Level = 0.93
+ member 1, weight = 0.15924, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = Yeo-Johnson, Confidence Level = 0.95
+ member 2, weight = 0.32961,  Kriging, Kernel Type = Damped Sin, Kernel Variation Type = Anisotropic, Regression Type = Constant
+ member 3, weight = 0.35548,  Kriging, Kernel Type = Damped Sin, Kernel Variation Type = Anisotropic, Regression Type = Pure Quadratic
+ GOFs: RMSE = 0.00026241, PRESS_RMSE = 0.00101643, PRESS_R2 = 0.870068, PRESS_RMAE = 0.777304, PRESS_RAAE = 0.281994
 
 
 
@@ -18,10 +18,10 @@ ________________________________________________________________________________
 Generation 12
 
 Rank = 1 ,  Ensemble Genome , 3 Members :
- member 0, weight = 0.31322, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = Yeo-Johnson, Confidence Level = 0.95
- member 1, weight = 0.278,  Linear Basis function, Regression Type = Pure Quadratic, Support Vector Kernel Type = Damped Sinus
- member 2, weight = 0.40878,  Kriging, Kernel Type = Damped Sin, Kernel Variation Type = Anisotropic, Regression Type = Constant
- GOFs: RMSE = 0.00146117, PRESS_RMSE = 0.0106743, PRESS_R2 = 0.964256, PRESS_RMAE = 0.363016, PRESS_RAAE = 0.140436
+ member 0, weight = 0.30559, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = Yeo-Johnson, Confidence Level = 0.95
+ member 1, weight = 0.45636,  Kriging, Kernel Type = Damped Sin, Kernel Variation Type = Anisotropic, Regression Type = Constant
+ member 2, weight = 0.23805,  Kriging, Kernel Type = Bessel, Kernel Variation Type = Anisotropic, Regression Type = Constant
+ GOFs: RMSE = 0.00321883, PRESS_RMSE = 0.00871995, PRESS_R2 = 0.978065, PRESS_RMAE = 0.253914, PRESS_RAAE = 0.122698
 
 
 
@@ -30,12 +30,11 @@ ________________________________________________________________________________
 __________________________________________________________________________________________________________________________________
 Generation 12
 
-Rank = 1 ,  Ensemble Genome , 4 Members :
- member 0, weight = 0.16904, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = Yeo-Johnson, Confidence Level = 0.95
- member 1, weight = 0.39422,  Kriging, Kernel Type = Gaussian, Kernel Variation Type = Anisotropic, Regression Type = Linear
- member 2, weight = 0.27343,  Kriging, Kernel Type = Gaussian, Kernel Variation Type = Anisotropic, Regression Type = Constant
- member 3, weight = 0.16331, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = None, Confidence Level = 0.93
- GOFs: RMSE = 245.052, PRESS_RMSE = 1049.1, PRESS_R2 = 0.996254, PRESS_RMAE = 0.226527, PRESS_RAAE = 0.0410215
+Rank = 1 ,  Ensemble Genome , 3 Members :
+ member 0, weight = 0.37706,  Linear Basis function, Regression Type = Linear, Support Vector Kernel Type = Damped Sinus
+ member 1, weight = 0.33555,  Kriging, Kernel Type = Gaussian, Kernel Variation Type = Anisotropic, Regression Type = Constant
+ member 2, weight = 0.28739, Polynomial Regression, Polynomial Type = Full Quadratic, Output Transformation Type = Yeo-Johnson, Confidence Level = 0.95
+ GOFs: RMSE = 164.087, PRESS_RMSE = 1001.06, PRESS_R2 = 0.996611, PRESS_RMAE = 0.149405, PRESS_RAAE = 0.0472816
 
 
 

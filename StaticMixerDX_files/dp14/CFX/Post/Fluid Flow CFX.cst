@@ -1,4 +1,4 @@
-# State file created:  2018/12/10 11:42:44
+# State file created:  2018/12/10 13:11:36
 # CFX-19.1
 
 COMMENT:User Data
@@ -16,9 +16,9 @@ DATA READER:
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case CFX
   Current Case Name = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp14\\
-CFX\CFX\Fluid Flow CFX_003.res
+CFX\CFX\Fluid Flow CFX_005.res
   Current Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
-dp14\CFX\CFX\Fluid Flow CFX_003.res
+dp14\CFX\CFX\Fluid Flow CFX_005.res
   Current Timestep = -1
   Current Timevalue = 0
   Edit Case Names = false
@@ -47,9 +47,9 @@ dp14\CFX\CFX\Fluid Flow CFX_003.res
   CASE:Case CFX
     Construct Variables From Fourier Coefficients = True
     Current Case Name = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
-dp14\CFX\CFX\Fluid Flow CFX_003.res
+dp14\CFX\CFX\Fluid Flow CFX_005.res
     Current Results File = D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\\
-dp14\CFX\CFX\Fluid Flow CFX_003.res
+dp14\CFX\CFX\Fluid Flow CFX_005.res
     Current Timestep = -1
     Current Timevalue = 0
     File Angle Units = rad
@@ -866,14 +866,14 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 187
-      Current Time Step = 187
+      Accumulated Time Step = 249
+      Current Time Step = 249
       OutTempAve = massFlowAve(Temperature)@out
       OutTempRange = maxVal(Temperature)@out - minVal(Temperature)@out
       PressureLoss = ((massFlowAve(Total Pressure)@in1 +massFlowAve(Total \
 Pressure)@in2 )/2)-(massFlowAve(Total Pressure)@out )
       Reference Pressure = 1 [atm]
-      Sequence Step = 187
+      Sequence Step = 249
       Time = 0 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step

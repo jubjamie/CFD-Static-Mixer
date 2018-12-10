@@ -41,6 +41,7 @@
     <ParameterSet ID="1E64CEA1-01E7-45F2-94E5-38C06C8B6F5F"/>
     <ParameterSet ID="678CF623-9F86-41FE-8614-0A0335EC47CD"/>
     <ParameterSet ID="6874CC2B-5357-4466-854D-27754B082FED"/>
+    <ParameterSet ID="726BA5C9-6340-4D5C-956C-1293E6CAFD94"/>
     <ParameterSet ID="C9549C0A-CC38-477E-9457-FF0D007CFAF4"/>
     <ParameterSet ID="A5862FA7-49EC-48EB-B260-9621B82F1392"/>
     <ParameterSet ID="B0E25DEB-30EA-4D24-9582-1BBB00BA3D31"/>
@@ -607,7 +608,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>1.16577e-002</Value>
+        <Value>8.72803e-003</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -772,7 +773,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>300.01</Value>
+        <Value>299.991</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -3581,7 +3582,7 @@
     <Caption>P16 - OutletRadius</Caption>
     <ExpressionID>P21</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>0.505</CurrentValue>
+      <CurrentValue>0.48</CurrentValue>
       <InitialValue>0.</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
@@ -5924,7 +5925,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>54061.9</Value>
+        <Value>63509.</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -6805,7 +6806,7 @@
           <AttributeValueBase>
             <Name>MaximumPredictedErrorOutput</Name>
             <Type>1</Type>
-            <DoubleValue>1.78640706688e-003</DoubleValue>
+            <DoubleValue>1.92395378771e-003</DoubleValue>
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
@@ -7002,7 +7003,7 @@
           <AttributeValueBase>
             <Name>MaximumPredictedErrorOutput</Name>
             <Type>1</Type>
-            <DoubleValue>2.7018893098e-002</DoubleValue>
+            <DoubleValue>2.09947664682e-002</DoubleValue>
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
@@ -8285,7 +8286,7 @@
           <AttributeValueBase>
             <Name>MaximumPredictedErrorOutput</Name>
             <Type>1</Type>
-            <DoubleValue>2723.19507054</DoubleValue>
+            <DoubleValue>2101.24538151</DoubleValue>
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
