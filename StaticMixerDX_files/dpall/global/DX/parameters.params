@@ -44,6 +44,7 @@
     <ParameterSet ID="C9549C0A-CC38-477E-9457-FF0D007CFAF4"/>
     <ParameterSet ID="A5862FA7-49EC-48EB-B260-9621B82F1392"/>
     <ParameterSet ID="B0E25DEB-30EA-4D24-9582-1BBB00BA3D31"/>
+    <ParameterSet ID="657913B6-55BF-48A4-B0CE-78A5B1145AAF"/>
   </ParameterSets>
 
   <ExpressionIds>
@@ -606,7 +607,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>1.33667e-002</Value>
+        <Value>1.16577e-002</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -771,7 +772,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>300.089</Value>
+        <Value>300.01</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>
@@ -3580,7 +3581,7 @@
     <Caption>P16 - OutletRadius</Caption>
     <ExpressionID>P21</ExpressionID>
     <ValueContainer Version="1">
-      <CurrentValue>0.5</CurrentValue>
+      <CurrentValue>0.505</CurrentValue>
       <InitialValue>0.</InitialValue>
       <ValueTypes/>
       <DoubleValues/>
@@ -5923,7 +5924,7 @@
         </ValueMapping>
       </ValueTypes>
       <DoubleValues>
-        <Value>47649.1</Value>
+        <Value>54061.9</Value>
       </DoubleValues>
       <LongValues/>
       <ArrayValues/>

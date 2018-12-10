@@ -1,0 +1,416 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+system1 = GetSystem(Name="RSO")
+responseSurface1 = system1.GetContainer(ComponentName="Response Surface")
+responseSurfaceModel1 = responseSurface1.GetModel()
+chart1 = responseSurfaceModel1.GetChart(Name="Response")
+chart1.NumberOfSlices = 10
+inputParameter1 = responseSurfaceModel1.GetParameter(Name="P1")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter1,
+    Axis="XAxis")
+inputParameter2 = responseSurfaceModel1.GetParameter(Name="P2")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="SweepAxis")
+system2 = GetSystem(Name="CFX")
+setup1 = system2.GetContainer(ComponentName="Setup")
+setup1.Edit()
+responsePoint1 = responseSurfaceModel1.GetResponsePoint(Name="ResponsePoint")
+inputParameter3 = responseSurfaceModel1.GetParameter(Name="P3")
+responsePoint1.SetParameter(
+    Parameter=inputParameter3,
+    Expression="1502 [kg s^-1]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter3,
+    Expression="1500 [kg s^-1]")
+inputParameter4 = responseSurfaceModel1.GetParameter(Name="P16")
+responsePoint1.SetParameter(
+    Parameter=inputParameter4,
+    Expression="0.5 [m]")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter4,
+    Axis="XAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="SweepAxis")
+responsePoint1.SetParameter(
+    Parameter=inputParameter1,
+    Expression="1 [m]")
+legend1 = Graphics.GetLegend(Name="Response_ResponseXY_Legend")
+legend1.Orientation = "Horizontal"
+legend1.Orientation = "Default"
+responsePoint2 = responseSurfaceModel1.CreateResponsePoint(ParameterValues={inputParameter1: "1.2026922822938866 [m]", inputParameter2: "0 [degree]", inputParameter3: "1000 [kg s^-1]", inputParameter4: "0.6 [m]"})
+responsePoint2.Note = "Created from Response Surface"
+chart2 = responseSurfaceModel1.GetChart(Name="LocalSensitivityCurves")
+outputParameter1 = responseSurfaceModel1.GetParameter(Name="P17")
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="YAxis")
+responseSurfaceModel1.DeleteResponsePoints(ResponsePoints=[responsePoint2])
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="-1.7999999999999972 [degree]")
+responsePoint1.SetParameter(
+    Parameter=inputParameter2,
+    Expression="0 [degree]")
+Save(Overwrite=True)
+outputParameter2 = responseSurfaceModel1.GetParameter(Name="P4")
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="YAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter3,
+    Axis="XAxis")
+viewport1 = GetDataEntity("/Graphics/Viewport:Response_ResponseXY_Legend_Viewport")
+viewport1.MarginLeft = 0
+viewport1.MarginRight = 1196
+viewport1.MarginBottom = 221
+viewport1.MarginTop = 0
+viewport1.Alignment = "49"
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter1,
+    Axis="XAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="SweepAxis")
+viewport1.MarginRight = 1220
+viewport1.Width = 94
+viewport1.Height = 164
+chart1.NumberOfSlices = 8
+viewport1.MarginRight = 1199
+viewport1.MarginBottom = 251
+viewport1.Width = 115
+viewport1.Height = 134
+chart1.NumberOfSlices = 7
+viewport1.MarginRight = 1211
+legend1.Orientation = "Horizontal"
+viewport1.MarginRight = 949
+viewport1.MarginBottom = 343
+legend1.Orientation = "Vertical"
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="YAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter2,
+    Axis="XAxis")
+responsePoint1.SetParameter(
+    Parameter=inputParameter4,
+    Expression="0.6 [m]")
+chart1.AssociateParameterToAxis(
+    Parameter=inputParameter4,
+    Axis="SweepAxis")
+outputParameter3 = responseSurfaceModel1.GetParameter(Name="P5")
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter3,
+    Axis="YAxis")
+chart2.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="YAxis")
+responsePoint3 = responseSurfaceModel1.CreateResponsePoint(ParameterValues={inputParameter1: "1 [m]"})
+responsePoint3.SetParameter(
+    Parameter=inputParameter4,
+    Expression="0.6 [m]")
+responsePoint4 = responseSurfaceModel1.CreateResponsePoint(ParameterValues={inputParameter1: "1 [m]"})
+designPoint1 = Parameters.GetDesignPoint(Name="6")
+designPoint2 = designPoint1.Duplicate()
+designPoint2.SetEntityProperties(Properties=Set(Retained=False, Exported=False, UpdateOrder=0, Note="Created from Response Surface"))
+parameter1 = Parameters.GetParameter(Name="P1")
+parameter2 = Parameters.GetParameter(Name="P2")
+parameter3 = Parameters.GetParameter(Name="P3")
+parameter4 = Parameters.GetParameter(Name="P16")
+parameter5 = Parameters.GetParameter(Name="P11")
+parameter6 = Parameters.GetParameter(Name="P12")
+parameter7 = Parameters.GetParameter(Name="P13")
+parameter8 = Parameters.GetParameter(Name="P14")
+parameter9 = Parameters.GetParameter(Name="P15")
+designPoint2.SetParameterExpressions(ParameterExpressions={parameter1: "1 [m]", parameter2: "-22.5 [degree]", parameter3: "1500 [kg s^-1]", parameter4: "0.6 [m]", parameter5: "0.15 [m]", parameter6: "0.15 [m]", parameter7: "0.011 [m]", parameter8: "0.011 [m]", parameter9: "0.15 [m]"})
+designPoint3 = designPoint1.Duplicate()
+designPoint3.SetEntityProperties(Properties=Set(Retained=False, Exported=False, UpdateOrder=0, Note="Created from Response Surface"))
+designPoint3.SetParameterExpressions(ParameterExpressions={parameter1: "1 [m]", parameter2: "-22.5 [degree]", parameter3: "1500 [kg s^-1]", parameter4: "0.5 [m]", parameter5: "0.15 [m]", parameter6: "0.15 [m]", parameter7: "0.011 [m]", parameter8: "0.011 [m]", parameter9: "0.15 [m]"})
+designPoint2.Retained = True
+designPoint3.Retained = True
+boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Parameters.SetBaseDesignPoint(DesignPoint=designPoint2)
+results1 = system2.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.646473, 0.0142682, 0.112948, 0.754395
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+VIEW:View 2
+  Light Angle = 50, 110
+END
+
+VIEW:View 3
+  Light Angle = 50, 110
+END
+
+VIEW:View 4
+  Light Angle = 50, 110
+END
+
+> update
+> autolegend plot=/PLANE:PressureCenter, view=VIEW:View 1""")
+results1.SendCommand(Command="""PLANE:PressureCenter
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Constant
+Colour Scale = Linear
+Colour Variable = Pressure
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Normal = 1 , 0 , 0 
+Option = ZX Plane
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /PLANE:PressureCenter, view=/VIEW:View 1""")
+results1.SendCommand(Command="""PLANE:PressureCenter
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Total Pressure
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Normal = 1 , 0 , 0 
+Option = ZX Plane
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, 0, 0
+    Scale = 0.30303
+    Pan = 0, 0
+    Rotation Quaternion = -0.700138, -0.00414128, 0.00931834, 0.713936
+    
+  END
+
+END
+
+> update
+PLANE:PressureCenter
+Apply Instancing Transform = On
+Apply Texture = Off
+Blend Texture = On
+Bound Radius = 0.5 [m]
+Colour = 0.75, 0.75, 0.75
+Colour Map = Default Colour Map
+Colour Mode = Variable
+Colour Scale = Linear
+Colour Variable = Total Pressure
+Colour Variable Boundary Values = Hybrid
+Culling Mode = No Culling
+Direction 1 Bound = 1.0 [m]
+Direction 1 Orientation = 0 [degree]
+Direction 1 Points = 10
+Direction 2 Bound = 1.0 [m]
+Direction 2 Points = 10
+Domain List = /DOMAIN GROUP:All Domains
+Draw Faces = On
+Draw Lines = Off
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Invert Plane Bound = Off
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Max = 0.0 [Pa]
+Min = 0.0 [Pa]
+Normal = 1 , 0 , 0 
+Option = ZX Plane
+Plane Bound = None
+Plane Type = Slice
+Point = 0 [m], 0 [m], 0 [m]
+Point 1 = 0 [m], 0 [m], 0 [m]
+Point 2 = 1 [m], 0 [m], 0 [m]
+Point 3 = 0 [m], 1 [m], 0 [m]
+Range = Global
+Render Edge Angle = 0 [degree]
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Texture Angle = 0
+Texture Direction = 0 , 1 , 0 
+Texture File =  
+Texture Material = Metal
+Texture Position = 0 , 0 
+Texture Scale = 1
+Texture Type = Predefined
+Tile Texture = Off
+Transform Texture = Off
+Transparency = 0.0
+X = 0.0 [m]
+Y = 0.0 [m]
+Z = 0.0 [m]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+Save(Overwrite=True)
+Parameters.SetBaseDesignPoint(DesignPoint=designPoint3)
+results1.Exit()
+solutionComponent1 = system2.GetComponent(Name="Solution")
+solutionComponent1.Clean()
+boolean2 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+designPoint2.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0 [degree]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0 [degree]")
+boolean3 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+boolean4 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession4 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+Save(Overwrite=True)

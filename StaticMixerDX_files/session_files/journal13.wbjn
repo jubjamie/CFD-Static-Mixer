@@ -1,0 +1,78 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+viewport1 = GetDataEntity("/Graphics/Viewport:LocalSensitivityCurves_Legend_Viewport")
+viewport1.MarginLeft = 0
+viewport1.MarginRight = 1178
+viewport1.MarginBottom = 327
+viewport1.MarginTop = 0
+viewport1.Alignment = "49"
+system1 = GetSystem(Name="RSO")
+responseSurface1 = system1.GetContainer(ComponentName="Response Surface")
+responseSurfaceModel1 = responseSurface1.GetModel()
+chart1 = responseSurfaceModel1.GetChart(Name="LocalSensitivityCurves")
+outputParameter1 = responseSurfaceModel1.GetParameter(Name="P17")
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="YAxis")
+viewport1.MarginRight = 1190
+outputParameter2 = responseSurfaceModel1.GetParameter(Name="P4")
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter2,
+    Axis="YAxis")
+chart1.AssociateParameterToAxis(
+    Parameter=outputParameter1,
+    Axis="YAxis")
+designPoint1 = Parameters.CreateDesignPoint()
+parameter1 = Parameters.GetParameter(Name="P16")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.4 [m]")
+designPoint1.Retained = True
+boolean1 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint1])
+designPoint2 = Parameters.GetDesignPoint(Name="14")
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.48 [m]")
+boolean2 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.5 [m]")
+boolean3 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+designPoint3 = Parameters.GetDesignPoint(Name="13")
+designPoint3.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.59 [m]")
+boolean4 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession4 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+designPoint3.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.6 [m]")
+boolean5 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession5 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+system2 = GetSystem(Name="CFX")
+solutionComponent1 = system2.GetComponent(Name="Solution")
+solutionComponent1.Clean()
+boolean6 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession6 = UpdateAllDesignPoints(DesignPoints=[designPoint3])
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.48 [m]")
+solutionComponent1.Clean()
+boolean7 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession7 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.5 [m]")
+boolean8 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession8 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="0.505 [m]")
+boolean9 = CheckPartialUpdateAndRetainPartialUpdatePropertiesSetConsistently()
+backgroundSession9 = UpdateAllDesignPoints(DesignPoints=[designPoint2])
+Save(Overwrite=True)
+Save(Overwrite=True)

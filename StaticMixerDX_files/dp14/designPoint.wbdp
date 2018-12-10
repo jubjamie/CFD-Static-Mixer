@@ -31,10 +31,10 @@
       <container-type valType="String">Ansys.DesignModeler.Core.Addin:Geometry</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">74543</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 74733, "Input": 74201, "Output": 2016}</last-modified-by-usage>
+      <last-updated valType="Int64">76979</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 77175, "Input": 76948, "Output": 2016}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
-      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 74535, "Mesh": 74034, "Setup": 74040, "Solution": 74097, "Results": 74175}</last-update-regen-times>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 76971, "Mesh": 76789, "Setup": 76795, "Solution": 76847, "Results": 76929}</last-update-regen-times>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Geometry/Geometry:GeometryDataObject" Version="1.0">
@@ -66,7 +66,7 @@
         <class-type valType="String">Ansys.Core.DataModel.DataObjects.DynamicDataObject, Ans.Core</class-type>
         <type-spec valType="String">{"SpecType": "Ansys.Core.DataModel.DataObjects.ParameterAdapterTypeSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "JournalVariableName": "parameterAdapter3", "Methods": {}, "Version": 1, "Members": {"DisplayText": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Label": "Display Text", "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": True}, "Value": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Length"}, "ParameterName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "Access": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}}, "DataTypeHierarchy": "ParameterAdapter3,ParameterAdapter,DataEntity"}</type-spec>
         <object-name valType="String">DesignModelerParameter</object-name>
-        <member-data valType="String">{"DisplayText": "DesignModelerParameter", "Value": "0.5 [m]", "ParameterName": "OutletRadius", "Access": "eGeometryParameterInput"}</member-data>
+        <member-data valType="String">{"DisplayText": "DesignModelerParameter", "Value": "0.505 [m]", "ParameterName": "OutletRadius", "Access": "eGeometryParameterInput"}</member-data>
         <properties-setByUserFlag-data valType="String">["Value"]</properties-setByUserFlag-data>
       </Object>
     </Container>
@@ -74,10 +74,10 @@
       <container-type valType="String">Ansys.Meshing.Core.Addin:SimulationModel</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">74567</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 74566, "Input": 74560, "Output": 74560}</last-modified-by-usage>
+      <last-updated valType="Int64">77003</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 77002, "Input": 76996, "Output": 76996}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
-      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 74543, "Mesh": 74034, "Setup": 74040, "Solution": 74097, "Results": 74175}</last-update-regen-times>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 76979, "Mesh": 76789, "Setup": 76795, "Solution": 76847, "Results": 76929}</last-update-regen-times>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Mesh/SimulationConnection:SimulationConnection" Version="1.0">
@@ -124,7 +124,7 @@
       <Object Name="/Mesh/OutputsGeneratedManagerDataEntityType:OutputsGeneratedManagerObject" Version="1.0">
         <class-type valType="String">OutputsGeneratedManagerDataEntityType</class-type>
         <object-name valType="String">OutputsGeneratedManagerObject</object-name>
-        <member-data valType="String">{"DisplayText": "OutputsGeneratedManagerObject", "outputGeneratedTimes": {"CMDBMesh": 74560}}</member-data>
+        <member-data valType="String">{"DisplayText": "OutputsGeneratedManagerObject", "outputGeneratedTimes": {"CMDBMesh": 76996}}</member-data>
       </Object>
       <Object Name="/Mesh/MeshProperties:MeshProperties" Version="1.0">
         <class-type valType="String">MeshProperties</class-type>
@@ -153,7 +153,7 @@
       <Object Name="/Mesh/MechanicalMeshFile:CMDBMesh" Version="1.0">
         <class-type valType="String">MechanicalMeshFile</class-type>
         <object-name valType="String">CMDBMesh</object-name>
-        <member-data valType="String">{"DisplayText": "CMDBMesh", "TransferFile": $$0b5fe494-2375-482c-837a-47d29401e4ac}</member-data>
+        <member-data valType="String">{"DisplayText": "CMDBMesh", "TransferFile": $$c48846e5-0fbb-4a80-b8d3-0e007216bc73}</member-data>
       </Object>
       <Object Name="/Mesh/ParameterAdapter1:c92b357e-04a8-4659-8a06-e8e629069263" Version="1.0">
         <class-type valType="String">Ansys.Meshing.Core.DataModel.Parameters.DynamicParameterObject, Ans.Meshing.Core</class-type>
@@ -230,16 +230,16 @@
       <container-type valType="String">Ansys.CFX.CFXCore.CFXCoreAddin:CFXSetupContainer</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">74573</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 74506, "Input": 3611, "Output": 1788}</last-modified-by-usage>
+      <last-updated valType="Int64">77009</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 76502, "Input": 3611, "Output": 1788}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
-      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 74543, "Mesh": 74567, "Setup": 74573, "Solution": 74097, "Results": 74175}</last-update-regen-times>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 76979, "Mesh": 77003, "Setup": 77009, "Solution": 76847, "Results": 76929}</last-update-regen-times>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Setup/CFXSetupProperties:Setup Source" Version="1.0">
         <class-type valType="String">CFXSetupProperties</class-type>
         <object-name valType="String">Setup Source</object-name>
-        <member-data valType="String">{"DisplayText": "Setup Source", "DataLinks": {"$$4b0d658f-c1d3-4d4c-9838-7f00eb022fe9": $$64d570fc-a66a-4627-825d-cd866a4b113d}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "DEFFileTimeStamp": 74573, "SolverInputExtendedFiles": [], "CachedANSYSInputFile": None, "PhysicsStatus": "", "AllowAssemblyMeshImport": False, "PhysicsErrSuppressEnabled": False, "PhysicsStatusSummary": "", "ANSYSInputPendingDelete": False, "DeletedMeshIDs": [], "NextMeshID": 2, "SolverInputFile": $$3399f104-d670-4320-bb02-9953d9a14ae4, "CaseFile": $$0e8a8528-4643-489b-a5d3-e44e94853313}</member-data>
+        <member-data valType="String">{"DisplayText": "Setup Source", "DataLinks": {"$$4b0d658f-c1d3-4d4c-9838-7f00eb022fe9": $$64d570fc-a66a-4627-825d-cd866a4b113d}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "DEFFileTimeStamp": 77009, "SolverInputExtendedFiles": [], "CachedANSYSInputFile": None, "PhysicsStatus": "", "AllowAssemblyMeshImport": False, "PhysicsErrSuppressEnabled": False, "PhysicsStatusSummary": "", "ANSYSInputPendingDelete": False, "DeletedMeshIDs": [], "NextMeshID": 2, "SolverInputFile": $$78ca447c-746c-43d8-ad3d-1a2ff0004516, "CaseFile": $$0e8a8528-4643-489b-a5d3-e44e94853313}</member-data>
         <custom-data>
           <DataSource1 valType="String">Mesh</DataSource1>
           <EntityType1 valType="String">SimulationGeneratedMesh</EntityType1>
@@ -255,7 +255,7 @@
       <Object Name="/Setup/CFXSetup:Setup Provider" Version="1.0">
         <class-type valType="String">CFXSetup</class-type>
         <object-name valType="String">Setup Provider</object-name>
-        <member-data valType="String">{"DisplayText": "Setup Provider", "DataSourceRef": $$69188d55-b80f-4f05-962d-f2ac12c0a124, "DataConnections": {"8fa949da-a614-4666-90c8-75a1e1bc091a": None}, "CFXSolverInputFile": $$3399f104-d670-4320-bb02-9953d9a14ae4, "MAPDLSolverInputFile": None}</member-data>
+        <member-data valType="String">{"DisplayText": "Setup Provider", "DataSourceRef": $$69188d55-b80f-4f05-962d-f2ac12c0a124, "DataConnections": {"8fa949da-a614-4666-90c8-75a1e1bc091a": None}, "CFXSolverInputFile": $$78ca447c-746c-43d8-ad3d-1a2ff0004516, "MAPDLSolverInputFile": None}</member-data>
       </Object>
       <Object Name="/Setup/SystemCouplingSetupData:Setup Coupling Data" Version="1.0">
         <class-type valType="String">SystemCouplingSetupData</class-type>
@@ -270,7 +270,7 @@
       <Object Name="/Setup/CFXMeshDataLink:MeshingMeshDataObject" Version="1.0">
         <class-type valType="String">CFXMeshDataLink</class-type>
         <object-name valType="String">MeshingMeshDataObject</object-name>
-        <member-data valType="String">{"DisplayText": "MeshingMeshDataObject", "Entity": $$4b0d658f-c1d3-4d4c-9838-7f00eb022fe9, "DataType": "CMDBMesh", "ConnectionKey": "64e586d2-18c8-4ee6-a22b-8969c4f566fb", "RefreshTimestamp": 74567, "ID": 1}</member-data>
+        <member-data valType="String">{"DisplayText": "MeshingMeshDataObject", "Entity": $$4b0d658f-c1d3-4d4c-9838-7f00eb022fe9, "DataType": "CMDBMesh", "ConnectionKey": "64e586d2-18c8-4ee6-a22b-8969c4f566fb", "RefreshTimestamp": 77003, "ID": 1}</member-data>
       </Object>
       <Object Name="/Setup/ParameterAdapter1:inMassFlow" Version="1.0">
         <class-type valType="String">Ansys.Core.DataModel.DataObjects.DynamicDataObject, Ans.Core</class-type>
@@ -284,16 +284,16 @@
       <container-type valType="String">Ansys.CFX.CFXCore.CFXCoreAddin:CFXSolutionContainer</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">74625</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 74676, "Input": 1808, "Output": 1803}</last-modified-by-usage>
+      <last-updated valType="Int64">77061</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 77106, "Input": 1808, "Output": 1803}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
-      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 74543, "Mesh": 74567, "Setup": 74573, "Solution": 74097, "Results": 74175}</last-update-regen-times>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 76979, "Mesh": 77003, "Setup": 77009, "Solution": 76847, "Results": 76929}</last-update-regen-times>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Solution/CFXSolutionProperties:Solution Source" Version="1.0">
         <class-type valType="String">CFXSolutionProperties</class-type>
         <object-name valType="String">Solution Source</object-name>
-        <member-data valType="String">{"DisplayText": "Solution Source", "DataLinks": {"$$20ead413-6947-41ec-96b7-51291b4ad302": $$08838af3-5702-40a3-8497-5e1e2b196590}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "CurrentResultsRef": $$202b38cd-1737-4a15-9474-3e7de19f02a3, "RunDirectory": "", "UpstreamExecutionControlCCL": "", "InitializationOption": "CurrentSolutionData", "CacheSolutionData": False, "KeepLatestSolutionOnly": True, "ExecutionControlOption": "IssueWarning", "HaveExecutionControlConflict": False, "LoadMResOptions": "LastConfigOnly", "FailedRun": None, "SolverPath": "", "SolverArguments": "", "ExecutionControlCCL": r"""&amp;replace SIMULATION CONTROL:
+        <member-data valType="String">{"DisplayText": "Solution Source", "DataLinks": {"$$20ead413-6947-41ec-96b7-51291b4ad302": $$08838af3-5702-40a3-8497-5e1e2b196590}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "CurrentResultsRef": $$317c1182-5276-4a6f-b170-eb2657dd180e, "RunDirectory": "", "UpstreamExecutionControlCCL": "", "InitializationOption": "CurrentSolutionData", "CacheSolutionData": False, "KeepLatestSolutionOnly": True, "ExecutionControlOption": "IssueWarning", "HaveExecutionControlConflict": False, "LoadMResOptions": "LastConfigOnly", "FailedRun": None, "SolverPath": "", "SolverArguments": "", "ExecutionControlCCL": r"""&amp;replace SIMULATION CONTROL:
   EXECUTION CONTROL:
     EXECUTABLE SELECTION:
       Double Precision = Off
@@ -372,22 +372,22 @@ END
       <Object Name="/Solution/CFXSetupDataLink:Setup Provider" Version="1.0">
         <class-type valType="String">CFXSetupDataLink</class-type>
         <object-name valType="String">Setup Provider</object-name>
-        <member-data valType="String">{"DisplayText": "Setup Provider", "Entity": $$20ead413-6947-41ec-96b7-51291b4ad302, "DataType": None, "ConnectionKey": "8fa949da-a614-4666-90c8-75a1e1bc091a", "RefreshTimestamp": 74573}</member-data>
+        <member-data valType="String">{"DisplayText": "Setup Provider", "Entity": $$20ead413-6947-41ec-96b7-51291b4ad302, "DataType": None, "ConnectionKey": "8fa949da-a614-4666-90c8-75a1e1bc091a", "RefreshTimestamp": 77009}</member-data>
       </Object>
-      <Object Name="/Solution/CFXSolverRun:Fluid Flow CFX_002" Version="1.0">
+      <Object Name="/Solution/CFXSolverRun:Fluid Flow CFX_003" Version="1.0">
         <class-type valType="String">CFXSolverRun</class-type>
-        <object-name valType="String">Fluid Flow CFX_002</object-name>
-        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_002", "ResultsFile": $$2e667aca-6f13-46a3-afaf-4b413d9d92ff, "OutFile": $$95291cb3-ffdc-4b1d-b43a-b73dc6a35c74, "ExtendedFiles": [], "ANSYSFile": None, "ANSYSRestartDB": None, "BakResultsFile": None, "RunStatus": "Normal", "Imported": False}</member-data>
+        <object-name valType="String">Fluid Flow CFX_003</object-name>
+        <member-data valType="String">{"DisplayText": "Fluid Flow CFX_003", "ResultsFile": $$c2ed6406-d8b6-46b8-9e21-009d177d5f66, "OutFile": $$f5c98775-e45a-49d0-ab19-e5922ab45e8d, "ExtendedFiles": [], "ANSYSFile": None, "ANSYSRestartDB": None, "BakResultsFile": None, "RunStatus": "Normal", "Imported": False}</member-data>
       </Object>
     </Container>
     <Container Name="Results" Version="1.0">
       <container-type valType="String">Ansys.CFX.CFDPost.CFDPostAddin:CFDAnalysisContainer</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">74713</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 74712, "Input": 73874, "Output": 74686}</last-modified-by-usage>
+      <last-updated valType="Int64">77143</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 77142, "Input": 73874, "Output": 77116}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
-      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 74543, "Mesh": 74567, "Setup": 74573, "Solution": 74625, "Results": 74175}</last-update-regen-times>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Design of Experiment": 61623, "DXDesign of ExperimentEvaluateContainer": 0, "Response Surface": 62246, "DXResponse SurfaceEvaluateContainer": 0, "Optimization": 0, "DXOptimizationEvaluateContainer": 0, "Scopes": 0, "Geometry": 76979, "Mesh": 77003, "Setup": 77009, "Solution": 77061, "Results": 76929}</last-update-regen-times>
       <unique-system-dir valType="String">CFX</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Results/CFDResults:Results Source" Version="1.0">
@@ -408,25 +408,25 @@ END
       <Object Name="/Results/SolutionDataLink:Solution Provider" Version="1.0">
         <class-type valType="String">SolutionDataLink</class-type>
         <object-name valType="String">Solution Provider</object-name>
-        <member-data valType="String">{"DisplayText": "Solution Provider", "Entity": $$5cb5b8a3-d27f-4f15-8447-7f189fa57708, "DataType": "CFXSolution", "ConnectionKey": "0fdb6c68-5520-4d95-bdcb-38457d78e3ac", "RefreshTimestamp": 74625, "ID": 1, "SecondID": 2, "DataEntityType": "CFXSolution", "SystemName": "CFX", "LastFilename": {"CFXSolution": r"B:\Documents\GitProjects\CFD\Stick\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp14\CFX\CFX\Fluid Flow CFX_002.res"}}</member-data>
+        <member-data valType="String">{"DisplayText": "Solution Provider", "Entity": $$5cb5b8a3-d27f-4f15-8447-7f189fa57708, "DataType": "CFXSolution", "ConnectionKey": "0fdb6c68-5520-4d95-bdcb-38457d78e3ac", "RefreshTimestamp": 77061, "ID": 1, "SecondID": 2, "DataEntityType": "CFXSolution", "SystemName": "CFX", "LastFilename": {"CFXSolution": r"D:\CFD BackUps\CFD-Static-Mixer\StaticMixerDX_files\dp14\CFX\CFX\Fluid Flow CFX_003.res"}}</member-data>
       </Object>
       <Object Name="/Results/ParameterAdapter1:OutTempRange" Version="1.0">
         <class-type valType="String">Ansys.Core.DataModel.DataObjects.DynamicDataObject, Ans.Core</class-type>
         <type-spec valType="String">{"SpecType": "Ansys.Core.DataModel.DataObjects.ParameterAdapterTypeSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "JournalVariableName": "parameterAdapter1", "Methods": {}, "Version": 1, "Members": {"DisplayText": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Label": "Display Text", "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": True}, "Value": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Temperature"}, "ParamName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "ParamType": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "ValueQuantityName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "VariableType": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "LastAppliedValue": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308"}}, "DataTypeHierarchy": "ParameterAdapter1,ParameterAdapter,DataEntity"}</type-spec>
         <object-name valType="String">OutTempRange</object-name>
-        <member-data valType="String">{"DisplayText": "OutTempRange", "Value": "0.0133667 [K]", "ParamName": "OutTempRange", "ParamType": "RESPONSE FIELD", "ValueQuantityName": "Temperature", "VariableType": "FloatVar", "LastAppliedValue": "0.0133667 [K]"}</member-data>
+        <member-data valType="String">{"DisplayText": "OutTempRange", "Value": "0.0116577 [K]", "ParamName": "OutTempRange", "ParamType": "RESPONSE FIELD", "ValueQuantityName": "Temperature", "VariableType": "FloatVar", "LastAppliedValue": "0.0116577 [K]"}</member-data>
       </Object>
       <Object Name="/Results/ParameterAdapter2:OutTempAve" Version="1.0">
         <class-type valType="String">Ansys.Core.DataModel.DataObjects.DynamicDataObject, Ans.Core</class-type>
         <type-spec valType="String">{"SpecType": "Ansys.Core.DataModel.DataObjects.ParameterAdapterTypeSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "JournalVariableName": "parameterAdapter2", "Methods": {}, "Version": 1, "Members": {"DisplayText": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Label": "Display Text", "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": True}, "Value": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Temperature"}, "ParamName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "ParamType": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "ValueQuantityName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "VariableType": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "LastAppliedValue": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308"}}, "DataTypeHierarchy": "ParameterAdapter2,ParameterAdapter,DataEntity"}</type-spec>
         <object-name valType="String">OutTempAve</object-name>
-        <member-data valType="String">{"DisplayText": "OutTempAve", "Value": "300.089 [K]", "ParamName": "OutTempAve", "ParamType": "RESPONSE FIELD", "ValueQuantityName": "Temperature", "VariableType": "FloatVar", "LastAppliedValue": "300.089 [K]"}</member-data>
+        <member-data valType="String">{"DisplayText": "OutTempAve", "Value": "300.01 [K]", "ParamName": "OutTempAve", "ParamType": "RESPONSE FIELD", "ValueQuantityName": "Temperature", "VariableType": "FloatVar", "LastAppliedValue": "300.01 [K]"}</member-data>
       </Object>
       <Object Name="/Results/ParameterAdapter3:PressureLoss" Version="1.0">
         <class-type valType="String">Ansys.Core.DataModel.DataObjects.DynamicDataObject, Ans.Core</class-type>
         <type-spec valType="String">{"SpecType": "Ansys.Core.DataModel.DataObjects.ParameterAdapterTypeSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "JournalVariableName": "parameterAdapter3", "Methods": {}, "Version": 1, "Members": {"DisplayText": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Label": "Display Text", "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": True}, "Value": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "AnyUser", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": True, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308", "QuantityName": "Pressure"}, "ParamName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "ParamType": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "ValueQuantityName": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Output", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "VariableType": {"SpecType": "Ansys.Core.DataSpecs.StringSpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Input", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False}, "LastAppliedValue": {"SpecType": "Ansys.Core.DataSpecs.QuantitySpec, Ans.Core", "Access": "UserWritable", "CanUndoPropertyChanges": True, "Exposure": "System", "IsOptional": False, "IsPersistent": True, "IsReadOnly": False, "Usage": "Extrinsic", "IsDesignPointInvariant": False, "IsParameterizable": False, "ReuseJournalVariables": False, "UndefinedValue": "1.79769313486231E+308"}}, "DataTypeHierarchy": "ParameterAdapter3,ParameterAdapter,DataEntity"}</type-spec>
         <object-name valType="String">PressureLoss</object-name>
-        <member-data valType="String">{"DisplayText": "PressureLoss", "Value": "47649.1 [Pa]", "ParamName": "PressureLoss", "ParamType": "RESPONSE FIELD", "ValueQuantityName": "Pressure", "VariableType": "FloatVar", "LastAppliedValue": "47649.1 [Pa]"}</member-data>
+        <member-data valType="String">{"DisplayText": "PressureLoss", "Value": "54061.9 [Pa]", "ParamName": "PressureLoss", "ParamType": "RESPONSE FIELD", "ValueQuantityName": "Pressure", "VariableType": "FloatVar", "LastAppliedValue": "54061.9 [Pa]"}</member-data>
       </Object>
     </Container>
   </Containers>
