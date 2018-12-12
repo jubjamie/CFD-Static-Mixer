@@ -46,6 +46,7 @@
     <ParameterSet ID="A5862FA7-49EC-48EB-B260-9621B82F1392"/>
     <ParameterSet ID="B0E25DEB-30EA-4D24-9582-1BBB00BA3D31"/>
     <ParameterSet ID="657913B6-55BF-48A4-B0CE-78A5B1145AAF"/>
+    <ParameterSet ID="A752DA14-2236-46EF-9C17-4583F5FEAC66"/>
   </ParameterSets>
 
   <ExpressionIds>
@@ -6251,6 +6252,22 @@
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
+      <Attribute ID="E561E07E-64F8-46D9-9C70-7E235088005D">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
     </Attributes>
   </Parameter>
 
@@ -6432,6 +6449,22 @@
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
+      <Attribute ID="541EF6E8-AC8A-4944-BFFA-0A3455067EA2">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
     </Attributes>
   </Parameter>
 
@@ -6608,6 +6641,22 @@
         <AttributeValueBases>
           <AttributeValueBase>
             <Name>A45EC404-497A-4595-8B54-36D9F10AA233</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
+      <Attribute ID="1D833AF9-5AA1-44F5-A382-16C867843C54">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
             <Type>0</Type>
             <IntegerValue>0</IntegerValue>
           </AttributeValueBase>
@@ -7188,6 +7237,22 @@
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
+      <Attribute ID="F9F13C5A-C834-4EE6-B671-8B1D728E0942">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
     </Attributes>
   </Parameter>
 
@@ -7364,6 +7429,22 @@
         <AttributeValueBases>
           <AttributeValueBase>
             <Name>06D8A2C4-18ED-4B3F-B2D7-F09BBE149D23</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
+      <Attribute ID="34F7B85D-56B2-4AC6-98F1-B6EDC42D8466">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
             <Type>0</Type>
             <IntegerValue>0</IntegerValue>
           </AttributeValueBase>
@@ -7550,6 +7631,22 @@
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
+      <Attribute ID="8FA4E3FD-6BF9-41D9-A3CC-3BA4D3F0EF47">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
     </Attributes>
   </Parameter>
 
@@ -7726,6 +7823,22 @@
         <AttributeValueBases>
           <AttributeValueBase>
             <Name>10A8E0BF-FC90-4BB9-A6BA-588FFB1BFF83</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
+      <Attribute ID="667CD8FE-CA15-4937-859B-02EB6A332383">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
             <Type>0</Type>
             <IntegerValue>0</IntegerValue>
           </AttributeValueBase>
@@ -7912,6 +8025,22 @@
           </AttributeValueBase>
         </AttributeValueBases>
       </Attribute>
+      <Attribute ID="F99125FB-88B2-41E2-8D22-EF7693FC97C0">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
     </Attributes>
   </Parameter>
 
@@ -8088,6 +8217,22 @@
         <AttributeValueBases>
           <AttributeValueBase>
             <Name>7EE574BF-9804-4349-8CB7-577F65698D68</Name>
+            <Type>0</Type>
+            <IntegerValue>0</IntegerValue>
+          </AttributeValueBase>
+        </AttributeValueBases>
+      </Attribute>
+      <Attribute ID="C0BBEB68-390F-452C-87C8-AD86E355C7F9">
+        <Name>NewCustomProperties</Name>
+        <AttributeTemplate>
+          <AttributeValueType>
+            <Type>0</Type>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
+          </AttributeValueType>
+        </AttributeTemplate>
+        <AttributeValueBases>
+          <AttributeValueBase>
+            <Name>12B1BD45-F6B4-4EA1-8086-716EC36E775A</Name>
             <Type>0</Type>
             <IntegerValue>0</IntegerValue>
           </AttributeValueBase>
